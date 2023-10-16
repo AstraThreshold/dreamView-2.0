@@ -1,0 +1,26 @@
+*.make
+*.obj
+*.cbp
+*.PrjPcbStructure
+*.Cam
+
+# 忽略Hardware文件夹下的所有以下文件夹
+1.Hardware/**/__Previews/
+1.Hardware/**/History/
+
+1.Hardware/Core/Project Outputs for dreamViewCoreRelease
+1.Hardware/Core/Project Logs for dreamViewCoreRelease
+
+1.Hardware/Driver/Project Outputs for dreamViewMotionRelease
+1.Hardware/Driver/Project Logs for dreamViewMotionRelease
+
+1.Hardware/IO/Project Outputs for dreamViewRelease
+1.Hardware/IO/Project Logs for dreamViewRelease
+
+2.Firmware/dreamView-FW/cmake-build-debug/CMakeCache.txt
+2.Firmware/dreamView-FW/cmake-build-debug/dreamView-FW.map
+
+2.Firmware/dreamView-FW/cmake-build-debug/.cmake/
+2.Firmware/dreamView-FW/cmake-build-debug/CMakeFiles/
+
+2.Firmware/dreamView-FW/Other/
