@@ -1,4 +1,4 @@
-# Install script for directory: D:/Projects/dreamView/2.Firmware/dreamView-FW
+# Install script for directory: D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Projects/dreamView/2.Firmware/dreamView-FW/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
