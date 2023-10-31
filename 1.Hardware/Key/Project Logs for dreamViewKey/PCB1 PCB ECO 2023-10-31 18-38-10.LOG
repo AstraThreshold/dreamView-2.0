@@ -1,0 +1,40 @@
+Added Component: Designator=CN1(SH1.0_3P)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://atta.szlcsc.com/upload/public/pdf/source/20211229/E8A09E85670B5E97244D2008A24D97FE.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "HDGC1002WR-S-3P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "À©Õ¹¿â"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "SH1.0Õë×ùÎÔÌù 3P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "HDGC(»ªµÂ¹²´´)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "HDGC1002WR-S-3P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Name"; Value = "HDGC1002WR-S-3P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "SMD,P=1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C2936213"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "HDGC1002WR-S-3P"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(Gateron_Switch_Direct)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "´øµÆÈÈ²å°Î°«Öá"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Name"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "´øµÆÈÈ²å°Î°«Öá"; VariantName = "[No Variations]"
+Added Component: Designator=TEST1(TestPoint_0402)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+3.3 Pin=SW1-1
+Added Pin To Net: NetName=+3.3 Pin=TEST1-1
+Added Net: Name=+3.3
+Added Pin To Net: NetName=GND Pin=CN1-1
+Added Pin To Net: NetName=GND Pin=CN1-4
+Added Pin To Net: NetName=GND Pin=CN1-5
+Added Pin To Net: NetName=GND Pin=SW1-3
+Added Pin To Net: NetName=GND Pin=SW1-5
+Added Net: Name=GND
+Added Pin To Net: NetName=NetCN1_2 Pin=CN1-2
+Added Pin To Net: NetName=NetCN1_2 Pin=SW1-6
+Added Net: Name=NetCN1_2
+Added Pin To Net: NetName=NetCN1_3 Pin=CN1-3
+Added Pin To Net: NetName=NetCN1_3 Pin=SW1-4
+Added Net: Name=NetCN1_3
+Added Class: Name=Sheet1
