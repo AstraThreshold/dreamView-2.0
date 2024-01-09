@@ -25,15 +25,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "u8g2.h"
-#include "oled_setup_u8g2_fir.h"    //OLED初始�????????????? 包含清屏 u8g2初始化等函数
-#include "oled_menu_init_fir.h"   //菜单初始�????????????? 包括菜单各模块的文字�?????????????
-#include "oled_menu_proc_fir.h"   //菜单处理
-#include "oled_key_fir.h"   //按键扫描 按键初始化等
-#include "stm32f1xx_it.h"
-#include "shutter_timer_fir.h"
-#include "oled_encoder_fir.h"
-#include "buzzer_fir.h"
 #include "core.h"
 /* USER CODE END Includes */
 
@@ -48,7 +39,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-//u8g2_t u8g2;
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -84,7 +75,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -100,26 +90,6 @@ int main(void)
   MX_SPI2_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-//  OLED_Init();
-//  OLED_Display_On();
-//  OLED_Clear();
-//  u8g2Init(&u8g2);
-//
-//  if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10) == 0)
-//  {
-//    //如果上电时的状�?�是等待上弦
-//    shutter_state_box = shutter_state_box_trg = u8g2_GetStrWidth(&u8g2, "Waiting") * 2 + 20;
-//  } else
-//  {
-//    shutter_state_box = shutter_state_box_trg = u8g2_GetStrWidth(&u8g2, "Ready!") * 2 + 6;
-//  }
-//
-//  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8 & GPIO_PIN_9, GPIO_PIN_SET);  //快门初始�?????????????
-//
-//  u8g2_SetFont(&u8g2, u8g2_font_myfont);
-//
-//  OLED_menu_init();
-//  Encoder_Init(0);
 
   dreamViewKernelStart();
   /* USER CODE END 2 */
@@ -132,10 +102,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//    key_scan();
-//    Encoder_Analyze(Encoder_Scan());
-//    buzzer_proc(10, 40);
-//    ui_proc();
+
   }
   /* USER CODE END 3 */
 }

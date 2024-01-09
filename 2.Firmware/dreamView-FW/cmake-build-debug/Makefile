@@ -128,29 +128,1037 @@ dreamView-FW.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/build
 .PHONY : dreamView-FW.elf/fast
 
-Core/Src/buzzer_fir.obj: Core/Src/buzzer_fir.c.obj
-.PHONY : Core/Src/buzzer_fir.obj
+3rdParty/u8g2/mui.obj: 3rdParty/u8g2/mui.c.obj
+.PHONY : 3rdParty/u8g2/mui.obj
 
 # target to build an object file
-Core/Src/buzzer_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/buzzer_fir.c.obj
-.PHONY : Core/Src/buzzer_fir.c.obj
+3rdParty/u8g2/mui.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/mui.c.obj
+.PHONY : 3rdParty/u8g2/mui.c.obj
 
-Core/Src/buzzer_fir.i: Core/Src/buzzer_fir.c.i
-.PHONY : Core/Src/buzzer_fir.i
+3rdParty/u8g2/mui.i: 3rdParty/u8g2/mui.c.i
+.PHONY : 3rdParty/u8g2/mui.i
 
 # target to preprocess a source file
-Core/Src/buzzer_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/buzzer_fir.c.i
-.PHONY : Core/Src/buzzer_fir.c.i
+3rdParty/u8g2/mui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/mui.c.i
+.PHONY : 3rdParty/u8g2/mui.c.i
 
-Core/Src/buzzer_fir.s: Core/Src/buzzer_fir.c.s
-.PHONY : Core/Src/buzzer_fir.s
+3rdParty/u8g2/mui.s: 3rdParty/u8g2/mui.c.s
+.PHONY : 3rdParty/u8g2/mui.s
 
 # target to generate assembly for a file
-Core/Src/buzzer_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/buzzer_fir.c.s
-.PHONY : Core/Src/buzzer_fir.c.s
+3rdParty/u8g2/mui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/mui.c.s
+.PHONY : 3rdParty/u8g2/mui.c.s
+
+3rdParty/u8g2/mui_u8g2.obj: 3rdParty/u8g2/mui_u8g2.c.obj
+.PHONY : 3rdParty/u8g2/mui_u8g2.obj
+
+# target to build an object file
+3rdParty/u8g2/mui_u8g2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/mui_u8g2.c.obj
+.PHONY : 3rdParty/u8g2/mui_u8g2.c.obj
+
+3rdParty/u8g2/mui_u8g2.i: 3rdParty/u8g2/mui_u8g2.c.i
+.PHONY : 3rdParty/u8g2/mui_u8g2.i
+
+# target to preprocess a source file
+3rdParty/u8g2/mui_u8g2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/mui_u8g2.c.i
+.PHONY : 3rdParty/u8g2/mui_u8g2.c.i
+
+3rdParty/u8g2/mui_u8g2.s: 3rdParty/u8g2/mui_u8g2.c.s
+.PHONY : 3rdParty/u8g2/mui_u8g2.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/mui_u8g2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/mui_u8g2.c.s
+.PHONY : 3rdParty/u8g2/mui_u8g2.c.s
+
+3rdParty/u8g2/u8g2_bitmap.obj: 3rdParty/u8g2/u8g2_bitmap.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_bitmap.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_bitmap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_bitmap.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_bitmap.c.obj
+
+3rdParty/u8g2/u8g2_bitmap.i: 3rdParty/u8g2/u8g2_bitmap.c.i
+.PHONY : 3rdParty/u8g2/u8g2_bitmap.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_bitmap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_bitmap.c.i
+.PHONY : 3rdParty/u8g2/u8g2_bitmap.c.i
+
+3rdParty/u8g2/u8g2_bitmap.s: 3rdParty/u8g2/u8g2_bitmap.c.s
+.PHONY : 3rdParty/u8g2/u8g2_bitmap.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_bitmap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_bitmap.c.s
+.PHONY : 3rdParty/u8g2/u8g2_bitmap.c.s
+
+3rdParty/u8g2/u8g2_box.obj: 3rdParty/u8g2/u8g2_box.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_box.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_box.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_box.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_box.c.obj
+
+3rdParty/u8g2/u8g2_box.i: 3rdParty/u8g2/u8g2_box.c.i
+.PHONY : 3rdParty/u8g2/u8g2_box.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_box.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_box.c.i
+.PHONY : 3rdParty/u8g2/u8g2_box.c.i
+
+3rdParty/u8g2/u8g2_box.s: 3rdParty/u8g2/u8g2_box.c.s
+.PHONY : 3rdParty/u8g2/u8g2_box.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_box.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_box.c.s
+.PHONY : 3rdParty/u8g2/u8g2_box.c.s
+
+3rdParty/u8g2/u8g2_buffer.obj: 3rdParty/u8g2/u8g2_buffer.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_buffer.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_buffer.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_buffer.c.obj
+
+3rdParty/u8g2/u8g2_buffer.i: 3rdParty/u8g2/u8g2_buffer.c.i
+.PHONY : 3rdParty/u8g2/u8g2_buffer.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_buffer.c.i
+.PHONY : 3rdParty/u8g2/u8g2_buffer.c.i
+
+3rdParty/u8g2/u8g2_buffer.s: 3rdParty/u8g2/u8g2_buffer.c.s
+.PHONY : 3rdParty/u8g2/u8g2_buffer.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_buffer.c.s
+.PHONY : 3rdParty/u8g2/u8g2_buffer.c.s
+
+3rdParty/u8g2/u8g2_button.obj: 3rdParty/u8g2/u8g2_button.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_button.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_button.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_button.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_button.c.obj
+
+3rdParty/u8g2/u8g2_button.i: 3rdParty/u8g2/u8g2_button.c.i
+.PHONY : 3rdParty/u8g2/u8g2_button.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_button.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_button.c.i
+.PHONY : 3rdParty/u8g2/u8g2_button.c.i
+
+3rdParty/u8g2/u8g2_button.s: 3rdParty/u8g2/u8g2_button.c.s
+.PHONY : 3rdParty/u8g2/u8g2_button.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_button.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_button.c.s
+.PHONY : 3rdParty/u8g2/u8g2_button.c.s
+
+3rdParty/u8g2/u8g2_circle.obj: 3rdParty/u8g2/u8g2_circle.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_circle.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_circle.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_circle.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_circle.c.obj
+
+3rdParty/u8g2/u8g2_circle.i: 3rdParty/u8g2/u8g2_circle.c.i
+.PHONY : 3rdParty/u8g2/u8g2_circle.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_circle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_circle.c.i
+.PHONY : 3rdParty/u8g2/u8g2_circle.c.i
+
+3rdParty/u8g2/u8g2_circle.s: 3rdParty/u8g2/u8g2_circle.c.s
+.PHONY : 3rdParty/u8g2/u8g2_circle.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_circle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_circle.c.s
+.PHONY : 3rdParty/u8g2/u8g2_circle.c.s
+
+3rdParty/u8g2/u8g2_cleardisplay.obj: 3rdParty/u8g2/u8g2_cleardisplay.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_cleardisplay.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_cleardisplay.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_cleardisplay.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_cleardisplay.c.obj
+
+3rdParty/u8g2/u8g2_cleardisplay.i: 3rdParty/u8g2/u8g2_cleardisplay.c.i
+.PHONY : 3rdParty/u8g2/u8g2_cleardisplay.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_cleardisplay.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_cleardisplay.c.i
+.PHONY : 3rdParty/u8g2/u8g2_cleardisplay.c.i
+
+3rdParty/u8g2/u8g2_cleardisplay.s: 3rdParty/u8g2/u8g2_cleardisplay.c.s
+.PHONY : 3rdParty/u8g2/u8g2_cleardisplay.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_cleardisplay.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_cleardisplay.c.s
+.PHONY : 3rdParty/u8g2/u8g2_cleardisplay.c.s
+
+3rdParty/u8g2/u8g2_d_memory.obj: 3rdParty/u8g2/u8g2_d_memory.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_d_memory.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_d_memory.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_d_memory.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_d_memory.c.obj
+
+3rdParty/u8g2/u8g2_d_memory.i: 3rdParty/u8g2/u8g2_d_memory.c.i
+.PHONY : 3rdParty/u8g2/u8g2_d_memory.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_d_memory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_d_memory.c.i
+.PHONY : 3rdParty/u8g2/u8g2_d_memory.c.i
+
+3rdParty/u8g2/u8g2_d_memory.s: 3rdParty/u8g2/u8g2_d_memory.c.s
+.PHONY : 3rdParty/u8g2/u8g2_d_memory.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_d_memory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_d_memory.c.s
+.PHONY : 3rdParty/u8g2/u8g2_d_memory.c.s
+
+3rdParty/u8g2/u8g2_d_setup.obj: 3rdParty/u8g2/u8g2_d_setup.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_d_setup.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_d_setup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_d_setup.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_d_setup.c.obj
+
+3rdParty/u8g2/u8g2_d_setup.i: 3rdParty/u8g2/u8g2_d_setup.c.i
+.PHONY : 3rdParty/u8g2/u8g2_d_setup.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_d_setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_d_setup.c.i
+.PHONY : 3rdParty/u8g2/u8g2_d_setup.c.i
+
+3rdParty/u8g2/u8g2_d_setup.s: 3rdParty/u8g2/u8g2_d_setup.c.s
+.PHONY : 3rdParty/u8g2/u8g2_d_setup.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_d_setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_d_setup.c.s
+.PHONY : 3rdParty/u8g2/u8g2_d_setup.c.s
+
+3rdParty/u8g2/u8g2_font.obj: 3rdParty/u8g2/u8g2_font.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_font.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_font.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_font.c.obj
+
+3rdParty/u8g2/u8g2_font.i: 3rdParty/u8g2/u8g2_font.c.i
+.PHONY : 3rdParty/u8g2/u8g2_font.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_font.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font.c.i
+.PHONY : 3rdParty/u8g2/u8g2_font.c.i
+
+3rdParty/u8g2/u8g2_font.s: 3rdParty/u8g2/u8g2_font.c.s
+.PHONY : 3rdParty/u8g2/u8g2_font.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_font.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font.c.s
+.PHONY : 3rdParty/u8g2/u8g2_font.c.s
+
+3rdParty/u8g2/u8g2_font_myfont_fir.obj: 3rdParty/u8g2/u8g2_font_myfont_fir.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_font_myfont_fir.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font_myfont_fir.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.c.obj
+
+3rdParty/u8g2/u8g2_font_myfont_fir.i: 3rdParty/u8g2/u8g2_font_myfont_fir.c.i
+.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_font_myfont_fir.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font_myfont_fir.c.i
+.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.c.i
+
+3rdParty/u8g2/u8g2_font_myfont_fir.s: 3rdParty/u8g2/u8g2_font_myfont_fir.c.s
+.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_font_myfont_fir.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font_myfont_fir.c.s
+.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.c.s
+
+3rdParty/u8g2/u8g2_fonts_nessary_fir.obj: 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj
+
+3rdParty/u8g2/u8g2_fonts_nessary_fir.i: 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i
+.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i
+.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i
+
+3rdParty/u8g2/u8g2_fonts_nessary_fir.s: 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s
+.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s
+.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s
+
+3rdParty/u8g2/u8g2_hvline.obj: 3rdParty/u8g2/u8g2_hvline.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_hvline.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_hvline.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_hvline.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_hvline.c.obj
+
+3rdParty/u8g2/u8g2_hvline.i: 3rdParty/u8g2/u8g2_hvline.c.i
+.PHONY : 3rdParty/u8g2/u8g2_hvline.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_hvline.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_hvline.c.i
+.PHONY : 3rdParty/u8g2/u8g2_hvline.c.i
+
+3rdParty/u8g2/u8g2_hvline.s: 3rdParty/u8g2/u8g2_hvline.c.s
+.PHONY : 3rdParty/u8g2/u8g2_hvline.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_hvline.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_hvline.c.s
+.PHONY : 3rdParty/u8g2/u8g2_hvline.c.s
+
+3rdParty/u8g2/u8g2_input_value.obj: 3rdParty/u8g2/u8g2_input_value.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_input_value.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_input_value.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_input_value.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_input_value.c.obj
+
+3rdParty/u8g2/u8g2_input_value.i: 3rdParty/u8g2/u8g2_input_value.c.i
+.PHONY : 3rdParty/u8g2/u8g2_input_value.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_input_value.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_input_value.c.i
+.PHONY : 3rdParty/u8g2/u8g2_input_value.c.i
+
+3rdParty/u8g2/u8g2_input_value.s: 3rdParty/u8g2/u8g2_input_value.c.s
+.PHONY : 3rdParty/u8g2/u8g2_input_value.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_input_value.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_input_value.c.s
+.PHONY : 3rdParty/u8g2/u8g2_input_value.c.s
+
+3rdParty/u8g2/u8g2_intersection.obj: 3rdParty/u8g2/u8g2_intersection.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_intersection.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_intersection.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_intersection.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_intersection.c.obj
+
+3rdParty/u8g2/u8g2_intersection.i: 3rdParty/u8g2/u8g2_intersection.c.i
+.PHONY : 3rdParty/u8g2/u8g2_intersection.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_intersection.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_intersection.c.i
+.PHONY : 3rdParty/u8g2/u8g2_intersection.c.i
+
+3rdParty/u8g2/u8g2_intersection.s: 3rdParty/u8g2/u8g2_intersection.c.s
+.PHONY : 3rdParty/u8g2/u8g2_intersection.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_intersection.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_intersection.c.s
+.PHONY : 3rdParty/u8g2/u8g2_intersection.c.s
+
+3rdParty/u8g2/u8g2_kerning.obj: 3rdParty/u8g2/u8g2_kerning.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_kerning.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_kerning.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_kerning.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_kerning.c.obj
+
+3rdParty/u8g2/u8g2_kerning.i: 3rdParty/u8g2/u8g2_kerning.c.i
+.PHONY : 3rdParty/u8g2/u8g2_kerning.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_kerning.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_kerning.c.i
+.PHONY : 3rdParty/u8g2/u8g2_kerning.c.i
+
+3rdParty/u8g2/u8g2_kerning.s: 3rdParty/u8g2/u8g2_kerning.c.s
+.PHONY : 3rdParty/u8g2/u8g2_kerning.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_kerning.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_kerning.c.s
+.PHONY : 3rdParty/u8g2/u8g2_kerning.c.s
+
+3rdParty/u8g2/u8g2_line.obj: 3rdParty/u8g2/u8g2_line.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_line.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_line.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_line.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_line.c.obj
+
+3rdParty/u8g2/u8g2_line.i: 3rdParty/u8g2/u8g2_line.c.i
+.PHONY : 3rdParty/u8g2/u8g2_line.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_line.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_line.c.i
+.PHONY : 3rdParty/u8g2/u8g2_line.c.i
+
+3rdParty/u8g2/u8g2_line.s: 3rdParty/u8g2/u8g2_line.c.s
+.PHONY : 3rdParty/u8g2/u8g2_line.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_line.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_line.c.s
+.PHONY : 3rdParty/u8g2/u8g2_line.c.s
+
+3rdParty/u8g2/u8g2_ll_hvline.obj: 3rdParty/u8g2/u8g2_ll_hvline.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_ll_hvline.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_ll_hvline.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_ll_hvline.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_ll_hvline.c.obj
+
+3rdParty/u8g2/u8g2_ll_hvline.i: 3rdParty/u8g2/u8g2_ll_hvline.c.i
+.PHONY : 3rdParty/u8g2/u8g2_ll_hvline.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_ll_hvline.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_ll_hvline.c.i
+.PHONY : 3rdParty/u8g2/u8g2_ll_hvline.c.i
+
+3rdParty/u8g2/u8g2_ll_hvline.s: 3rdParty/u8g2/u8g2_ll_hvline.c.s
+.PHONY : 3rdParty/u8g2/u8g2_ll_hvline.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_ll_hvline.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_ll_hvline.c.s
+.PHONY : 3rdParty/u8g2/u8g2_ll_hvline.c.s
+
+3rdParty/u8g2/u8g2_message.obj: 3rdParty/u8g2/u8g2_message.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_message.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_message.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_message.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_message.c.obj
+
+3rdParty/u8g2/u8g2_message.i: 3rdParty/u8g2/u8g2_message.c.i
+.PHONY : 3rdParty/u8g2/u8g2_message.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_message.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_message.c.i
+.PHONY : 3rdParty/u8g2/u8g2_message.c.i
+
+3rdParty/u8g2/u8g2_message.s: 3rdParty/u8g2/u8g2_message.c.s
+.PHONY : 3rdParty/u8g2/u8g2_message.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_message.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_message.c.s
+.PHONY : 3rdParty/u8g2/u8g2_message.c.s
+
+3rdParty/u8g2/u8g2_polygon.obj: 3rdParty/u8g2/u8g2_polygon.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_polygon.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_polygon.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_polygon.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_polygon.c.obj
+
+3rdParty/u8g2/u8g2_polygon.i: 3rdParty/u8g2/u8g2_polygon.c.i
+.PHONY : 3rdParty/u8g2/u8g2_polygon.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_polygon.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_polygon.c.i
+.PHONY : 3rdParty/u8g2/u8g2_polygon.c.i
+
+3rdParty/u8g2/u8g2_polygon.s: 3rdParty/u8g2/u8g2_polygon.c.s
+.PHONY : 3rdParty/u8g2/u8g2_polygon.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_polygon.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_polygon.c.s
+.PHONY : 3rdParty/u8g2/u8g2_polygon.c.s
+
+3rdParty/u8g2/u8g2_selection_list.obj: 3rdParty/u8g2/u8g2_selection_list.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_selection_list.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_selection_list.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_selection_list.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_selection_list.c.obj
+
+3rdParty/u8g2/u8g2_selection_list.i: 3rdParty/u8g2/u8g2_selection_list.c.i
+.PHONY : 3rdParty/u8g2/u8g2_selection_list.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_selection_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_selection_list.c.i
+.PHONY : 3rdParty/u8g2/u8g2_selection_list.c.i
+
+3rdParty/u8g2/u8g2_selection_list.s: 3rdParty/u8g2/u8g2_selection_list.c.s
+.PHONY : 3rdParty/u8g2/u8g2_selection_list.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_selection_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_selection_list.c.s
+.PHONY : 3rdParty/u8g2/u8g2_selection_list.c.s
+
+3rdParty/u8g2/u8g2_setup.obj: 3rdParty/u8g2/u8g2_setup.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_setup.obj
+
+# target to build an object file
+3rdParty/u8g2/u8g2_setup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_setup.c.obj
+.PHONY : 3rdParty/u8g2/u8g2_setup.c.obj
+
+3rdParty/u8g2/u8g2_setup.i: 3rdParty/u8g2/u8g2_setup.c.i
+.PHONY : 3rdParty/u8g2/u8g2_setup.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8g2_setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_setup.c.i
+.PHONY : 3rdParty/u8g2/u8g2_setup.c.i
+
+3rdParty/u8g2/u8g2_setup.s: 3rdParty/u8g2/u8g2_setup.c.s
+.PHONY : 3rdParty/u8g2/u8g2_setup.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8g2_setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_setup.c.s
+.PHONY : 3rdParty/u8g2/u8g2_setup.c.s
+
+3rdParty/u8g2/u8log.obj: 3rdParty/u8g2/u8log.c.obj
+.PHONY : 3rdParty/u8g2/u8log.obj
+
+# target to build an object file
+3rdParty/u8g2/u8log.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log.c.obj
+.PHONY : 3rdParty/u8g2/u8log.c.obj
+
+3rdParty/u8g2/u8log.i: 3rdParty/u8g2/u8log.c.i
+.PHONY : 3rdParty/u8g2/u8log.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8log.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log.c.i
+.PHONY : 3rdParty/u8g2/u8log.c.i
+
+3rdParty/u8g2/u8log.s: 3rdParty/u8g2/u8log.c.s
+.PHONY : 3rdParty/u8g2/u8log.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8log.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log.c.s
+.PHONY : 3rdParty/u8g2/u8log.c.s
+
+3rdParty/u8g2/u8log_u8g2.obj: 3rdParty/u8g2/u8log_u8g2.c.obj
+.PHONY : 3rdParty/u8g2/u8log_u8g2.obj
+
+# target to build an object file
+3rdParty/u8g2/u8log_u8g2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log_u8g2.c.obj
+.PHONY : 3rdParty/u8g2/u8log_u8g2.c.obj
+
+3rdParty/u8g2/u8log_u8g2.i: 3rdParty/u8g2/u8log_u8g2.c.i
+.PHONY : 3rdParty/u8g2/u8log_u8g2.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8log_u8g2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log_u8g2.c.i
+.PHONY : 3rdParty/u8g2/u8log_u8g2.c.i
+
+3rdParty/u8g2/u8log_u8g2.s: 3rdParty/u8g2/u8log_u8g2.c.s
+.PHONY : 3rdParty/u8g2/u8log_u8g2.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8log_u8g2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log_u8g2.c.s
+.PHONY : 3rdParty/u8g2/u8log_u8g2.c.s
+
+3rdParty/u8g2/u8log_u8x8.obj: 3rdParty/u8g2/u8log_u8x8.c.obj
+.PHONY : 3rdParty/u8g2/u8log_u8x8.obj
+
+# target to build an object file
+3rdParty/u8g2/u8log_u8x8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log_u8x8.c.obj
+.PHONY : 3rdParty/u8g2/u8log_u8x8.c.obj
+
+3rdParty/u8g2/u8log_u8x8.i: 3rdParty/u8g2/u8log_u8x8.c.i
+.PHONY : 3rdParty/u8g2/u8log_u8x8.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8log_u8x8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log_u8x8.c.i
+.PHONY : 3rdParty/u8g2/u8log_u8x8.c.i
+
+3rdParty/u8g2/u8log_u8x8.s: 3rdParty/u8g2/u8log_u8x8.c.s
+.PHONY : 3rdParty/u8g2/u8log_u8x8.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8log_u8x8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8log_u8x8.c.s
+.PHONY : 3rdParty/u8g2/u8log_u8x8.c.s
+
+3rdParty/u8g2/u8x8_8x8.obj: 3rdParty/u8g2/u8x8_8x8.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_8x8.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_8x8.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_8x8.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_8x8.c.obj
+
+3rdParty/u8g2/u8x8_8x8.i: 3rdParty/u8g2/u8x8_8x8.c.i
+.PHONY : 3rdParty/u8g2/u8x8_8x8.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_8x8.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_8x8.c.i
+.PHONY : 3rdParty/u8g2/u8x8_8x8.c.i
+
+3rdParty/u8g2/u8x8_8x8.s: 3rdParty/u8g2/u8x8_8x8.c.s
+.PHONY : 3rdParty/u8g2/u8x8_8x8.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_8x8.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_8x8.c.s
+.PHONY : 3rdParty/u8g2/u8x8_8x8.c.s
+
+3rdParty/u8g2/u8x8_byte.obj: 3rdParty/u8g2/u8x8_byte.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_byte.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_byte.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_byte.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_byte.c.obj
+
+3rdParty/u8g2/u8x8_byte.i: 3rdParty/u8g2/u8x8_byte.c.i
+.PHONY : 3rdParty/u8g2/u8x8_byte.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_byte.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_byte.c.i
+.PHONY : 3rdParty/u8g2/u8x8_byte.c.i
+
+3rdParty/u8g2/u8x8_byte.s: 3rdParty/u8g2/u8x8_byte.c.s
+.PHONY : 3rdParty/u8g2/u8x8_byte.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_byte.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_byte.c.s
+.PHONY : 3rdParty/u8g2/u8x8_byte.c.s
+
+3rdParty/u8g2/u8x8_cad.obj: 3rdParty/u8g2/u8x8_cad.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_cad.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_cad.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_cad.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_cad.c.obj
+
+3rdParty/u8g2/u8x8_cad.i: 3rdParty/u8g2/u8x8_cad.c.i
+.PHONY : 3rdParty/u8g2/u8x8_cad.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_cad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_cad.c.i
+.PHONY : 3rdParty/u8g2/u8x8_cad.c.i
+
+3rdParty/u8g2/u8x8_cad.s: 3rdParty/u8g2/u8x8_cad.c.s
+.PHONY : 3rdParty/u8g2/u8x8_cad.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_cad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_cad.c.s
+.PHONY : 3rdParty/u8g2/u8x8_cad.c.s
+
+3rdParty/u8g2/u8x8_capture.obj: 3rdParty/u8g2/u8x8_capture.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_capture.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_capture.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_capture.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_capture.c.obj
+
+3rdParty/u8g2/u8x8_capture.i: 3rdParty/u8g2/u8x8_capture.c.i
+.PHONY : 3rdParty/u8g2/u8x8_capture.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_capture.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_capture.c.i
+.PHONY : 3rdParty/u8g2/u8x8_capture.c.i
+
+3rdParty/u8g2/u8x8_capture.s: 3rdParty/u8g2/u8x8_capture.c.s
+.PHONY : 3rdParty/u8g2/u8x8_capture.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_capture.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_capture.c.s
+.PHONY : 3rdParty/u8g2/u8x8_capture.c.s
+
+3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.obj: 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.obj
+
+3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.i: 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.i
+.PHONY : 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.i
+.PHONY : 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.i
+
+3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.s: 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.s
+.PHONY : 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.s
+.PHONY : 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c.s
+
+3rdParty/u8g2/u8x8_debounce.obj: 3rdParty/u8g2/u8x8_debounce.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_debounce.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_debounce.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_debounce.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_debounce.c.obj
+
+3rdParty/u8g2/u8x8_debounce.i: 3rdParty/u8g2/u8x8_debounce.c.i
+.PHONY : 3rdParty/u8g2/u8x8_debounce.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_debounce.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_debounce.c.i
+.PHONY : 3rdParty/u8g2/u8x8_debounce.c.i
+
+3rdParty/u8g2/u8x8_debounce.s: 3rdParty/u8g2/u8x8_debounce.c.s
+.PHONY : 3rdParty/u8g2/u8x8_debounce.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_debounce.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_debounce.c.s
+.PHONY : 3rdParty/u8g2/u8x8_debounce.c.s
+
+3rdParty/u8g2/u8x8_display.obj: 3rdParty/u8g2/u8x8_display.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_display.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_display.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_display.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_display.c.obj
+
+3rdParty/u8g2/u8x8_display.i: 3rdParty/u8g2/u8x8_display.c.i
+.PHONY : 3rdParty/u8g2/u8x8_display.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_display.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_display.c.i
+.PHONY : 3rdParty/u8g2/u8x8_display.c.i
+
+3rdParty/u8g2/u8x8_display.s: 3rdParty/u8g2/u8x8_display.c.s
+.PHONY : 3rdParty/u8g2/u8x8_display.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_display.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_display.c.s
+.PHONY : 3rdParty/u8g2/u8x8_display.c.s
+
+3rdParty/u8g2/u8x8_fonts.obj: 3rdParty/u8g2/u8x8_fonts.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_fonts.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_fonts.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_fonts.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_fonts.c.obj
+
+3rdParty/u8g2/u8x8_fonts.i: 3rdParty/u8g2/u8x8_fonts.c.i
+.PHONY : 3rdParty/u8g2/u8x8_fonts.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_fonts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_fonts.c.i
+.PHONY : 3rdParty/u8g2/u8x8_fonts.c.i
+
+3rdParty/u8g2/u8x8_fonts.s: 3rdParty/u8g2/u8x8_fonts.c.s
+.PHONY : 3rdParty/u8g2/u8x8_fonts.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_fonts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_fonts.c.s
+.PHONY : 3rdParty/u8g2/u8x8_fonts.c.s
+
+3rdParty/u8g2/u8x8_gpio.obj: 3rdParty/u8g2/u8x8_gpio.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_gpio.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_gpio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_gpio.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_gpio.c.obj
+
+3rdParty/u8g2/u8x8_gpio.i: 3rdParty/u8g2/u8x8_gpio.c.i
+.PHONY : 3rdParty/u8g2/u8x8_gpio.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_gpio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_gpio.c.i
+.PHONY : 3rdParty/u8g2/u8x8_gpio.c.i
+
+3rdParty/u8g2/u8x8_gpio.s: 3rdParty/u8g2/u8x8_gpio.c.s
+.PHONY : 3rdParty/u8g2/u8x8_gpio.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_gpio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_gpio.c.s
+.PHONY : 3rdParty/u8g2/u8x8_gpio.c.s
+
+3rdParty/u8g2/u8x8_input_value.obj: 3rdParty/u8g2/u8x8_input_value.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_input_value.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_input_value.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_input_value.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_input_value.c.obj
+
+3rdParty/u8g2/u8x8_input_value.i: 3rdParty/u8g2/u8x8_input_value.c.i
+.PHONY : 3rdParty/u8g2/u8x8_input_value.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_input_value.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_input_value.c.i
+.PHONY : 3rdParty/u8g2/u8x8_input_value.c.i
+
+3rdParty/u8g2/u8x8_input_value.s: 3rdParty/u8g2/u8x8_input_value.c.s
+.PHONY : 3rdParty/u8g2/u8x8_input_value.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_input_value.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_input_value.c.s
+.PHONY : 3rdParty/u8g2/u8x8_input_value.c.s
+
+3rdParty/u8g2/u8x8_message.obj: 3rdParty/u8g2/u8x8_message.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_message.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_message.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_message.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_message.c.obj
+
+3rdParty/u8g2/u8x8_message.i: 3rdParty/u8g2/u8x8_message.c.i
+.PHONY : 3rdParty/u8g2/u8x8_message.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_message.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_message.c.i
+.PHONY : 3rdParty/u8g2/u8x8_message.c.i
+
+3rdParty/u8g2/u8x8_message.s: 3rdParty/u8g2/u8x8_message.c.s
+.PHONY : 3rdParty/u8g2/u8x8_message.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_message.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_message.c.s
+.PHONY : 3rdParty/u8g2/u8x8_message.c.s
+
+3rdParty/u8g2/u8x8_selection_list.obj: 3rdParty/u8g2/u8x8_selection_list.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_selection_list.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_selection_list.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_selection_list.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_selection_list.c.obj
+
+3rdParty/u8g2/u8x8_selection_list.i: 3rdParty/u8g2/u8x8_selection_list.c.i
+.PHONY : 3rdParty/u8g2/u8x8_selection_list.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_selection_list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_selection_list.c.i
+.PHONY : 3rdParty/u8g2/u8x8_selection_list.c.i
+
+3rdParty/u8g2/u8x8_selection_list.s: 3rdParty/u8g2/u8x8_selection_list.c.s
+.PHONY : 3rdParty/u8g2/u8x8_selection_list.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_selection_list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_selection_list.c.s
+.PHONY : 3rdParty/u8g2/u8x8_selection_list.c.s
+
+3rdParty/u8g2/u8x8_setup.obj: 3rdParty/u8g2/u8x8_setup.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_setup.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_setup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_setup.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_setup.c.obj
+
+3rdParty/u8g2/u8x8_setup.i: 3rdParty/u8g2/u8x8_setup.c.i
+.PHONY : 3rdParty/u8g2/u8x8_setup.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_setup.c.i
+.PHONY : 3rdParty/u8g2/u8x8_setup.c.i
+
+3rdParty/u8g2/u8x8_setup.s: 3rdParty/u8g2/u8x8_setup.c.s
+.PHONY : 3rdParty/u8g2/u8x8_setup.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_setup.c.s
+.PHONY : 3rdParty/u8g2/u8x8_setup.c.s
+
+3rdParty/u8g2/u8x8_string.obj: 3rdParty/u8g2/u8x8_string.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_string.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_string.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_string.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_string.c.obj
+
+3rdParty/u8g2/u8x8_string.i: 3rdParty/u8g2/u8x8_string.c.i
+.PHONY : 3rdParty/u8g2/u8x8_string.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_string.c.i
+.PHONY : 3rdParty/u8g2/u8x8_string.c.i
+
+3rdParty/u8g2/u8x8_string.s: 3rdParty/u8g2/u8x8_string.c.s
+.PHONY : 3rdParty/u8g2/u8x8_string.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_string.c.s
+.PHONY : 3rdParty/u8g2/u8x8_string.c.s
+
+3rdParty/u8g2/u8x8_u16toa.obj: 3rdParty/u8g2/u8x8_u16toa.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_u16toa.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_u16toa.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_u16toa.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_u16toa.c.obj
+
+3rdParty/u8g2/u8x8_u16toa.i: 3rdParty/u8g2/u8x8_u16toa.c.i
+.PHONY : 3rdParty/u8g2/u8x8_u16toa.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_u16toa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_u16toa.c.i
+.PHONY : 3rdParty/u8g2/u8x8_u16toa.c.i
+
+3rdParty/u8g2/u8x8_u16toa.s: 3rdParty/u8g2/u8x8_u16toa.c.s
+.PHONY : 3rdParty/u8g2/u8x8_u16toa.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_u16toa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_u16toa.c.s
+.PHONY : 3rdParty/u8g2/u8x8_u16toa.c.s
+
+3rdParty/u8g2/u8x8_u8toa.obj: 3rdParty/u8g2/u8x8_u8toa.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_u8toa.obj
+
+# target to build an object file
+3rdParty/u8g2/u8x8_u8toa.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_u8toa.c.obj
+.PHONY : 3rdParty/u8g2/u8x8_u8toa.c.obj
+
+3rdParty/u8g2/u8x8_u8toa.i: 3rdParty/u8g2/u8x8_u8toa.c.i
+.PHONY : 3rdParty/u8g2/u8x8_u8toa.i
+
+# target to preprocess a source file
+3rdParty/u8g2/u8x8_u8toa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_u8toa.c.i
+.PHONY : 3rdParty/u8g2/u8x8_u8toa.c.i
+
+3rdParty/u8g2/u8x8_u8toa.s: 3rdParty/u8g2/u8x8_u8toa.c.s
+.PHONY : 3rdParty/u8g2/u8x8_u8toa.s
+
+# target to generate assembly for a file
+3rdParty/u8g2/u8x8_u8toa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8x8_u8toa.c.s
+.PHONY : 3rdParty/u8g2/u8x8_u8toa.c.s
+
+Core/Src/buzzer.obj: Core/Src/buzzer.c.obj
+.PHONY : Core/Src/buzzer.obj
+
+# target to build an object file
+Core/Src/buzzer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/buzzer.c.obj
+.PHONY : Core/Src/buzzer.c.obj
+
+Core/Src/buzzer.i: Core/Src/buzzer.c.i
+.PHONY : Core/Src/buzzer.i
+
+# target to preprocess a source file
+Core/Src/buzzer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/buzzer.c.i
+.PHONY : Core/Src/buzzer.c.i
+
+Core/Src/buzzer.s: Core/Src/buzzer.c.s
+.PHONY : Core/Src/buzzer.s
+
+# target to generate assembly for a file
+Core/Src/buzzer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/buzzer.c.s
+.PHONY : Core/Src/buzzer.c.s
 
 Core/Src/core.obj: Core/Src/core.cpp.obj
 .PHONY : Core/Src/core.obj
@@ -224,6 +1232,30 @@ Core/Src/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/gpio.c.s
 .PHONY : Core/Src/gpio.c.s
 
+Core/Src/key.obj: Core/Src/key.c.obj
+.PHONY : Core/Src/key.obj
+
+# target to build an object file
+Core/Src/key.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/key.c.obj
+.PHONY : Core/Src/key.c.obj
+
+Core/Src/key.i: Core/Src/key.c.i
+.PHONY : Core/Src/key.i
+
+# target to preprocess a source file
+Core/Src/key.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/key.c.i
+.PHONY : Core/Src/key.c.i
+
+Core/Src/key.s: Core/Src/key.c.s
+.PHONY : Core/Src/key.s
+
+# target to generate assembly for a file
+Core/Src/key.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/key.c.s
+.PHONY : Core/Src/key.c.s
+
 Core/Src/main.obj: Core/Src/main.c.obj
 .PHONY : Core/Src/main.obj
 
@@ -272,245 +1304,29 @@ Core/Src/menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/menu.cpp.s
 .PHONY : Core/Src/menu.cpp.s
 
-Core/Src/mui.obj: Core/Src/mui.c.obj
-.PHONY : Core/Src/mui.obj
+Core/Src/oled.obj: Core/Src/oled.c.obj
+.PHONY : Core/Src/oled.obj
 
 # target to build an object file
-Core/Src/mui.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/mui.c.obj
-.PHONY : Core/Src/mui.c.obj
+Core/Src/oled.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled.c.obj
+.PHONY : Core/Src/oled.c.obj
 
-Core/Src/mui.i: Core/Src/mui.c.i
-.PHONY : Core/Src/mui.i
-
-# target to preprocess a source file
-Core/Src/mui.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/mui.c.i
-.PHONY : Core/Src/mui.c.i
-
-Core/Src/mui.s: Core/Src/mui.c.s
-.PHONY : Core/Src/mui.s
-
-# target to generate assembly for a file
-Core/Src/mui.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/mui.c.s
-.PHONY : Core/Src/mui.c.s
-
-Core/Src/mui_u8g2.obj: Core/Src/mui_u8g2.c.obj
-.PHONY : Core/Src/mui_u8g2.obj
-
-# target to build an object file
-Core/Src/mui_u8g2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/mui_u8g2.c.obj
-.PHONY : Core/Src/mui_u8g2.c.obj
-
-Core/Src/mui_u8g2.i: Core/Src/mui_u8g2.c.i
-.PHONY : Core/Src/mui_u8g2.i
+Core/Src/oled.i: Core/Src/oled.c.i
+.PHONY : Core/Src/oled.i
 
 # target to preprocess a source file
-Core/Src/mui_u8g2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/mui_u8g2.c.i
-.PHONY : Core/Src/mui_u8g2.c.i
+Core/Src/oled.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled.c.i
+.PHONY : Core/Src/oled.c.i
 
-Core/Src/mui_u8g2.s: Core/Src/mui_u8g2.c.s
-.PHONY : Core/Src/mui_u8g2.s
-
-# target to generate assembly for a file
-Core/Src/mui_u8g2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/mui_u8g2.c.s
-.PHONY : Core/Src/mui_u8g2.c.s
-
-Core/Src/oled_encoder_fir.obj: Core/Src/oled_encoder_fir.c.obj
-.PHONY : Core/Src/oled_encoder_fir.obj
-
-# target to build an object file
-Core/Src/oled_encoder_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_encoder_fir.c.obj
-.PHONY : Core/Src/oled_encoder_fir.c.obj
-
-Core/Src/oled_encoder_fir.i: Core/Src/oled_encoder_fir.c.i
-.PHONY : Core/Src/oled_encoder_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_encoder_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_encoder_fir.c.i
-.PHONY : Core/Src/oled_encoder_fir.c.i
-
-Core/Src/oled_encoder_fir.s: Core/Src/oled_encoder_fir.c.s
-.PHONY : Core/Src/oled_encoder_fir.s
+Core/Src/oled.s: Core/Src/oled.c.s
+.PHONY : Core/Src/oled.s
 
 # target to generate assembly for a file
-Core/Src/oled_encoder_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_encoder_fir.c.s
-.PHONY : Core/Src/oled_encoder_fir.c.s
-
-Core/Src/oled_key_fir.obj: Core/Src/oled_key_fir.c.obj
-.PHONY : Core/Src/oled_key_fir.obj
-
-# target to build an object file
-Core/Src/oled_key_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_key_fir.c.obj
-.PHONY : Core/Src/oled_key_fir.c.obj
-
-Core/Src/oled_key_fir.i: Core/Src/oled_key_fir.c.i
-.PHONY : Core/Src/oled_key_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_key_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_key_fir.c.i
-.PHONY : Core/Src/oled_key_fir.c.i
-
-Core/Src/oled_key_fir.s: Core/Src/oled_key_fir.c.s
-.PHONY : Core/Src/oled_key_fir.s
-
-# target to generate assembly for a file
-Core/Src/oled_key_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_key_fir.c.s
-.PHONY : Core/Src/oled_key_fir.c.s
-
-Core/Src/oled_menu_fir.obj: Core/Src/oled_menu_fir.c.obj
-.PHONY : Core/Src/oled_menu_fir.obj
-
-# target to build an object file
-Core/Src/oled_menu_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_fir.c.obj
-.PHONY : Core/Src/oled_menu_fir.c.obj
-
-Core/Src/oled_menu_fir.i: Core/Src/oled_menu_fir.c.i
-.PHONY : Core/Src/oled_menu_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_menu_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_fir.c.i
-.PHONY : Core/Src/oled_menu_fir.c.i
-
-Core/Src/oled_menu_fir.s: Core/Src/oled_menu_fir.c.s
-.PHONY : Core/Src/oled_menu_fir.s
-
-# target to generate assembly for a file
-Core/Src/oled_menu_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_fir.c.s
-.PHONY : Core/Src/oled_menu_fir.c.s
-
-Core/Src/oled_menu_init_fir.obj: Core/Src/oled_menu_init_fir.c.obj
-.PHONY : Core/Src/oled_menu_init_fir.obj
-
-# target to build an object file
-Core/Src/oled_menu_init_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_init_fir.c.obj
-.PHONY : Core/Src/oled_menu_init_fir.c.obj
-
-Core/Src/oled_menu_init_fir.i: Core/Src/oled_menu_init_fir.c.i
-.PHONY : Core/Src/oled_menu_init_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_menu_init_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_init_fir.c.i
-.PHONY : Core/Src/oled_menu_init_fir.c.i
-
-Core/Src/oled_menu_init_fir.s: Core/Src/oled_menu_init_fir.c.s
-.PHONY : Core/Src/oled_menu_init_fir.s
-
-# target to generate assembly for a file
-Core/Src/oled_menu_init_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_init_fir.c.s
-.PHONY : Core/Src/oled_menu_init_fir.c.s
-
-Core/Src/oled_menu_proc_fir.obj: Core/Src/oled_menu_proc_fir.c.obj
-.PHONY : Core/Src/oled_menu_proc_fir.obj
-
-# target to build an object file
-Core/Src/oled_menu_proc_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_proc_fir.c.obj
-.PHONY : Core/Src/oled_menu_proc_fir.c.obj
-
-Core/Src/oled_menu_proc_fir.i: Core/Src/oled_menu_proc_fir.c.i
-.PHONY : Core/Src/oled_menu_proc_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_menu_proc_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_proc_fir.c.i
-.PHONY : Core/Src/oled_menu_proc_fir.c.i
-
-Core/Src/oled_menu_proc_fir.s: Core/Src/oled_menu_proc_fir.c.s
-.PHONY : Core/Src/oled_menu_proc_fir.s
-
-# target to generate assembly for a file
-Core/Src/oled_menu_proc_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_proc_fir.c.s
-.PHONY : Core/Src/oled_menu_proc_fir.c.s
-
-Core/Src/oled_menu_show_fir.obj: Core/Src/oled_menu_show_fir.c.obj
-.PHONY : Core/Src/oled_menu_show_fir.obj
-
-# target to build an object file
-Core/Src/oled_menu_show_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_show_fir.c.obj
-.PHONY : Core/Src/oled_menu_show_fir.c.obj
-
-Core/Src/oled_menu_show_fir.i: Core/Src/oled_menu_show_fir.c.i
-.PHONY : Core/Src/oled_menu_show_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_menu_show_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_show_fir.c.i
-.PHONY : Core/Src/oled_menu_show_fir.c.i
-
-Core/Src/oled_menu_show_fir.s: Core/Src/oled_menu_show_fir.c.s
-.PHONY : Core/Src/oled_menu_show_fir.s
-
-# target to generate assembly for a file
-Core/Src/oled_menu_show_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_menu_show_fir.c.s
-.PHONY : Core/Src/oled_menu_show_fir.c.s
-
-Core/Src/oled_setup_u8g2_fir.obj: Core/Src/oled_setup_u8g2_fir.c.obj
-.PHONY : Core/Src/oled_setup_u8g2_fir.obj
-
-# target to build an object file
-Core/Src/oled_setup_u8g2_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_setup_u8g2_fir.c.obj
-.PHONY : Core/Src/oled_setup_u8g2_fir.c.obj
-
-Core/Src/oled_setup_u8g2_fir.i: Core/Src/oled_setup_u8g2_fir.c.i
-.PHONY : Core/Src/oled_setup_u8g2_fir.i
-
-# target to preprocess a source file
-Core/Src/oled_setup_u8g2_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_setup_u8g2_fir.c.i
-.PHONY : Core/Src/oled_setup_u8g2_fir.c.i
-
-Core/Src/oled_setup_u8g2_fir.s: Core/Src/oled_setup_u8g2_fir.c.s
-.PHONY : Core/Src/oled_setup_u8g2_fir.s
-
-# target to generate assembly for a file
-Core/Src/oled_setup_u8g2_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled_setup_u8g2_fir.c.s
-.PHONY : Core/Src/oled_setup_u8g2_fir.c.s
-
-Core/Src/shutter_timer_fir.obj: Core/Src/shutter_timer_fir.c.obj
-.PHONY : Core/Src/shutter_timer_fir.obj
-
-# target to build an object file
-Core/Src/shutter_timer_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/shutter_timer_fir.c.obj
-.PHONY : Core/Src/shutter_timer_fir.c.obj
-
-Core/Src/shutter_timer_fir.i: Core/Src/shutter_timer_fir.c.i
-.PHONY : Core/Src/shutter_timer_fir.i
-
-# target to preprocess a source file
-Core/Src/shutter_timer_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/shutter_timer_fir.c.i
-.PHONY : Core/Src/shutter_timer_fir.c.i
-
-Core/Src/shutter_timer_fir.s: Core/Src/shutter_timer_fir.c.s
-.PHONY : Core/Src/shutter_timer_fir.s
-
-# target to generate assembly for a file
-Core/Src/shutter_timer_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/shutter_timer_fir.c.s
-.PHONY : Core/Src/shutter_timer_fir.c.s
+Core/Src/oled.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/oled.c.s
+.PHONY : Core/Src/oled.c.s
 
 Core/Src/spi.obj: Core/Src/spi.c.obj
 .PHONY : Core/Src/spi.obj
@@ -655,966 +1471,6 @@ Core/Src/tim.s: Core/Src/tim.c.s
 Core/Src/tim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/tim.c.s
 .PHONY : Core/Src/tim.c.s
-
-Core/Src/u8g2_bitmap.obj: Core/Src/u8g2_bitmap.c.obj
-.PHONY : Core/Src/u8g2_bitmap.obj
-
-# target to build an object file
-Core/Src/u8g2_bitmap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_bitmap.c.obj
-.PHONY : Core/Src/u8g2_bitmap.c.obj
-
-Core/Src/u8g2_bitmap.i: Core/Src/u8g2_bitmap.c.i
-.PHONY : Core/Src/u8g2_bitmap.i
-
-# target to preprocess a source file
-Core/Src/u8g2_bitmap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_bitmap.c.i
-.PHONY : Core/Src/u8g2_bitmap.c.i
-
-Core/Src/u8g2_bitmap.s: Core/Src/u8g2_bitmap.c.s
-.PHONY : Core/Src/u8g2_bitmap.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_bitmap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_bitmap.c.s
-.PHONY : Core/Src/u8g2_bitmap.c.s
-
-Core/Src/u8g2_box.obj: Core/Src/u8g2_box.c.obj
-.PHONY : Core/Src/u8g2_box.obj
-
-# target to build an object file
-Core/Src/u8g2_box.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_box.c.obj
-.PHONY : Core/Src/u8g2_box.c.obj
-
-Core/Src/u8g2_box.i: Core/Src/u8g2_box.c.i
-.PHONY : Core/Src/u8g2_box.i
-
-# target to preprocess a source file
-Core/Src/u8g2_box.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_box.c.i
-.PHONY : Core/Src/u8g2_box.c.i
-
-Core/Src/u8g2_box.s: Core/Src/u8g2_box.c.s
-.PHONY : Core/Src/u8g2_box.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_box.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_box.c.s
-.PHONY : Core/Src/u8g2_box.c.s
-
-Core/Src/u8g2_buffer.obj: Core/Src/u8g2_buffer.c.obj
-.PHONY : Core/Src/u8g2_buffer.obj
-
-# target to build an object file
-Core/Src/u8g2_buffer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_buffer.c.obj
-.PHONY : Core/Src/u8g2_buffer.c.obj
-
-Core/Src/u8g2_buffer.i: Core/Src/u8g2_buffer.c.i
-.PHONY : Core/Src/u8g2_buffer.i
-
-# target to preprocess a source file
-Core/Src/u8g2_buffer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_buffer.c.i
-.PHONY : Core/Src/u8g2_buffer.c.i
-
-Core/Src/u8g2_buffer.s: Core/Src/u8g2_buffer.c.s
-.PHONY : Core/Src/u8g2_buffer.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_buffer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_buffer.c.s
-.PHONY : Core/Src/u8g2_buffer.c.s
-
-Core/Src/u8g2_button.obj: Core/Src/u8g2_button.c.obj
-.PHONY : Core/Src/u8g2_button.obj
-
-# target to build an object file
-Core/Src/u8g2_button.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_button.c.obj
-.PHONY : Core/Src/u8g2_button.c.obj
-
-Core/Src/u8g2_button.i: Core/Src/u8g2_button.c.i
-.PHONY : Core/Src/u8g2_button.i
-
-# target to preprocess a source file
-Core/Src/u8g2_button.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_button.c.i
-.PHONY : Core/Src/u8g2_button.c.i
-
-Core/Src/u8g2_button.s: Core/Src/u8g2_button.c.s
-.PHONY : Core/Src/u8g2_button.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_button.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_button.c.s
-.PHONY : Core/Src/u8g2_button.c.s
-
-Core/Src/u8g2_circle.obj: Core/Src/u8g2_circle.c.obj
-.PHONY : Core/Src/u8g2_circle.obj
-
-# target to build an object file
-Core/Src/u8g2_circle.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_circle.c.obj
-.PHONY : Core/Src/u8g2_circle.c.obj
-
-Core/Src/u8g2_circle.i: Core/Src/u8g2_circle.c.i
-.PHONY : Core/Src/u8g2_circle.i
-
-# target to preprocess a source file
-Core/Src/u8g2_circle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_circle.c.i
-.PHONY : Core/Src/u8g2_circle.c.i
-
-Core/Src/u8g2_circle.s: Core/Src/u8g2_circle.c.s
-.PHONY : Core/Src/u8g2_circle.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_circle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_circle.c.s
-.PHONY : Core/Src/u8g2_circle.c.s
-
-Core/Src/u8g2_cleardisplay.obj: Core/Src/u8g2_cleardisplay.c.obj
-.PHONY : Core/Src/u8g2_cleardisplay.obj
-
-# target to build an object file
-Core/Src/u8g2_cleardisplay.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_cleardisplay.c.obj
-.PHONY : Core/Src/u8g2_cleardisplay.c.obj
-
-Core/Src/u8g2_cleardisplay.i: Core/Src/u8g2_cleardisplay.c.i
-.PHONY : Core/Src/u8g2_cleardisplay.i
-
-# target to preprocess a source file
-Core/Src/u8g2_cleardisplay.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_cleardisplay.c.i
-.PHONY : Core/Src/u8g2_cleardisplay.c.i
-
-Core/Src/u8g2_cleardisplay.s: Core/Src/u8g2_cleardisplay.c.s
-.PHONY : Core/Src/u8g2_cleardisplay.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_cleardisplay.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_cleardisplay.c.s
-.PHONY : Core/Src/u8g2_cleardisplay.c.s
-
-Core/Src/u8g2_d_memory.obj: Core/Src/u8g2_d_memory.c.obj
-.PHONY : Core/Src/u8g2_d_memory.obj
-
-# target to build an object file
-Core/Src/u8g2_d_memory.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_d_memory.c.obj
-.PHONY : Core/Src/u8g2_d_memory.c.obj
-
-Core/Src/u8g2_d_memory.i: Core/Src/u8g2_d_memory.c.i
-.PHONY : Core/Src/u8g2_d_memory.i
-
-# target to preprocess a source file
-Core/Src/u8g2_d_memory.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_d_memory.c.i
-.PHONY : Core/Src/u8g2_d_memory.c.i
-
-Core/Src/u8g2_d_memory.s: Core/Src/u8g2_d_memory.c.s
-.PHONY : Core/Src/u8g2_d_memory.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_d_memory.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_d_memory.c.s
-.PHONY : Core/Src/u8g2_d_memory.c.s
-
-Core/Src/u8g2_d_setup.obj: Core/Src/u8g2_d_setup.c.obj
-.PHONY : Core/Src/u8g2_d_setup.obj
-
-# target to build an object file
-Core/Src/u8g2_d_setup.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_d_setup.c.obj
-.PHONY : Core/Src/u8g2_d_setup.c.obj
-
-Core/Src/u8g2_d_setup.i: Core/Src/u8g2_d_setup.c.i
-.PHONY : Core/Src/u8g2_d_setup.i
-
-# target to preprocess a source file
-Core/Src/u8g2_d_setup.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_d_setup.c.i
-.PHONY : Core/Src/u8g2_d_setup.c.i
-
-Core/Src/u8g2_d_setup.s: Core/Src/u8g2_d_setup.c.s
-.PHONY : Core/Src/u8g2_d_setup.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_d_setup.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_d_setup.c.s
-.PHONY : Core/Src/u8g2_d_setup.c.s
-
-Core/Src/u8g2_font.obj: Core/Src/u8g2_font.c.obj
-.PHONY : Core/Src/u8g2_font.obj
-
-# target to build an object file
-Core/Src/u8g2_font.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_font.c.obj
-.PHONY : Core/Src/u8g2_font.c.obj
-
-Core/Src/u8g2_font.i: Core/Src/u8g2_font.c.i
-.PHONY : Core/Src/u8g2_font.i
-
-# target to preprocess a source file
-Core/Src/u8g2_font.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_font.c.i
-.PHONY : Core/Src/u8g2_font.c.i
-
-Core/Src/u8g2_font.s: Core/Src/u8g2_font.c.s
-.PHONY : Core/Src/u8g2_font.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_font.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_font.c.s
-.PHONY : Core/Src/u8g2_font.c.s
-
-Core/Src/u8g2_font_myfont_fir.obj: Core/Src/u8g2_font_myfont_fir.c.obj
-.PHONY : Core/Src/u8g2_font_myfont_fir.obj
-
-# target to build an object file
-Core/Src/u8g2_font_myfont_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_font_myfont_fir.c.obj
-.PHONY : Core/Src/u8g2_font_myfont_fir.c.obj
-
-Core/Src/u8g2_font_myfont_fir.i: Core/Src/u8g2_font_myfont_fir.c.i
-.PHONY : Core/Src/u8g2_font_myfont_fir.i
-
-# target to preprocess a source file
-Core/Src/u8g2_font_myfont_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_font_myfont_fir.c.i
-.PHONY : Core/Src/u8g2_font_myfont_fir.c.i
-
-Core/Src/u8g2_font_myfont_fir.s: Core/Src/u8g2_font_myfont_fir.c.s
-.PHONY : Core/Src/u8g2_font_myfont_fir.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_font_myfont_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_font_myfont_fir.c.s
-.PHONY : Core/Src/u8g2_font_myfont_fir.c.s
-
-Core/Src/u8g2_fonts_nessary_fir.obj: Core/Src/u8g2_fonts_nessary_fir.c.obj
-.PHONY : Core/Src/u8g2_fonts_nessary_fir.obj
-
-# target to build an object file
-Core/Src/u8g2_fonts_nessary_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_fonts_nessary_fir.c.obj
-.PHONY : Core/Src/u8g2_fonts_nessary_fir.c.obj
-
-Core/Src/u8g2_fonts_nessary_fir.i: Core/Src/u8g2_fonts_nessary_fir.c.i
-.PHONY : Core/Src/u8g2_fonts_nessary_fir.i
-
-# target to preprocess a source file
-Core/Src/u8g2_fonts_nessary_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_fonts_nessary_fir.c.i
-.PHONY : Core/Src/u8g2_fonts_nessary_fir.c.i
-
-Core/Src/u8g2_fonts_nessary_fir.s: Core/Src/u8g2_fonts_nessary_fir.c.s
-.PHONY : Core/Src/u8g2_fonts_nessary_fir.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_fonts_nessary_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_fonts_nessary_fir.c.s
-.PHONY : Core/Src/u8g2_fonts_nessary_fir.c.s
-
-Core/Src/u8g2_hvline.obj: Core/Src/u8g2_hvline.c.obj
-.PHONY : Core/Src/u8g2_hvline.obj
-
-# target to build an object file
-Core/Src/u8g2_hvline.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_hvline.c.obj
-.PHONY : Core/Src/u8g2_hvline.c.obj
-
-Core/Src/u8g2_hvline.i: Core/Src/u8g2_hvline.c.i
-.PHONY : Core/Src/u8g2_hvline.i
-
-# target to preprocess a source file
-Core/Src/u8g2_hvline.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_hvline.c.i
-.PHONY : Core/Src/u8g2_hvline.c.i
-
-Core/Src/u8g2_hvline.s: Core/Src/u8g2_hvline.c.s
-.PHONY : Core/Src/u8g2_hvline.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_hvline.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_hvline.c.s
-.PHONY : Core/Src/u8g2_hvline.c.s
-
-Core/Src/u8g2_input_value.obj: Core/Src/u8g2_input_value.c.obj
-.PHONY : Core/Src/u8g2_input_value.obj
-
-# target to build an object file
-Core/Src/u8g2_input_value.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_input_value.c.obj
-.PHONY : Core/Src/u8g2_input_value.c.obj
-
-Core/Src/u8g2_input_value.i: Core/Src/u8g2_input_value.c.i
-.PHONY : Core/Src/u8g2_input_value.i
-
-# target to preprocess a source file
-Core/Src/u8g2_input_value.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_input_value.c.i
-.PHONY : Core/Src/u8g2_input_value.c.i
-
-Core/Src/u8g2_input_value.s: Core/Src/u8g2_input_value.c.s
-.PHONY : Core/Src/u8g2_input_value.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_input_value.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_input_value.c.s
-.PHONY : Core/Src/u8g2_input_value.c.s
-
-Core/Src/u8g2_intersection.obj: Core/Src/u8g2_intersection.c.obj
-.PHONY : Core/Src/u8g2_intersection.obj
-
-# target to build an object file
-Core/Src/u8g2_intersection.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_intersection.c.obj
-.PHONY : Core/Src/u8g2_intersection.c.obj
-
-Core/Src/u8g2_intersection.i: Core/Src/u8g2_intersection.c.i
-.PHONY : Core/Src/u8g2_intersection.i
-
-# target to preprocess a source file
-Core/Src/u8g2_intersection.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_intersection.c.i
-.PHONY : Core/Src/u8g2_intersection.c.i
-
-Core/Src/u8g2_intersection.s: Core/Src/u8g2_intersection.c.s
-.PHONY : Core/Src/u8g2_intersection.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_intersection.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_intersection.c.s
-.PHONY : Core/Src/u8g2_intersection.c.s
-
-Core/Src/u8g2_kerning.obj: Core/Src/u8g2_kerning.c.obj
-.PHONY : Core/Src/u8g2_kerning.obj
-
-# target to build an object file
-Core/Src/u8g2_kerning.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_kerning.c.obj
-.PHONY : Core/Src/u8g2_kerning.c.obj
-
-Core/Src/u8g2_kerning.i: Core/Src/u8g2_kerning.c.i
-.PHONY : Core/Src/u8g2_kerning.i
-
-# target to preprocess a source file
-Core/Src/u8g2_kerning.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_kerning.c.i
-.PHONY : Core/Src/u8g2_kerning.c.i
-
-Core/Src/u8g2_kerning.s: Core/Src/u8g2_kerning.c.s
-.PHONY : Core/Src/u8g2_kerning.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_kerning.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_kerning.c.s
-.PHONY : Core/Src/u8g2_kerning.c.s
-
-Core/Src/u8g2_line.obj: Core/Src/u8g2_line.c.obj
-.PHONY : Core/Src/u8g2_line.obj
-
-# target to build an object file
-Core/Src/u8g2_line.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_line.c.obj
-.PHONY : Core/Src/u8g2_line.c.obj
-
-Core/Src/u8g2_line.i: Core/Src/u8g2_line.c.i
-.PHONY : Core/Src/u8g2_line.i
-
-# target to preprocess a source file
-Core/Src/u8g2_line.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_line.c.i
-.PHONY : Core/Src/u8g2_line.c.i
-
-Core/Src/u8g2_line.s: Core/Src/u8g2_line.c.s
-.PHONY : Core/Src/u8g2_line.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_line.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_line.c.s
-.PHONY : Core/Src/u8g2_line.c.s
-
-Core/Src/u8g2_ll_hvline.obj: Core/Src/u8g2_ll_hvline.c.obj
-.PHONY : Core/Src/u8g2_ll_hvline.obj
-
-# target to build an object file
-Core/Src/u8g2_ll_hvline.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_ll_hvline.c.obj
-.PHONY : Core/Src/u8g2_ll_hvline.c.obj
-
-Core/Src/u8g2_ll_hvline.i: Core/Src/u8g2_ll_hvline.c.i
-.PHONY : Core/Src/u8g2_ll_hvline.i
-
-# target to preprocess a source file
-Core/Src/u8g2_ll_hvline.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_ll_hvline.c.i
-.PHONY : Core/Src/u8g2_ll_hvline.c.i
-
-Core/Src/u8g2_ll_hvline.s: Core/Src/u8g2_ll_hvline.c.s
-.PHONY : Core/Src/u8g2_ll_hvline.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_ll_hvline.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_ll_hvline.c.s
-.PHONY : Core/Src/u8g2_ll_hvline.c.s
-
-Core/Src/u8g2_message.obj: Core/Src/u8g2_message.c.obj
-.PHONY : Core/Src/u8g2_message.obj
-
-# target to build an object file
-Core/Src/u8g2_message.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_message.c.obj
-.PHONY : Core/Src/u8g2_message.c.obj
-
-Core/Src/u8g2_message.i: Core/Src/u8g2_message.c.i
-.PHONY : Core/Src/u8g2_message.i
-
-# target to preprocess a source file
-Core/Src/u8g2_message.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_message.c.i
-.PHONY : Core/Src/u8g2_message.c.i
-
-Core/Src/u8g2_message.s: Core/Src/u8g2_message.c.s
-.PHONY : Core/Src/u8g2_message.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_message.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_message.c.s
-.PHONY : Core/Src/u8g2_message.c.s
-
-Core/Src/u8g2_polygon.obj: Core/Src/u8g2_polygon.c.obj
-.PHONY : Core/Src/u8g2_polygon.obj
-
-# target to build an object file
-Core/Src/u8g2_polygon.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_polygon.c.obj
-.PHONY : Core/Src/u8g2_polygon.c.obj
-
-Core/Src/u8g2_polygon.i: Core/Src/u8g2_polygon.c.i
-.PHONY : Core/Src/u8g2_polygon.i
-
-# target to preprocess a source file
-Core/Src/u8g2_polygon.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_polygon.c.i
-.PHONY : Core/Src/u8g2_polygon.c.i
-
-Core/Src/u8g2_polygon.s: Core/Src/u8g2_polygon.c.s
-.PHONY : Core/Src/u8g2_polygon.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_polygon.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_polygon.c.s
-.PHONY : Core/Src/u8g2_polygon.c.s
-
-Core/Src/u8g2_selection_list.obj: Core/Src/u8g2_selection_list.c.obj
-.PHONY : Core/Src/u8g2_selection_list.obj
-
-# target to build an object file
-Core/Src/u8g2_selection_list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_selection_list.c.obj
-.PHONY : Core/Src/u8g2_selection_list.c.obj
-
-Core/Src/u8g2_selection_list.i: Core/Src/u8g2_selection_list.c.i
-.PHONY : Core/Src/u8g2_selection_list.i
-
-# target to preprocess a source file
-Core/Src/u8g2_selection_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_selection_list.c.i
-.PHONY : Core/Src/u8g2_selection_list.c.i
-
-Core/Src/u8g2_selection_list.s: Core/Src/u8g2_selection_list.c.s
-.PHONY : Core/Src/u8g2_selection_list.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_selection_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_selection_list.c.s
-.PHONY : Core/Src/u8g2_selection_list.c.s
-
-Core/Src/u8g2_setup.obj: Core/Src/u8g2_setup.c.obj
-.PHONY : Core/Src/u8g2_setup.obj
-
-# target to build an object file
-Core/Src/u8g2_setup.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_setup.c.obj
-.PHONY : Core/Src/u8g2_setup.c.obj
-
-Core/Src/u8g2_setup.i: Core/Src/u8g2_setup.c.i
-.PHONY : Core/Src/u8g2_setup.i
-
-# target to preprocess a source file
-Core/Src/u8g2_setup.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_setup.c.i
-.PHONY : Core/Src/u8g2_setup.c.i
-
-Core/Src/u8g2_setup.s: Core/Src/u8g2_setup.c.s
-.PHONY : Core/Src/u8g2_setup.s
-
-# target to generate assembly for a file
-Core/Src/u8g2_setup.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8g2_setup.c.s
-.PHONY : Core/Src/u8g2_setup.c.s
-
-Core/Src/u8log.obj: Core/Src/u8log.c.obj
-.PHONY : Core/Src/u8log.obj
-
-# target to build an object file
-Core/Src/u8log.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log.c.obj
-.PHONY : Core/Src/u8log.c.obj
-
-Core/Src/u8log.i: Core/Src/u8log.c.i
-.PHONY : Core/Src/u8log.i
-
-# target to preprocess a source file
-Core/Src/u8log.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log.c.i
-.PHONY : Core/Src/u8log.c.i
-
-Core/Src/u8log.s: Core/Src/u8log.c.s
-.PHONY : Core/Src/u8log.s
-
-# target to generate assembly for a file
-Core/Src/u8log.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log.c.s
-.PHONY : Core/Src/u8log.c.s
-
-Core/Src/u8log_u8g2.obj: Core/Src/u8log_u8g2.c.obj
-.PHONY : Core/Src/u8log_u8g2.obj
-
-# target to build an object file
-Core/Src/u8log_u8g2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log_u8g2.c.obj
-.PHONY : Core/Src/u8log_u8g2.c.obj
-
-Core/Src/u8log_u8g2.i: Core/Src/u8log_u8g2.c.i
-.PHONY : Core/Src/u8log_u8g2.i
-
-# target to preprocess a source file
-Core/Src/u8log_u8g2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log_u8g2.c.i
-.PHONY : Core/Src/u8log_u8g2.c.i
-
-Core/Src/u8log_u8g2.s: Core/Src/u8log_u8g2.c.s
-.PHONY : Core/Src/u8log_u8g2.s
-
-# target to generate assembly for a file
-Core/Src/u8log_u8g2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log_u8g2.c.s
-.PHONY : Core/Src/u8log_u8g2.c.s
-
-Core/Src/u8log_u8x8.obj: Core/Src/u8log_u8x8.c.obj
-.PHONY : Core/Src/u8log_u8x8.obj
-
-# target to build an object file
-Core/Src/u8log_u8x8.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log_u8x8.c.obj
-.PHONY : Core/Src/u8log_u8x8.c.obj
-
-Core/Src/u8log_u8x8.i: Core/Src/u8log_u8x8.c.i
-.PHONY : Core/Src/u8log_u8x8.i
-
-# target to preprocess a source file
-Core/Src/u8log_u8x8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log_u8x8.c.i
-.PHONY : Core/Src/u8log_u8x8.c.i
-
-Core/Src/u8log_u8x8.s: Core/Src/u8log_u8x8.c.s
-.PHONY : Core/Src/u8log_u8x8.s
-
-# target to generate assembly for a file
-Core/Src/u8log_u8x8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8log_u8x8.c.s
-.PHONY : Core/Src/u8log_u8x8.c.s
-
-Core/Src/u8x8_8x8.obj: Core/Src/u8x8_8x8.c.obj
-.PHONY : Core/Src/u8x8_8x8.obj
-
-# target to build an object file
-Core/Src/u8x8_8x8.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_8x8.c.obj
-.PHONY : Core/Src/u8x8_8x8.c.obj
-
-Core/Src/u8x8_8x8.i: Core/Src/u8x8_8x8.c.i
-.PHONY : Core/Src/u8x8_8x8.i
-
-# target to preprocess a source file
-Core/Src/u8x8_8x8.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_8x8.c.i
-.PHONY : Core/Src/u8x8_8x8.c.i
-
-Core/Src/u8x8_8x8.s: Core/Src/u8x8_8x8.c.s
-.PHONY : Core/Src/u8x8_8x8.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_8x8.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_8x8.c.s
-.PHONY : Core/Src/u8x8_8x8.c.s
-
-Core/Src/u8x8_byte.obj: Core/Src/u8x8_byte.c.obj
-.PHONY : Core/Src/u8x8_byte.obj
-
-# target to build an object file
-Core/Src/u8x8_byte.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_byte.c.obj
-.PHONY : Core/Src/u8x8_byte.c.obj
-
-Core/Src/u8x8_byte.i: Core/Src/u8x8_byte.c.i
-.PHONY : Core/Src/u8x8_byte.i
-
-# target to preprocess a source file
-Core/Src/u8x8_byte.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_byte.c.i
-.PHONY : Core/Src/u8x8_byte.c.i
-
-Core/Src/u8x8_byte.s: Core/Src/u8x8_byte.c.s
-.PHONY : Core/Src/u8x8_byte.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_byte.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_byte.c.s
-.PHONY : Core/Src/u8x8_byte.c.s
-
-Core/Src/u8x8_cad.obj: Core/Src/u8x8_cad.c.obj
-.PHONY : Core/Src/u8x8_cad.obj
-
-# target to build an object file
-Core/Src/u8x8_cad.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_cad.c.obj
-.PHONY : Core/Src/u8x8_cad.c.obj
-
-Core/Src/u8x8_cad.i: Core/Src/u8x8_cad.c.i
-.PHONY : Core/Src/u8x8_cad.i
-
-# target to preprocess a source file
-Core/Src/u8x8_cad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_cad.c.i
-.PHONY : Core/Src/u8x8_cad.c.i
-
-Core/Src/u8x8_cad.s: Core/Src/u8x8_cad.c.s
-.PHONY : Core/Src/u8x8_cad.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_cad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_cad.c.s
-.PHONY : Core/Src/u8x8_cad.c.s
-
-Core/Src/u8x8_capture.obj: Core/Src/u8x8_capture.c.obj
-.PHONY : Core/Src/u8x8_capture.obj
-
-# target to build an object file
-Core/Src/u8x8_capture.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_capture.c.obj
-.PHONY : Core/Src/u8x8_capture.c.obj
-
-Core/Src/u8x8_capture.i: Core/Src/u8x8_capture.c.i
-.PHONY : Core/Src/u8x8_capture.i
-
-# target to preprocess a source file
-Core/Src/u8x8_capture.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_capture.c.i
-.PHONY : Core/Src/u8x8_capture.c.i
-
-Core/Src/u8x8_capture.s: Core/Src/u8x8_capture.c.s
-.PHONY : Core/Src/u8x8_capture.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_capture.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_capture.c.s
-.PHONY : Core/Src/u8x8_capture.c.s
-
-Core/Src/u8x8_d_ssd1306_128x64_noname.obj: Core/Src/u8x8_d_ssd1306_128x64_noname.c.obj
-.PHONY : Core/Src/u8x8_d_ssd1306_128x64_noname.obj
-
-# target to build an object file
-Core/Src/u8x8_d_ssd1306_128x64_noname.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_d_ssd1306_128x64_noname.c.obj
-.PHONY : Core/Src/u8x8_d_ssd1306_128x64_noname.c.obj
-
-Core/Src/u8x8_d_ssd1306_128x64_noname.i: Core/Src/u8x8_d_ssd1306_128x64_noname.c.i
-.PHONY : Core/Src/u8x8_d_ssd1306_128x64_noname.i
-
-# target to preprocess a source file
-Core/Src/u8x8_d_ssd1306_128x64_noname.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_d_ssd1306_128x64_noname.c.i
-.PHONY : Core/Src/u8x8_d_ssd1306_128x64_noname.c.i
-
-Core/Src/u8x8_d_ssd1306_128x64_noname.s: Core/Src/u8x8_d_ssd1306_128x64_noname.c.s
-.PHONY : Core/Src/u8x8_d_ssd1306_128x64_noname.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_d_ssd1306_128x64_noname.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_d_ssd1306_128x64_noname.c.s
-.PHONY : Core/Src/u8x8_d_ssd1306_128x64_noname.c.s
-
-Core/Src/u8x8_debounce.obj: Core/Src/u8x8_debounce.c.obj
-.PHONY : Core/Src/u8x8_debounce.obj
-
-# target to build an object file
-Core/Src/u8x8_debounce.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_debounce.c.obj
-.PHONY : Core/Src/u8x8_debounce.c.obj
-
-Core/Src/u8x8_debounce.i: Core/Src/u8x8_debounce.c.i
-.PHONY : Core/Src/u8x8_debounce.i
-
-# target to preprocess a source file
-Core/Src/u8x8_debounce.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_debounce.c.i
-.PHONY : Core/Src/u8x8_debounce.c.i
-
-Core/Src/u8x8_debounce.s: Core/Src/u8x8_debounce.c.s
-.PHONY : Core/Src/u8x8_debounce.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_debounce.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_debounce.c.s
-.PHONY : Core/Src/u8x8_debounce.c.s
-
-Core/Src/u8x8_display.obj: Core/Src/u8x8_display.c.obj
-.PHONY : Core/Src/u8x8_display.obj
-
-# target to build an object file
-Core/Src/u8x8_display.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_display.c.obj
-.PHONY : Core/Src/u8x8_display.c.obj
-
-Core/Src/u8x8_display.i: Core/Src/u8x8_display.c.i
-.PHONY : Core/Src/u8x8_display.i
-
-# target to preprocess a source file
-Core/Src/u8x8_display.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_display.c.i
-.PHONY : Core/Src/u8x8_display.c.i
-
-Core/Src/u8x8_display.s: Core/Src/u8x8_display.c.s
-.PHONY : Core/Src/u8x8_display.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_display.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_display.c.s
-.PHONY : Core/Src/u8x8_display.c.s
-
-Core/Src/u8x8_fonts.obj: Core/Src/u8x8_fonts.c.obj
-.PHONY : Core/Src/u8x8_fonts.obj
-
-# target to build an object file
-Core/Src/u8x8_fonts.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_fonts.c.obj
-.PHONY : Core/Src/u8x8_fonts.c.obj
-
-Core/Src/u8x8_fonts.i: Core/Src/u8x8_fonts.c.i
-.PHONY : Core/Src/u8x8_fonts.i
-
-# target to preprocess a source file
-Core/Src/u8x8_fonts.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_fonts.c.i
-.PHONY : Core/Src/u8x8_fonts.c.i
-
-Core/Src/u8x8_fonts.s: Core/Src/u8x8_fonts.c.s
-.PHONY : Core/Src/u8x8_fonts.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_fonts.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_fonts.c.s
-.PHONY : Core/Src/u8x8_fonts.c.s
-
-Core/Src/u8x8_gpio.obj: Core/Src/u8x8_gpio.c.obj
-.PHONY : Core/Src/u8x8_gpio.obj
-
-# target to build an object file
-Core/Src/u8x8_gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_gpio.c.obj
-.PHONY : Core/Src/u8x8_gpio.c.obj
-
-Core/Src/u8x8_gpio.i: Core/Src/u8x8_gpio.c.i
-.PHONY : Core/Src/u8x8_gpio.i
-
-# target to preprocess a source file
-Core/Src/u8x8_gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_gpio.c.i
-.PHONY : Core/Src/u8x8_gpio.c.i
-
-Core/Src/u8x8_gpio.s: Core/Src/u8x8_gpio.c.s
-.PHONY : Core/Src/u8x8_gpio.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_gpio.c.s
-.PHONY : Core/Src/u8x8_gpio.c.s
-
-Core/Src/u8x8_input_value.obj: Core/Src/u8x8_input_value.c.obj
-.PHONY : Core/Src/u8x8_input_value.obj
-
-# target to build an object file
-Core/Src/u8x8_input_value.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_input_value.c.obj
-.PHONY : Core/Src/u8x8_input_value.c.obj
-
-Core/Src/u8x8_input_value.i: Core/Src/u8x8_input_value.c.i
-.PHONY : Core/Src/u8x8_input_value.i
-
-# target to preprocess a source file
-Core/Src/u8x8_input_value.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_input_value.c.i
-.PHONY : Core/Src/u8x8_input_value.c.i
-
-Core/Src/u8x8_input_value.s: Core/Src/u8x8_input_value.c.s
-.PHONY : Core/Src/u8x8_input_value.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_input_value.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_input_value.c.s
-.PHONY : Core/Src/u8x8_input_value.c.s
-
-Core/Src/u8x8_message.obj: Core/Src/u8x8_message.c.obj
-.PHONY : Core/Src/u8x8_message.obj
-
-# target to build an object file
-Core/Src/u8x8_message.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_message.c.obj
-.PHONY : Core/Src/u8x8_message.c.obj
-
-Core/Src/u8x8_message.i: Core/Src/u8x8_message.c.i
-.PHONY : Core/Src/u8x8_message.i
-
-# target to preprocess a source file
-Core/Src/u8x8_message.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_message.c.i
-.PHONY : Core/Src/u8x8_message.c.i
-
-Core/Src/u8x8_message.s: Core/Src/u8x8_message.c.s
-.PHONY : Core/Src/u8x8_message.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_message.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_message.c.s
-.PHONY : Core/Src/u8x8_message.c.s
-
-Core/Src/u8x8_selection_list.obj: Core/Src/u8x8_selection_list.c.obj
-.PHONY : Core/Src/u8x8_selection_list.obj
-
-# target to build an object file
-Core/Src/u8x8_selection_list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_selection_list.c.obj
-.PHONY : Core/Src/u8x8_selection_list.c.obj
-
-Core/Src/u8x8_selection_list.i: Core/Src/u8x8_selection_list.c.i
-.PHONY : Core/Src/u8x8_selection_list.i
-
-# target to preprocess a source file
-Core/Src/u8x8_selection_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_selection_list.c.i
-.PHONY : Core/Src/u8x8_selection_list.c.i
-
-Core/Src/u8x8_selection_list.s: Core/Src/u8x8_selection_list.c.s
-.PHONY : Core/Src/u8x8_selection_list.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_selection_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_selection_list.c.s
-.PHONY : Core/Src/u8x8_selection_list.c.s
-
-Core/Src/u8x8_setup.obj: Core/Src/u8x8_setup.c.obj
-.PHONY : Core/Src/u8x8_setup.obj
-
-# target to build an object file
-Core/Src/u8x8_setup.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_setup.c.obj
-.PHONY : Core/Src/u8x8_setup.c.obj
-
-Core/Src/u8x8_setup.i: Core/Src/u8x8_setup.c.i
-.PHONY : Core/Src/u8x8_setup.i
-
-# target to preprocess a source file
-Core/Src/u8x8_setup.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_setup.c.i
-.PHONY : Core/Src/u8x8_setup.c.i
-
-Core/Src/u8x8_setup.s: Core/Src/u8x8_setup.c.s
-.PHONY : Core/Src/u8x8_setup.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_setup.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_setup.c.s
-.PHONY : Core/Src/u8x8_setup.c.s
-
-Core/Src/u8x8_string.obj: Core/Src/u8x8_string.c.obj
-.PHONY : Core/Src/u8x8_string.obj
-
-# target to build an object file
-Core/Src/u8x8_string.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_string.c.obj
-.PHONY : Core/Src/u8x8_string.c.obj
-
-Core/Src/u8x8_string.i: Core/Src/u8x8_string.c.i
-.PHONY : Core/Src/u8x8_string.i
-
-# target to preprocess a source file
-Core/Src/u8x8_string.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_string.c.i
-.PHONY : Core/Src/u8x8_string.c.i
-
-Core/Src/u8x8_string.s: Core/Src/u8x8_string.c.s
-.PHONY : Core/Src/u8x8_string.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_string.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_string.c.s
-.PHONY : Core/Src/u8x8_string.c.s
-
-Core/Src/u8x8_u16toa.obj: Core/Src/u8x8_u16toa.c.obj
-.PHONY : Core/Src/u8x8_u16toa.obj
-
-# target to build an object file
-Core/Src/u8x8_u16toa.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_u16toa.c.obj
-.PHONY : Core/Src/u8x8_u16toa.c.obj
-
-Core/Src/u8x8_u16toa.i: Core/Src/u8x8_u16toa.c.i
-.PHONY : Core/Src/u8x8_u16toa.i
-
-# target to preprocess a source file
-Core/Src/u8x8_u16toa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_u16toa.c.i
-.PHONY : Core/Src/u8x8_u16toa.c.i
-
-Core/Src/u8x8_u16toa.s: Core/Src/u8x8_u16toa.c.s
-.PHONY : Core/Src/u8x8_u16toa.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_u16toa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_u16toa.c.s
-.PHONY : Core/Src/u8x8_u16toa.c.s
-
-Core/Src/u8x8_u8toa.obj: Core/Src/u8x8_u8toa.c.obj
-.PHONY : Core/Src/u8x8_u8toa.obj
-
-# target to build an object file
-Core/Src/u8x8_u8toa.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_u8toa.c.obj
-.PHONY : Core/Src/u8x8_u8toa.c.obj
-
-Core/Src/u8x8_u8toa.i: Core/Src/u8x8_u8toa.c.i
-.PHONY : Core/Src/u8x8_u8toa.i
-
-# target to preprocess a source file
-Core/Src/u8x8_u8toa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_u8toa.c.i
-.PHONY : Core/Src/u8x8_u8toa.c.i
-
-Core/Src/u8x8_u8toa.s: Core/Src/u8x8_u8toa.c.s
-.PHONY : Core/Src/u8x8_u8toa.s
-
-# target to generate assembly for a file
-Core/Src/u8x8_u8toa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/u8x8_u8toa.c.s
-.PHONY : Core/Src/u8x8_u8toa.c.s
 
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.obj: Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
 .PHONY : Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.obj
@@ -1969,9 +1825,135 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... dreamView-FW.elf
-	@echo ... Core/Src/buzzer_fir.obj
-	@echo ... Core/Src/buzzer_fir.i
-	@echo ... Core/Src/buzzer_fir.s
+	@echo ... 3rdParty/u8g2/mui.obj
+	@echo ... 3rdParty/u8g2/mui.i
+	@echo ... 3rdParty/u8g2/mui.s
+	@echo ... 3rdParty/u8g2/mui_u8g2.obj
+	@echo ... 3rdParty/u8g2/mui_u8g2.i
+	@echo ... 3rdParty/u8g2/mui_u8g2.s
+	@echo ... 3rdParty/u8g2/u8g2_bitmap.obj
+	@echo ... 3rdParty/u8g2/u8g2_bitmap.i
+	@echo ... 3rdParty/u8g2/u8g2_bitmap.s
+	@echo ... 3rdParty/u8g2/u8g2_box.obj
+	@echo ... 3rdParty/u8g2/u8g2_box.i
+	@echo ... 3rdParty/u8g2/u8g2_box.s
+	@echo ... 3rdParty/u8g2/u8g2_buffer.obj
+	@echo ... 3rdParty/u8g2/u8g2_buffer.i
+	@echo ... 3rdParty/u8g2/u8g2_buffer.s
+	@echo ... 3rdParty/u8g2/u8g2_button.obj
+	@echo ... 3rdParty/u8g2/u8g2_button.i
+	@echo ... 3rdParty/u8g2/u8g2_button.s
+	@echo ... 3rdParty/u8g2/u8g2_circle.obj
+	@echo ... 3rdParty/u8g2/u8g2_circle.i
+	@echo ... 3rdParty/u8g2/u8g2_circle.s
+	@echo ... 3rdParty/u8g2/u8g2_cleardisplay.obj
+	@echo ... 3rdParty/u8g2/u8g2_cleardisplay.i
+	@echo ... 3rdParty/u8g2/u8g2_cleardisplay.s
+	@echo ... 3rdParty/u8g2/u8g2_d_memory.obj
+	@echo ... 3rdParty/u8g2/u8g2_d_memory.i
+	@echo ... 3rdParty/u8g2/u8g2_d_memory.s
+	@echo ... 3rdParty/u8g2/u8g2_d_setup.obj
+	@echo ... 3rdParty/u8g2/u8g2_d_setup.i
+	@echo ... 3rdParty/u8g2/u8g2_d_setup.s
+	@echo ... 3rdParty/u8g2/u8g2_font.obj
+	@echo ... 3rdParty/u8g2/u8g2_font.i
+	@echo ... 3rdParty/u8g2/u8g2_font.s
+	@echo ... 3rdParty/u8g2/u8g2_font_myfont_fir.obj
+	@echo ... 3rdParty/u8g2/u8g2_font_myfont_fir.i
+	@echo ... 3rdParty/u8g2/u8g2_font_myfont_fir.s
+	@echo ... 3rdParty/u8g2/u8g2_fonts_nessary_fir.obj
+	@echo ... 3rdParty/u8g2/u8g2_fonts_nessary_fir.i
+	@echo ... 3rdParty/u8g2/u8g2_fonts_nessary_fir.s
+	@echo ... 3rdParty/u8g2/u8g2_hvline.obj
+	@echo ... 3rdParty/u8g2/u8g2_hvline.i
+	@echo ... 3rdParty/u8g2/u8g2_hvline.s
+	@echo ... 3rdParty/u8g2/u8g2_input_value.obj
+	@echo ... 3rdParty/u8g2/u8g2_input_value.i
+	@echo ... 3rdParty/u8g2/u8g2_input_value.s
+	@echo ... 3rdParty/u8g2/u8g2_intersection.obj
+	@echo ... 3rdParty/u8g2/u8g2_intersection.i
+	@echo ... 3rdParty/u8g2/u8g2_intersection.s
+	@echo ... 3rdParty/u8g2/u8g2_kerning.obj
+	@echo ... 3rdParty/u8g2/u8g2_kerning.i
+	@echo ... 3rdParty/u8g2/u8g2_kerning.s
+	@echo ... 3rdParty/u8g2/u8g2_line.obj
+	@echo ... 3rdParty/u8g2/u8g2_line.i
+	@echo ... 3rdParty/u8g2/u8g2_line.s
+	@echo ... 3rdParty/u8g2/u8g2_ll_hvline.obj
+	@echo ... 3rdParty/u8g2/u8g2_ll_hvline.i
+	@echo ... 3rdParty/u8g2/u8g2_ll_hvline.s
+	@echo ... 3rdParty/u8g2/u8g2_message.obj
+	@echo ... 3rdParty/u8g2/u8g2_message.i
+	@echo ... 3rdParty/u8g2/u8g2_message.s
+	@echo ... 3rdParty/u8g2/u8g2_polygon.obj
+	@echo ... 3rdParty/u8g2/u8g2_polygon.i
+	@echo ... 3rdParty/u8g2/u8g2_polygon.s
+	@echo ... 3rdParty/u8g2/u8g2_selection_list.obj
+	@echo ... 3rdParty/u8g2/u8g2_selection_list.i
+	@echo ... 3rdParty/u8g2/u8g2_selection_list.s
+	@echo ... 3rdParty/u8g2/u8g2_setup.obj
+	@echo ... 3rdParty/u8g2/u8g2_setup.i
+	@echo ... 3rdParty/u8g2/u8g2_setup.s
+	@echo ... 3rdParty/u8g2/u8log.obj
+	@echo ... 3rdParty/u8g2/u8log.i
+	@echo ... 3rdParty/u8g2/u8log.s
+	@echo ... 3rdParty/u8g2/u8log_u8g2.obj
+	@echo ... 3rdParty/u8g2/u8log_u8g2.i
+	@echo ... 3rdParty/u8g2/u8log_u8g2.s
+	@echo ... 3rdParty/u8g2/u8log_u8x8.obj
+	@echo ... 3rdParty/u8g2/u8log_u8x8.i
+	@echo ... 3rdParty/u8g2/u8log_u8x8.s
+	@echo ... 3rdParty/u8g2/u8x8_8x8.obj
+	@echo ... 3rdParty/u8g2/u8x8_8x8.i
+	@echo ... 3rdParty/u8g2/u8x8_8x8.s
+	@echo ... 3rdParty/u8g2/u8x8_byte.obj
+	@echo ... 3rdParty/u8g2/u8x8_byte.i
+	@echo ... 3rdParty/u8g2/u8x8_byte.s
+	@echo ... 3rdParty/u8g2/u8x8_cad.obj
+	@echo ... 3rdParty/u8g2/u8x8_cad.i
+	@echo ... 3rdParty/u8g2/u8x8_cad.s
+	@echo ... 3rdParty/u8g2/u8x8_capture.obj
+	@echo ... 3rdParty/u8g2/u8x8_capture.i
+	@echo ... 3rdParty/u8g2/u8x8_capture.s
+	@echo ... 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.obj
+	@echo ... 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.i
+	@echo ... 3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.s
+	@echo ... 3rdParty/u8g2/u8x8_debounce.obj
+	@echo ... 3rdParty/u8g2/u8x8_debounce.i
+	@echo ... 3rdParty/u8g2/u8x8_debounce.s
+	@echo ... 3rdParty/u8g2/u8x8_display.obj
+	@echo ... 3rdParty/u8g2/u8x8_display.i
+	@echo ... 3rdParty/u8g2/u8x8_display.s
+	@echo ... 3rdParty/u8g2/u8x8_fonts.obj
+	@echo ... 3rdParty/u8g2/u8x8_fonts.i
+	@echo ... 3rdParty/u8g2/u8x8_fonts.s
+	@echo ... 3rdParty/u8g2/u8x8_gpio.obj
+	@echo ... 3rdParty/u8g2/u8x8_gpio.i
+	@echo ... 3rdParty/u8g2/u8x8_gpio.s
+	@echo ... 3rdParty/u8g2/u8x8_input_value.obj
+	@echo ... 3rdParty/u8g2/u8x8_input_value.i
+	@echo ... 3rdParty/u8g2/u8x8_input_value.s
+	@echo ... 3rdParty/u8g2/u8x8_message.obj
+	@echo ... 3rdParty/u8g2/u8x8_message.i
+	@echo ... 3rdParty/u8g2/u8x8_message.s
+	@echo ... 3rdParty/u8g2/u8x8_selection_list.obj
+	@echo ... 3rdParty/u8g2/u8x8_selection_list.i
+	@echo ... 3rdParty/u8g2/u8x8_selection_list.s
+	@echo ... 3rdParty/u8g2/u8x8_setup.obj
+	@echo ... 3rdParty/u8g2/u8x8_setup.i
+	@echo ... 3rdParty/u8g2/u8x8_setup.s
+	@echo ... 3rdParty/u8g2/u8x8_string.obj
+	@echo ... 3rdParty/u8g2/u8x8_string.i
+	@echo ... 3rdParty/u8g2/u8x8_string.s
+	@echo ... 3rdParty/u8g2/u8x8_u16toa.obj
+	@echo ... 3rdParty/u8g2/u8x8_u16toa.i
+	@echo ... 3rdParty/u8g2/u8x8_u16toa.s
+	@echo ... 3rdParty/u8g2/u8x8_u8toa.obj
+	@echo ... 3rdParty/u8g2/u8x8_u8toa.i
+	@echo ... 3rdParty/u8g2/u8x8_u8toa.s
+	@echo ... Core/Src/buzzer.obj
+	@echo ... Core/Src/buzzer.i
+	@echo ... Core/Src/buzzer.s
 	@echo ... Core/Src/core.obj
 	@echo ... Core/Src/core.i
 	@echo ... Core/Src/core.s
@@ -1981,42 +1963,18 @@ help:
 	@echo ... Core/Src/gpio.obj
 	@echo ... Core/Src/gpio.i
 	@echo ... Core/Src/gpio.s
+	@echo ... Core/Src/key.obj
+	@echo ... Core/Src/key.i
+	@echo ... Core/Src/key.s
 	@echo ... Core/Src/main.obj
 	@echo ... Core/Src/main.i
 	@echo ... Core/Src/main.s
 	@echo ... Core/Src/menu.obj
 	@echo ... Core/Src/menu.i
 	@echo ... Core/Src/menu.s
-	@echo ... Core/Src/mui.obj
-	@echo ... Core/Src/mui.i
-	@echo ... Core/Src/mui.s
-	@echo ... Core/Src/mui_u8g2.obj
-	@echo ... Core/Src/mui_u8g2.i
-	@echo ... Core/Src/mui_u8g2.s
-	@echo ... Core/Src/oled_encoder_fir.obj
-	@echo ... Core/Src/oled_encoder_fir.i
-	@echo ... Core/Src/oled_encoder_fir.s
-	@echo ... Core/Src/oled_key_fir.obj
-	@echo ... Core/Src/oled_key_fir.i
-	@echo ... Core/Src/oled_key_fir.s
-	@echo ... Core/Src/oled_menu_fir.obj
-	@echo ... Core/Src/oled_menu_fir.i
-	@echo ... Core/Src/oled_menu_fir.s
-	@echo ... Core/Src/oled_menu_init_fir.obj
-	@echo ... Core/Src/oled_menu_init_fir.i
-	@echo ... Core/Src/oled_menu_init_fir.s
-	@echo ... Core/Src/oled_menu_proc_fir.obj
-	@echo ... Core/Src/oled_menu_proc_fir.i
-	@echo ... Core/Src/oled_menu_proc_fir.s
-	@echo ... Core/Src/oled_menu_show_fir.obj
-	@echo ... Core/Src/oled_menu_show_fir.i
-	@echo ... Core/Src/oled_menu_show_fir.s
-	@echo ... Core/Src/oled_setup_u8g2_fir.obj
-	@echo ... Core/Src/oled_setup_u8g2_fir.i
-	@echo ... Core/Src/oled_setup_u8g2_fir.s
-	@echo ... Core/Src/shutter_timer_fir.obj
-	@echo ... Core/Src/shutter_timer_fir.i
-	@echo ... Core/Src/shutter_timer_fir.s
+	@echo ... Core/Src/oled.obj
+	@echo ... Core/Src/oled.i
+	@echo ... Core/Src/oled.s
 	@echo ... Core/Src/spi.obj
 	@echo ... Core/Src/spi.i
 	@echo ... Core/Src/spi.s
@@ -2035,126 +1993,6 @@ help:
 	@echo ... Core/Src/tim.obj
 	@echo ... Core/Src/tim.i
 	@echo ... Core/Src/tim.s
-	@echo ... Core/Src/u8g2_bitmap.obj
-	@echo ... Core/Src/u8g2_bitmap.i
-	@echo ... Core/Src/u8g2_bitmap.s
-	@echo ... Core/Src/u8g2_box.obj
-	@echo ... Core/Src/u8g2_box.i
-	@echo ... Core/Src/u8g2_box.s
-	@echo ... Core/Src/u8g2_buffer.obj
-	@echo ... Core/Src/u8g2_buffer.i
-	@echo ... Core/Src/u8g2_buffer.s
-	@echo ... Core/Src/u8g2_button.obj
-	@echo ... Core/Src/u8g2_button.i
-	@echo ... Core/Src/u8g2_button.s
-	@echo ... Core/Src/u8g2_circle.obj
-	@echo ... Core/Src/u8g2_circle.i
-	@echo ... Core/Src/u8g2_circle.s
-	@echo ... Core/Src/u8g2_cleardisplay.obj
-	@echo ... Core/Src/u8g2_cleardisplay.i
-	@echo ... Core/Src/u8g2_cleardisplay.s
-	@echo ... Core/Src/u8g2_d_memory.obj
-	@echo ... Core/Src/u8g2_d_memory.i
-	@echo ... Core/Src/u8g2_d_memory.s
-	@echo ... Core/Src/u8g2_d_setup.obj
-	@echo ... Core/Src/u8g2_d_setup.i
-	@echo ... Core/Src/u8g2_d_setup.s
-	@echo ... Core/Src/u8g2_font.obj
-	@echo ... Core/Src/u8g2_font.i
-	@echo ... Core/Src/u8g2_font.s
-	@echo ... Core/Src/u8g2_font_myfont_fir.obj
-	@echo ... Core/Src/u8g2_font_myfont_fir.i
-	@echo ... Core/Src/u8g2_font_myfont_fir.s
-	@echo ... Core/Src/u8g2_fonts_nessary_fir.obj
-	@echo ... Core/Src/u8g2_fonts_nessary_fir.i
-	@echo ... Core/Src/u8g2_fonts_nessary_fir.s
-	@echo ... Core/Src/u8g2_hvline.obj
-	@echo ... Core/Src/u8g2_hvline.i
-	@echo ... Core/Src/u8g2_hvline.s
-	@echo ... Core/Src/u8g2_input_value.obj
-	@echo ... Core/Src/u8g2_input_value.i
-	@echo ... Core/Src/u8g2_input_value.s
-	@echo ... Core/Src/u8g2_intersection.obj
-	@echo ... Core/Src/u8g2_intersection.i
-	@echo ... Core/Src/u8g2_intersection.s
-	@echo ... Core/Src/u8g2_kerning.obj
-	@echo ... Core/Src/u8g2_kerning.i
-	@echo ... Core/Src/u8g2_kerning.s
-	@echo ... Core/Src/u8g2_line.obj
-	@echo ... Core/Src/u8g2_line.i
-	@echo ... Core/Src/u8g2_line.s
-	@echo ... Core/Src/u8g2_ll_hvline.obj
-	@echo ... Core/Src/u8g2_ll_hvline.i
-	@echo ... Core/Src/u8g2_ll_hvline.s
-	@echo ... Core/Src/u8g2_message.obj
-	@echo ... Core/Src/u8g2_message.i
-	@echo ... Core/Src/u8g2_message.s
-	@echo ... Core/Src/u8g2_polygon.obj
-	@echo ... Core/Src/u8g2_polygon.i
-	@echo ... Core/Src/u8g2_polygon.s
-	@echo ... Core/Src/u8g2_selection_list.obj
-	@echo ... Core/Src/u8g2_selection_list.i
-	@echo ... Core/Src/u8g2_selection_list.s
-	@echo ... Core/Src/u8g2_setup.obj
-	@echo ... Core/Src/u8g2_setup.i
-	@echo ... Core/Src/u8g2_setup.s
-	@echo ... Core/Src/u8log.obj
-	@echo ... Core/Src/u8log.i
-	@echo ... Core/Src/u8log.s
-	@echo ... Core/Src/u8log_u8g2.obj
-	@echo ... Core/Src/u8log_u8g2.i
-	@echo ... Core/Src/u8log_u8g2.s
-	@echo ... Core/Src/u8log_u8x8.obj
-	@echo ... Core/Src/u8log_u8x8.i
-	@echo ... Core/Src/u8log_u8x8.s
-	@echo ... Core/Src/u8x8_8x8.obj
-	@echo ... Core/Src/u8x8_8x8.i
-	@echo ... Core/Src/u8x8_8x8.s
-	@echo ... Core/Src/u8x8_byte.obj
-	@echo ... Core/Src/u8x8_byte.i
-	@echo ... Core/Src/u8x8_byte.s
-	@echo ... Core/Src/u8x8_cad.obj
-	@echo ... Core/Src/u8x8_cad.i
-	@echo ... Core/Src/u8x8_cad.s
-	@echo ... Core/Src/u8x8_capture.obj
-	@echo ... Core/Src/u8x8_capture.i
-	@echo ... Core/Src/u8x8_capture.s
-	@echo ... Core/Src/u8x8_d_ssd1306_128x64_noname.obj
-	@echo ... Core/Src/u8x8_d_ssd1306_128x64_noname.i
-	@echo ... Core/Src/u8x8_d_ssd1306_128x64_noname.s
-	@echo ... Core/Src/u8x8_debounce.obj
-	@echo ... Core/Src/u8x8_debounce.i
-	@echo ... Core/Src/u8x8_debounce.s
-	@echo ... Core/Src/u8x8_display.obj
-	@echo ... Core/Src/u8x8_display.i
-	@echo ... Core/Src/u8x8_display.s
-	@echo ... Core/Src/u8x8_fonts.obj
-	@echo ... Core/Src/u8x8_fonts.i
-	@echo ... Core/Src/u8x8_fonts.s
-	@echo ... Core/Src/u8x8_gpio.obj
-	@echo ... Core/Src/u8x8_gpio.i
-	@echo ... Core/Src/u8x8_gpio.s
-	@echo ... Core/Src/u8x8_input_value.obj
-	@echo ... Core/Src/u8x8_input_value.i
-	@echo ... Core/Src/u8x8_input_value.s
-	@echo ... Core/Src/u8x8_message.obj
-	@echo ... Core/Src/u8x8_message.i
-	@echo ... Core/Src/u8x8_message.s
-	@echo ... Core/Src/u8x8_selection_list.obj
-	@echo ... Core/Src/u8x8_selection_list.i
-	@echo ... Core/Src/u8x8_selection_list.s
-	@echo ... Core/Src/u8x8_setup.obj
-	@echo ... Core/Src/u8x8_setup.i
-	@echo ... Core/Src/u8x8_setup.s
-	@echo ... Core/Src/u8x8_string.obj
-	@echo ... Core/Src/u8x8_string.i
-	@echo ... Core/Src/u8x8_string.s
-	@echo ... Core/Src/u8x8_u16toa.obj
-	@echo ... Core/Src/u8x8_u16toa.i
-	@echo ... Core/Src/u8x8_u16toa.s
-	@echo ... Core/Src/u8x8_u8toa.obj
-	@echo ... Core/Src/u8x8_u8toa.i
-	@echo ... Core/Src/u8x8_u8toa.s
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.obj
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.i
 	@echo ... Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.s

@@ -1,0 +1,3 @@
+D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW-OLD/cmake-build-debug/CMakeFiles/dreamView-FW.elf.dir
+D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW-OLD/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW-OLD/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -22,8 +22,7 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "oled_menu_show_fir.h"
-#include "buzzer_fir.h"
+#include "buzzer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -188,12 +187,12 @@ void SysTick_Handler(void)
   /* USER CODE BEGIN SysTick_IRQn 0 */
   if (beep_time >= 1) beep_time--;
   else if (beep_time <= 1) buzzer_off();
-  if (++ms_Count >= 1000)
-  {
-    ms_Count = 0;
-    FPS = FPS_Count;
-    FPS_Count = 0;
-  }
+//  if (++ms_Count >= 1000)
+//  {
+//    ms_Count = 0;
+//    FPS = FPS_Count;
+//    FPS_Count = 0;
+//  }
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */

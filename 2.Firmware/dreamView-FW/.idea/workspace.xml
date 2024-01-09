@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="CUSTOM_SCOPE_NAME" value="未命名" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="dreamView-FW" targetName="dreamView-FW.elf" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
+      <change afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/.idea/dreamView-FW1.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Hardware/BLDC/PCB3.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/BLDC/PCB3.PcbDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Hardware/BLDC/Sheet3.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/BLDC/Sheet3.SchDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Hardware/Core/PCB2.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/Core/PCB2.PcbDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Hardware/Core/Sheet2.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/Core/Sheet2.SchDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Hardware/Core/dreamViewCoreRelease.PrjPcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/Core/dreamViewCoreRelease.PrjPcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/buzzer_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/core.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/dma.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/dreamView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/menu.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/mui.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/mui_u8g2.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui_u8g2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_encoder_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_key_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_init_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_proc_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_show_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_setup_u8g2_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/shutter_timer_fir.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/spi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f1xx_hal_conf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f1xx_it.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/tim.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/u8g2.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/u8g2_wqy.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_wqy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/u8x8.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/buzzer_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/buzzer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/core.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/core.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/mui.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/mui_u8g2.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui_u8g2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_encoder_fir.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_key_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/key.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_fir.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_init_fir.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_proc_fir.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_show_fir.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/oled_setup_u8g2_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/shutter_timer_fir.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_bitmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_bitmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_box.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_box.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_buffer.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_buffer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_button.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_circle.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_circle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_cleardisplay.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_cleardisplay.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_d_memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_d_memory.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_d_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_d_setup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_font.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_font.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_font_myfont_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_font_myfont_fir.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_fonts_nessary_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_fonts_nessary_fir.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_hvline.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_hvline.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_input_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_input_value.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_intersection.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_intersection.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_kerning.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_kerning.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_line.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_ll_hvline.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_ll_hvline.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_message.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_polygon.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_polygon.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_selection_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_selection_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_setup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8log.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8log.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8log_u8g2.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8log_u8g2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8log_u8x8.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8log_u8x8.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_8x8.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_8x8.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_byte.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_byte.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_cad.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_cad.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_capture.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_capture.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_d_ssd1306_128x64_noname.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_debounce.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_debounce.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_display.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_display.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_fonts.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_fonts.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_gpio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_input_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_input_value.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_message.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_selection_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_selection_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_setup.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_string.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_string.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_u16toa.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_u16toa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_u8toa.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_u8toa.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dreamView-FW.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/dreamView-FW.ioc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="1508" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="名称" />
+        <option value="值" />
+        <option value="描述" />
+      </list>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3e8a8f77-cca9-4602-8fe0-81240dff98b4" />
+        <option name="url" value="https://github.com/Fir-Geek/dreamView_BlackPillDemo.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../STM32CubeToolChains/arm-gnu-toolchain-12.2.rel1-mingw-w64-i686-arm-none-eabi/arm-none-eabi/include/c++/12.2.1/bits/stl_algobase.h" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="未命名" pattern="file[dreamView-FW1.0]:Core/*||file[dreamView-FW1.0]:3rdParty/*" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2LR9mlmuETcpbTKVoOdzVaDtxiT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;所有位置&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW-OLD&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\dreamView-2.0\2.Firmware\dreamView-FW\3rdParty\u8g2" />
+      <recent name="D:\Projects\dreamView\2.Firmware\dreamView-FW\Bsp\gpio\Src" />
+      <recent name="D:\Projects\dreamView\2.Firmware\dreamView-FW\Bsp\oled\Src" />
+      <recent name="D:\Projects\dreamView\2.Firmware\dreamView-FW\dreamview\Src" />
+      <recent name="D:\Projects\dreamView\2.Firmware\dreamView-FW\dreamview\Inc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="OpenOCD 下载并运行.OCD dreamView-FW">
+    <configuration name="dreamView-FW.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dreamView-FW" TARGET_NAME="dreamView-FW.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dreamView-FW" RUN_TARGET_NAME="dreamView-FW.elf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OCD dreamView-FW" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dreamView-FW" TARGET_NAME="dreamView-FW.elf" CONFIG_NAME="Debug" version="1" RUN_TARGET_PROJECT_NAME="dreamView-FW" RUN_TARGET_NAME="dreamView-FW.elf">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="D:\Projects\dreamView-2.0\2.Firmware\dreamView-FW\stm32f103c8_blue_pill.cfg" reset-type="INIT" download-type="ALWAYS">
+        <debugger kind="GDB" isBundled="true" />
+      </openocd>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 应用程序.dreamView-FW.elf" />
+      <item itemvalue="OpenOCD 下载并运行.OCD dreamView-FW" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="" />
+      <created>1675821435568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675821435568</updated>
+      <workItem from="1675821455828" duration="1711000" />
+      <workItem from="1675823192041" duration="33000" />
+      <workItem from="1675823231836" duration="18269000" />
+      <workItem from="1675859434726" duration="4825000" />
+      <workItem from="1675906946178" duration="236000" />
+      <workItem from="1675907574366" duration="199000" />
+      <workItem from="1675921605118" duration="1694000" />
+      <workItem from="1675942390592" duration="9000" />
+      <workItem from="1676032108307" duration="6810000" />
+      <workItem from="1676132752364" duration="4102000" />
+      <workItem from="1676186631991" duration="13517000" />
+      <workItem from="1676255830317" duration="12296000" />
+      <workItem from="1676305335606" duration="6908000" />
+      <workItem from="1676365859861" duration="4166000" />
+      <workItem from="1676393485855" duration="3427000" />
+      <workItem from="1676475468295" duration="1251000" />
+      <workItem from="1676725390951" duration="596000" />
+      <workItem from="1676740741411" duration="1000" />
+      <workItem from="1676789633788" duration="19448000" />
+      <workItem from="1676865229187" duration="6390000" />
+      <workItem from="1676880824756" duration="4512000" />
+      <workItem from="1676954617570" duration="1164000" />
+      <workItem from="1676957267475" duration="5673000" />
+      <workItem from="1676971796381" duration="6321000" />
+      <workItem from="1676991750709" duration="2643000" />
+      <workItem from="1677031625209" duration="1599000" />
+      <workItem from="1677040569545" duration="1187000" />
+      <workItem from="1677074329544" duration="5000" />
+      <workItem from="1677077251631" duration="6067000" />
+      <workItem from="1677130575682" duration="7971000" />
+      <workItem from="1677155766074" duration="9249000" />
+      <workItem from="1677171977468" duration="464000" />
+      <workItem from="1677172642456" duration="7000" />
+      <workItem from="1677203558936" duration="493000" />
+      <workItem from="1677211741803" duration="4368000" />
+      <workItem from="1677216589879" duration="5835000" />
+      <workItem from="1677223510225" duration="333000" />
+      <workItem from="1677239460376" duration="890000" />
+      <workItem from="1677251012732" duration="2522000" />
+      <workItem from="1677307475971" duration="6629000" />
+      <workItem from="1677376027075" duration="4396000" />
+      <workItem from="1677414172962" duration="3657000" />
+      <workItem from="1677427816916" duration="1245000" />
+      <workItem from="1677455144004" duration="2027000" />
+      <workItem from="1677476115842" duration="4438000" />
+      <workItem from="1677549251453" duration="3188000" />
+      <workItem from="1677559473735" duration="2076000" />
+      <workItem from="1677573794793" duration="3644000" />
+      <workItem from="1677596591018" duration="2406000" />
+      <workItem from="1677647459571" duration="745000" />
+      <workItem from="1677728747833" duration="211000" />
+      <workItem from="1677747571762" duration="11000" />
+      <workItem from="1677775131433" duration="605000" />
+      <workItem from="1677818933139" duration="5000" />
+      <workItem from="1677822042678" duration="23000" />
+      <workItem from="1677822890647" duration="977000" />
+      <workItem from="1677825710833" duration="12000" />
+      <workItem from="1677827099796" duration="118000" />
+      <workItem from="1678003321422" duration="11000" />
+      <workItem from="1678083779797" duration="76000" />
+      <workItem from="1678098058464" duration="22000" />
+      <workItem from="1678157995370" duration="50000" />
+      <workItem from="1678366675389" duration="654000" />
+      <workItem from="1678426844579" duration="9000" />
+      <workItem from="1678450775880" duration="1190000" />
+      <workItem from="1678465879864" duration="3000" />
+      <workItem from="1679142868411" duration="1337000" />
+      <workItem from="1679155402880" duration="707000" />
+      <workItem from="1679237575653" duration="4000" />
+      <workItem from="1679314360713" duration="16000" />
+      <workItem from="1679484171237" duration="48000" />
+      <workItem from="1679502526634" duration="1000" />
+      <workItem from="1679757064189" duration="3000" />
+      <workItem from="1680176850810" duration="2000" />
+      <workItem from="1681053854059" duration="2000" />
+      <workItem from="1681309638432" duration="2049000" />
+      <workItem from="1681320933957" duration="4517000" />
+      <workItem from="1681532450192" duration="599000" />
+      <workItem from="1681533136543" duration="145000" />
+      <workItem from="1681533309070" duration="1499000" />
+      <workItem from="1681548049161" duration="1361000" />
+      <workItem from="1681556241621" duration="3515000" />
+      <workItem from="1681618052615" duration="9038000" />
+      <workItem from="1681652909408" duration="15781000" />
+      <workItem from="1681703046213" duration="7978000" />
+      <workItem from="1681718383809" duration="3525000" />
+      <workItem from="1681728166495" duration="7316000" />
+      <workItem from="1681737559848" duration="4000" />
+      <workItem from="1681746660788" duration="6732000" />
+      <workItem from="1681789692801" duration="3153000" />
+      <workItem from="1681797964816" duration="6069000" />
+      <workItem from="1681822246618" duration="5913000" />
+      <workItem from="1681888645810" duration="2556000" />
+      <workItem from="1681967264874" duration="4000" />
+      <workItem from="1682058201719" duration="2766000" />
+      <workItem from="1682146150915" duration="11554000" />
+      <workItem from="1682228292014" duration="5803000" />
+      <workItem from="1682242654407" duration="8899000" />
+      <workItem from="1682309392829" duration="1000" />
+      <workItem from="1682322401575" duration="2024000" />
+      <workItem from="1682392852603" duration="646000" />
+      <workItem from="1682495855916" duration="425000" />
+      <workItem from="1682847901576" duration="2451000" />
+      <workItem from="1682861614686" duration="6478000" />
+      <workItem from="1682922174846" duration="10980000" />
+      <workItem from="1683018227946" duration="3657000" />
+      <workItem from="1683700009559" duration="7000" />
+      <workItem from="1684498541670" duration="270000" />
+      <workItem from="1684500434656" duration="627000" />
+      <workItem from="1685348129254" duration="670000" />
+      <workItem from="1685531680467" duration="127000" />
+      <workItem from="1685687997743" duration="293000" />
+      <workItem from="1685731512984" duration="636000" />
+      <workItem from="1685778907324" duration="30000" />
+      <workItem from="1685818125100" duration="819000" />
+      <workItem from="1685860986363" duration="27000" />
+      <workItem from="1686883992671" duration="987000" />
+      <workItem from="1695050483580" duration="1892000" />
+      <workItem from="1695265734821" duration="1248000" />
+      <workItem from="1695308251174" duration="621000" />
+      <workItem from="1696606054296" duration="625000" />
+      <workItem from="1696777233514" duration="595000" />
+      <workItem from="1697203162989" duration="4650000" />
+      <workItem from="1697363307310" duration="67000" />
+      <workItem from="1697363384053" duration="8000" />
+      <workItem from="1697363609843" duration="1000" />
+      <workItem from="1697364363966" duration="71000" />
+      <workItem from="1697516821950" duration="3000" />
+      <workItem from="1697516843627" duration="1000" />
+      <workItem from="1697516858975" duration="1000" />
+      <workItem from="1697516940386" duration="1000" />
+      <workItem from="1697517081987" duration="2000" />
+      <workItem from="1698159325332" duration="1117000" />
+      <workItem from="1698211615374" duration="610000" />
+      <workItem from="1698941106089" duration="4000" />
+      <workItem from="1699251051546" duration="603000" />
+      <workItem from="1699849782489" duration="3167000" />
+      <workItem from="1699923366855" duration="7241000" />
+      <workItem from="1700629951734" duration="2000" />
+      <workItem from="1700710321701" duration="2038000" />
+      <workItem from="1700815801988" duration="1248000" />
+      <workItem from="1701010262438" duration="1350000" />
+      <workItem from="1701047222465" duration="680000" />
+      <workItem from="1701067506303" duration="30000" />
+      <workItem from="1701067545118" duration="2000" />
+      <workItem from="1702220150414" duration="595000" />
+      <workItem from="1704634407776" duration="1208000" />
+      <workItem from="1704707126472" duration="2000" />
+      <workItem from="1704708965391" duration="742000" />
+      <workItem from="1704716719298" duration="7642000" />
+      <workItem from="1704767427867" duration="82000" />
+      <workItem from="1704788075045" duration="5000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial submission">
+      <created>1676991362688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676991362688</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial submission">
+      <created>1676994182229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676994182229</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial submission">
+      <created>1676994370008</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676994370008</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed myfont">
+      <created>1676994859741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676994859741</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed myfont">
+      <created>1677032418397</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677032418397</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change the location of the switch.">
+      <created>1677080228150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677080228150</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixed the problem of scroll bar length.">
+      <created>1677080767013</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677080767013</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add animation master switch, fixed the screen scrolling problem in animation editing interface.">
+      <created>1677084274328</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677084274328</updated>
+    </task>
+    <task id="LOCAL-00009" summary="enable the animation master switch.">
+      <created>1677084640930</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677084640930</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fixed the error codes in comments.">
+      <created>1677136283264</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1677136283264</updated>
+    </task>
+    <task id="LOCAL-00011" summary="the shutter button can be used as a confirmation key.">
+      <created>1677137057761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677137057761</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added function for move strings.">
+      <created>1677139316504</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677139316504</updated>
+    </task>
+    <task id="LOCAL-00013" summary="modified the return condition of the string move function.">
+      <created>1677140521936</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677140521936</updated>
+    </task>
+    <task id="LOCAL-00014" summary="replaces three-way switches with rotary encoders.">
+      <created>1677165925998</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677165925998</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add support for advanced timer-based rotary encoders.">
+      <created>1677223664163</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1677223664163</updated>
+    </task>
+    <task id="LOCAL-00016" summary="reconfigured encoder scanning algorithm (not completed).">
+      <created>1677340810074</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677340810074</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added new version of encoder scanning algorithm (not verified).">
+      <created>1677428890098</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1677428890098</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added new version of encoder scanning algorithm (verified).">
+      <created>1677477995126</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1677477995126</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added circular menu animation.">
+      <created>1677581775656</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677581775656</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added encoder filtering algorithm">
+      <created>1681572672828</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681572672828</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added key sounds and key sounds setting menu">
+      <created>1681658785554</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681658785554</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Clean cache">
+      <created>1681660254014</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681660254014</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Modified .gitignore">
+      <created>1681661246797</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681661246797</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added support for C++">
+      <created>1681751321608</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681751321608</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added support for C++">
+      <created>1681752567441</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681752567441</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Changed the chip model to STM32F103CBT6 and modified the corresponding file">
+      <created>1681753774544</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681753774544</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Main menu refactored in C++">
+      <created>1682234147467</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1682234147467</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Backup current program">
+      <created>1682848036185</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1682848036185</updated>
+    </task>
+    <task id="LOCAL-00029" summary="备份代码，准备优化屏幕刷新算法">
+      <created>1682862969229</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1682862969229</updated>
+    </task>
+    <task id="LOCAL-00030" summary="优化屏幕刷新逻辑，主菜单刷新率达到160">
+      <created>1682869494813</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1682869494813</updated>
+    </task>
+    <task id="LOCAL-00031" summary="准备编写文字入场动画，备份代码">
+      <created>1682924818863</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1682924818863</updated>
+    </task>
+    <task id="LOCAL-00032" summary="加入文字入场动画">
+      <created>1683022082427</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1683022082427</updated>
+    </task>
+    <task id="LOCAL-00033" summary="加入文字入场动画">
+      <created>1683022176821</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1683022176821</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="985fcfab-1fcb-4672-8379-4d1ad4bcd02a" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="985fcfab-1fcb-4672-8379-4d1ad4bcd02a">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="fixed the problem of scroll bar length." />
+    <MESSAGE value="add animation master switch, fixed the screen scrolling problem in animation editing interface." />
+    <MESSAGE value="enable the animation master switch." />
+    <MESSAGE value="fixed the error codes in comments." />
+    <MESSAGE value="the shutter button can be used as a confirmation key." />
+    <MESSAGE value="added function for move strings." />
+    <MESSAGE value="modified the return condition of the string move function." />
+    <MESSAGE value="replaces three-way switches with rotary encoders." />
+    <MESSAGE value="add support for advanced timer-based rotary encoders." />
+    <MESSAGE value="reconfigured encoder scanning algorithm (not completed)." />
+    <MESSAGE value="added new version of encoder scanning algorithm (not verified)." />
+    <MESSAGE value="added new version of encoder scanning algorithm (verified)." />
+    <MESSAGE value="added circular menu animation." />
+    <MESSAGE value="Added encoder filtering algorithm" />
+    <MESSAGE value="Added key sounds and key sounds setting menu" />
+    <MESSAGE value="Clean cache" />
+    <MESSAGE value="Modified .gitignore" />
+    <MESSAGE value="Added support for C++" />
+    <MESSAGE value="Changed the chip model to STM32F103CBT6 and modified the corresponding file" />
+    <MESSAGE value="Main menu refactored in C++" />
+    <MESSAGE value="Backup current program" />
+    <MESSAGE value="备份代码，准备优化屏幕刷新算法" />
+    <MESSAGE value="优化屏幕刷新逻辑，主菜单刷新率达到160" />
+    <MESSAGE value="准备编写文字入场动画，备份代码" />
+    <MESSAGE value="加入文字入场动画" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入文字入场动画" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
