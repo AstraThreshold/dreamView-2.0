@@ -3,6 +3,7 @@
 //
 #include "core.h"
 #include "oled.h"
+#include "menu.h"
 
 void drawTestLogo(u8g2_t *u8g2)
 {
@@ -36,10 +37,13 @@ void dreamViewKernelStart(void)
   OLED_Clear();
   u8g2Init(&u8g2);
 
+  list_init();
+  oled_init();
+
   for (;;)
   {
-    OLED_ClearBuffer();
-    drawTestLogo(&u8g2);
-    u8g2_SendBuffer(&u8g2);
+    //drawTestLogo(&u8g2);
+    btn_scan();
+    ui_proc();
   }
 }

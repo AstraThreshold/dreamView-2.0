@@ -25,99 +25,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
-      <change afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/.idea/dreamView-FW1.0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.Hardware/BLDC/PCB3.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/BLDC/PCB3.PcbDoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.Hardware/BLDC/Sheet3.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/BLDC/Sheet3.SchDoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.Hardware/Core/PCB2.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/Core/PCB2.PcbDoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.Hardware/Core/Sheet2.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/Core/Sheet2.SchDoc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.Hardware/Core/dreamViewCoreRelease.PrjPcb" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Hardware/Core/dreamViewCoreRelease.PrjPcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/buzzer_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/core.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/dma.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/dreamView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/gpio.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/menu.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/mui.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/mui_u8g2.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui_u8g2.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_encoder_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_key_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_init_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_proc_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_menu_show_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/oled_setup_u8g2_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/shutter_timer_fir.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/spi.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f1xx_hal_conf.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f1xx_it.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/tim.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/u8g2.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/u8g2_wqy.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_wqy.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/u8x8.h" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/buzzer_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/buzzer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/menu.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/core.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/core.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/menu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/mui.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/mui_u8g2.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/mui_u8g2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_encoder_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_key_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/key.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_init_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_proc_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_menu_show_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/oled_setup_u8g2_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/oled.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/shutter_timer_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_bitmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_bitmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_box.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_box.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_buffer.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_buffer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_button.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_button.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_circle.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_circle.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_cleardisplay.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_cleardisplay.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_d_memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_d_memory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_d_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_d_setup.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_font.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_font.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_font_myfont_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_font_myfont_fir.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_fonts_nessary_fir.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_fonts_nessary_fir.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_hvline.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_hvline.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_input_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_input_value.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_intersection.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_intersection.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_kerning.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_kerning.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_ll_hvline.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_ll_hvline.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_message.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_polygon.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_polygon.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_selection_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_selection_list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8g2_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_setup.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8log.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8log.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8log_u8g2.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8log_u8g2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8log_u8x8.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8log_u8x8.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_8x8.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_8x8.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_byte.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_byte.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_cad.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_cad.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_capture.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_capture.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_d_ssd1306_128x64_noname.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_d_ssd1306_128x64_noname.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_debounce.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_debounce.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_display.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_display.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_fonts.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_fonts.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_gpio.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_input_value.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_input_value.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_message.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_message.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_selection_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_selection_list.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_setup.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_setup.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_string.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_string.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_u16toa.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_u16toa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/u8x8_u8toa.c" beforeDir="false" afterPath="$PROJECT_DIR$/3rdParty/u8g2/u8x8_u8toa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dreamView-FW.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/dreamView-FW.ioc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
