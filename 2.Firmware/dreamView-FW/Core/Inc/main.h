@@ -65,8 +65,6 @@ void Error_Handler(void);
 #define RST_GPIO_Port GPIOA
 #define DC_Pin GPIO_PIN_4
 #define DC_GPIO_Port GPIOA
-#define KEY0_Pin GPIO_PIN_5
-#define KEY0_GPIO_Port GPIOA
 #define KEY1_Pin GPIO_PIN_6
 #define KEY1_GPIO_Port GPIOA
 #define KEY2_Pin GPIO_PIN_7

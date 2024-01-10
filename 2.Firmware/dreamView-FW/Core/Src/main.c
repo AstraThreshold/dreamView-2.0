@@ -89,6 +89,7 @@ int main(void)
   MX_DMA_Init();
   MX_SPI2_Init();
   MX_TIM4_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   dreamViewKernelStart();

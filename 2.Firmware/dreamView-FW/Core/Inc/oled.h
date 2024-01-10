@@ -48,7 +48,6 @@ extern void OLED_Display_On(void);
 
 extern void OLED_Display_Off(void);
 
-//todo: 修改亮度函数（淘宝聊天记录 寄存器）
 extern void OLED_Lighter(void);
 
 extern void OLED_Darker(void);
@@ -58,6 +57,8 @@ extern void OLED_Clear(void);
 extern void OLED_Init(void);
 
 extern void delay_us(uint32_t time);
+
+extern void drawTestLogo(u8g2_t *u8g2);
 
 extern uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *arg_ptr);
 
