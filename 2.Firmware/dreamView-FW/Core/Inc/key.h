@@ -20,39 +20,39 @@ extern "C" {
   */
 
 //Key: 1:高电平，按键未按下， 0：低电平，按键按下
-#define Key HAL_GPIO_ReadPin(KEY1_GPIO_Port,KEY1_Pin)
+#define KEY0 HAL_GPIO_ReadPin(KEY1_GPIO_Port,KEY1_Pin)
+#define KEY1 HAL_GPIO_ReadPin(KEY2_GPIO_Port,KEY2_Pin)
+#define Key (KEY0 && KEY1)
 
 typedef enum
 {
   KEY_CHECK = 0,
   KEY_COMFIRM = 1,
   KEY_RELEASE = 2
-}KEY_STATE;
+} KEY_STATE;
 
 typedef enum
 {
   NULL_KEY = 0,
-  SHORT_KEY =1,
+  SHORT_KEY = 1,
   LONG_KEY
-}KEY_TYPE;
+} KEY_TYPE;
 
-//extern u8 g_KeyFlag;
-//extern KEY_TYPE g_KeyActionFlag;
+//对应的按键值，
+typedef enum
+{
+  KEY_NULL = 0,
+  KEY_0,
+  KEY_1,
+} KEY_VALUE;
 
-//单个按键事件
-//#define SingleKeyEvent
-
-//单个按键实现长按和短按
-#define SingleKey_LongShort_Event	1
 extern void Key_Init(void);
+
 extern void Key_Scan(void);
 
 extern void Key_Proc(void);
 
 extern uint8_t g_KeyFlag;                // 按键有效标志，0： 按键值无效； 1：按键值有效
-
-
-
 
 #ifdef __cplusplus
 }

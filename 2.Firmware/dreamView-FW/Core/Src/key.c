@@ -13,6 +13,8 @@ KEY_STATE KeyState = KEY_CHECK;  // 初始化按键状态为检测状态
 
 KEY_TYPE g_KeyActionFlag;    //用于区别长按和短按
 
+KEY_VALUE g_KeyValue;
+
 void Key_Scan(void)
 {
   static uint8_t TimeCnt = 0;
@@ -40,6 +42,8 @@ void Key_Scan(void)
         if (TimeCnt > 100)            // 长按 1 s
         {
           g_KeyActionFlag = LONG_KEY;
+          if (0 == KEY0) { g_KeyValue = KEY_0; }
+          if (0 == KEY1) { g_KeyValue = KEY_1; }
           TimeCnt = 0;
           lock = 0;               //重新检查
           KeyState = KEY_RELEASE;    // 需要进入按键释放状态
@@ -49,12 +53,15 @@ void Key_Scan(void)
       {
         if (1 == lock)                // 不是第一次进入，  释放按键才执行
         {
-
+          if (1 == KEY0) { g_KeyValue = KEY_0; }
+          if (1 == KEY1) { g_KeyValue = KEY_1; }
           g_KeyActionFlag = SHORT_KEY;          // 短按
           KeyState = KEY_RELEASE;    // 需要进入按键释放状态
         } else                          // 当前Key值为1，确认为抖动，则返回上一个状态
         {
           KeyState = KEY_CHECK;    // 返回上一个状态
+
+          g_KeyValue = KEY_NULL;
         }
 
       }
@@ -74,23 +81,52 @@ void Key_Scan(void)
 
 void Key_Proc()
 {
-  switch (g_KeyActionFlag)
+  switch (g_KeyValue)
   {
-    case SHORT_KEY:
-      /*
-      执行短按对应的事件
-      */
-      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_12);
-      g_KeyActionFlag = NULL_KEY;    //状态回到空
+    case KEY_0:
+      switch (g_KeyActionFlag)
+      {
+        case SHORT_KEY:
+          /*
+          执行短按对应的事件
+          */
+          HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_12);
+          g_KeyActionFlag = NULL_KEY;    //状态回到空
+          break;
+
+        case LONG_KEY:
+          /*
+         执行长按对应的事件
+         */
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+          g_KeyActionFlag = NULL_KEY;    //状态回到空
+        default:
+          break;
+      }
+      g_KeyValue = KEY_NULL;
       break;
 
-    case LONG_KEY:
-      /*
-     执行长按对应的事件
-     */
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
-      g_KeyActionFlag = NULL_KEY;    //状态回到空
-    default:
+    case KEY_1:
+      switch (g_KeyActionFlag)
+      {
+        case SHORT_KEY:
+          /*
+          执行短按对应的事件
+          */
+          HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_12);
+          g_KeyActionFlag = NULL_KEY;    //状态回到空
+          break;
+
+        case LONG_KEY:
+          /*
+         执行长按对应的事件
+         */
+          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+          g_KeyActionFlag = NULL_KEY;    //状态回到空
+        default:
+          break;
+      }
+      g_KeyValue = KEY_NULL;
       break;
   }
 }
