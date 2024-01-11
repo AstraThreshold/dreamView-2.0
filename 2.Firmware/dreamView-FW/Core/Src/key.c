@@ -1,12 +1,14 @@
 #include "key.h"
 
 /**
- * 单个按键检测短按和长按事件
+ * 多个（两个）按键检测短按和长按事件
  * 短按：时间 10ms < T < 1 s, 长按：时间 T >1 s
- * 功能：使用状态机方式，扫描单个按键；扫描周期为10ms,10ms刚好跳过抖动；
+ * 功能：使用状态机方式，扫描按键；扫描周期为10ms,10ms刚好跳过抖动；
  * 状态机使用switch case语句实现状态之间的跳转
  * lock变量用于判断是否是第一次进行按键确认状态
- * ：长按键事件提前执行，短按键事件释放后才执行
+ * 长按键事件提前执行，短按键事件释放后才执行
+ *
+ * 特性：长按时不会触发短按的事件
  */
 
 KEY_STATE KeyState = KEY_CHECK;  // 初始化按键状态为检测状态
@@ -42,6 +44,7 @@ void Key_Scan(void)
         if (TimeCnt > 100)            // 长按 1 s
         {
           g_KeyActionFlag = LONG_KEY;
+          //判断按键依然按下
           if (0 == KEY0) { g_KeyValue = KEY_0; }
           if (0 == KEY1) { g_KeyValue = KEY_1; }
           TimeCnt = 0;
@@ -53,6 +56,7 @@ void Key_Scan(void)
       {
         if (1 == lock)                // 不是第一次进入，  释放按键才执行
         {
+          //所以这里要判断按键被释放才行
           if (1 == KEY0) { g_KeyValue = KEY_0; }
           if (1 == KEY1) { g_KeyValue = KEY_1; }
           g_KeyActionFlag = SHORT_KEY;          // 短按

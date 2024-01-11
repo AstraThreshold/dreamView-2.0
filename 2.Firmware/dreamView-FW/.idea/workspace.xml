@@ -25,8 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/key.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/key.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/key.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
