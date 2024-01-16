@@ -14,7 +14,8 @@ extern "C" {
 #endif
 
 /**
-  * 使用定时器来轮询Key_Scan()函数，定时节拍为2ms,
+  * 使用定时器(SysTick)来轮询Key_Scan()函数
+  * SysTick轮询时间为1ms 建立变量 每轮询一次+1 大于10时执行一次Key_Scan() 然后清零变量
   * 状态转换时间为10ms,即每次进入switch case语句的时间差为10ms
   * 利用该10ms的间隙跳过按键抖动
   */
@@ -27,26 +28,30 @@ extern "C" {
 typedef enum
 {
   KEY_CHECK = 0,
-  KEY_COMFIRM = 1,
-  KEY_RELEASE = 2
+  KEY_0_COMFIRM,
+  KEY_1_COMFIRM,
+  KEY_RELEASE,
 } KEY_STATE;
 
 typedef enum
 {
-  NULL_KEY = 0,
-  SHORT_KEY = 1,
-  LONG_KEY
+  KEY_NOT_PRESSED = 0,
+  KEY_PRESSED,
 } KEY_TYPE;
 
 //对应的按键值，
 typedef enum
 {
   KEY_NULL = 0,
-  KEY_0,
-  KEY_1,
+  KEY_0_CLICK,  //轻击
+  KEY_0_PRESS,  //长按
+  KEY_1_CLICK,
+  KEY_1_PPESS,
 } KEY_VALUE;
 
-extern void Key_Init(void);
+extern KEY_TYPE g_KeyActionFlag;
+
+extern KEY_VALUE g_KeyValue;
 
 extern void Key_Scan(void);
 

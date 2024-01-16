@@ -5,8 +5,12 @@
 #define MENU_H
 
 #include "algorithm"
+#include "../../3rdParty/u8g2/u8g2.h"
 
-extern void list_init();
+extern void ui_init();
+extern void oled_init();
+extern void ui_proc();
+extern void ui_param_init();
 
 #ifdef __cplusplus
 extern "C" {

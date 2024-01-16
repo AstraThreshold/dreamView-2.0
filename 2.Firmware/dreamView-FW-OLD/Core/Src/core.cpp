@@ -68,7 +68,7 @@ void dreamViewKernelStart(void)
     key_scan();
     Encoder_Analyze(Encoder_Scan());
     buzzer_proc(10, 45);
-    //ui_proc();
+    ui_proc();
 
     OLED_ClearBuffer();
     //dreamViewUI.mainMenuProc(&mainMenu);
