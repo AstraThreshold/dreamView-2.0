@@ -36,6 +36,6 @@ void dreamViewKernelStart(void)
 
     //u8g2_SetDrawColor(&u8g2, 1);
 
-   // u8g2_SendBuffer(&u8g2);
+    // u8g2_SendBuffer(&u8g2);
   }
 }

@@ -25,23 +25,20 @@ extern "C" {
 #define KEY1 HAL_GPIO_ReadPin(KEY2_GPIO_Port,KEY2_Pin)
 #define Key (KEY0 && KEY1)
 
-typedef enum
-{
+typedef enum {
   KEY_CHECK = 0,
   KEY_0_COMFIRM,
   KEY_1_COMFIRM,
   KEY_RELEASE,
 } KEY_STATE;
 
-typedef enum
-{
+typedef enum {
   KEY_NOT_PRESSED = 0,
   KEY_PRESSED,
 } KEY_TYPE;
 
 //对应的按键值，
-typedef enum
-{
+typedef enum {
   KEY_NULL = 0,
   KEY_0_CLICK,  //轻击
   KEY_0_PRESS,  //长按

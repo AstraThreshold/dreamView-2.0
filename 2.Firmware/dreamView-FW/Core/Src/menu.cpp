@@ -316,20 +316,27 @@ struct {
 #define   TILE_ICON_H         30                          //磁贴图标高度
 #define   TILE_ICON_W         30                          //磁贴图标宽度
 #define   TILE_ICON_S         36                          //磁贴图标间距
-#define   TILE_INDI_H         27                          //磁贴大标题指示器高度
-#define   TILE_INDI_W         7                           //磁贴大标题指示器宽度
-#define   TILE_INDI_S         36                          //磁贴大标题指示器上边距
+#define   TILE_ICON_L         5                           //磁贴图标上边距
+#define   TILE_INDI_H         27                          //磁贴标题指示器高度
+#define   TILE_INDI_S         38                          //磁贴标题上边距
+#define   TILE_LINE_S         46                          //磁贴标题虚线上边距
+#define   TILE_ARROW_S        4                           //磁贴标题箭头侧边距
+#define   TILE_ARROW_L        56                          //磁贴标题箭头上边距
+#define   TILE_ARROW_W        6                           //磁贴标题箭头长度
+#define   TILE_BTN_S          16                          //磁贴按钮图标侧边距
 struct {
   float title_y_calc = TILE_INDI_S + (TILE_INDI_H - TILE_B_TITLE_H) / 2 + TILE_B_TITLE_H * 2;
   float title_y_trg_calc = TILE_INDI_S + (TILE_INDI_H - TILE_B_TITLE_H) / 2 + TILE_B_TITLE_H;
   int16_t temp;
   bool select_flag;
+  float arrow_y;
+  float arrow_y_trg;
+  float line_y;
+  float line_y_trg;
   float icon_x;
   float icon_x_trg;
   float icon_y;
   float icon_y_trg;
-  float indi_x;
-  float indi_x_trg;
   float title_y;
   float title_y_trg;
 } tile;
@@ -344,15 +351,6 @@ struct {
 #define   LIST_BAR_W          5                           //列表进度条宽度，需要是奇数，因为正中间有1像素宽度的线
 #define   LIST_BOX_R          0.5f                        //列表选择框圆角
 
-/*
-//超窄行高度测试
-#define   LIST_FONT           u8g2_font_4x6_tr            //列表字体
-#define   LIST_TEXT_H         5                           //列表每行文字字体的高度
-#define   LIST_LINE_H         7                           //列表单行高度
-#define   LIST_TEXT_S         1                           //列表每行文字的上边距，左边距和右边距，下边距由它和字体高度和行高度决定
-#define   LIST_BAR_W          7                           //列表进度条宽度，需要是奇数，因为正中间有1像素宽度的线
-#define   LIST_BOX_R          0.5f                        //列表选择框圆角
-*/
 struct {
   uint8_t line_n = DISP_H / LIST_LINE_H;
   int16_t temp;
@@ -366,9 +364,6 @@ struct {
   float bar_y;
   float bar_y_trg;
 } list;
-
-//电压测量页面变量
-//开发板模拟引脚
 
 //曲线相关
 #define   WAVE_SAMPLE         20                          //采集倍数
@@ -393,7 +388,6 @@ struct {
   float text_bg_r_trg;
 } volt;
 
-
 //选择框变量
 
 //默认参数
@@ -403,14 +397,6 @@ struct {
 #define   CHECK_BOX_F_H       12                          //选择框外框高度
 #define   CHECK_BOX_D_S       2                           //选择框里面的点距离外框的边距
 
-/*
-//超窄行高度测试
-#define   CHECK_BOX_L_S       99                          //选择框在每行的左边距
-#define   CHECK_BOX_U_S       0                           //选择框在每行的上边距
-#define   CHECK_BOX_F_W       5                           //选择框外框宽度
-#define   CHECK_BOX_F_H       5                           //选择框外框高度
-#define   CHECK_BOX_D_S       1                           //选择框里面的点距离外框的边距
-*/
 struct {
   uint8_t *v;
   uint8_t *m;
@@ -536,7 +522,7 @@ void window_value_init(char title[], uint8_t select, uint8_t *value, uint8_t max
 void ui_param_init()
 {
   ui.param[DISP_BRI] = 255;      //屏幕亮度
-  ui.param[TILE_ANI] = 30;       //磁贴动画速度
+  ui.param[TILE_ANI] = 50;       //磁贴动画速度
   ui.param[LIST_ANI] = 60;       //列表动画速度
   ui.param[WIN_ANI] = 25;       //弹窗动画速度
   ui.param[SPOT_ANI] = 50;       //聚光动画速度
@@ -546,8 +532,8 @@ void ui_param_init()
   ui.param[BTN_LPT] = 150;      //按键长按时长
   ui.param[TILE_UFD] = 1;        //磁贴图标从头展开开关
   ui.param[LIST_UFD] = 1;        //菜单列表从头展开开关
-  ui.param[TILE_LOOP] = 0;        //磁贴图标循环模式开关
-  ui.param[LIST_LOOP] = 0;        //菜单列表循环模式开关
+  ui.param[TILE_LOOP] = 1;        //磁贴图标循环模式开关
+  ui.param[LIST_LOOP] = 1;        //菜单列表循环模式开关
   ui.param[WIN_BOK] = 0;        //弹窗背景虚化开关
   ui.param[KNOB_DIR] = 0;        //旋钮方向切换开关
   ui.param[DARK_MODE] = 1;        //黑暗模式开关
@@ -574,10 +560,12 @@ void tile_param_init()
   ui.init = false;
   tile.icon_x = 0;
   tile.icon_x_trg = TILE_ICON_S;
-  tile.icon_y = -TILE_ICON_H;
-  tile.icon_y_trg = 0;
-  tile.indi_x = 0;
-  tile.indi_x_trg = TILE_INDI_W;
+  tile.arrow_y = 76;    //为了让其到位的速度慢一点
+  tile.arrow_y_trg = TILE_ARROW_L;
+  tile.line_y = 65;
+  tile.line_y_trg = TILE_LINE_S;
+  tile.icon_y = -TILE_ICON_H * 2;
+  tile.icon_y_trg = TILE_ICON_L;
   tile.title_y = tile.title_y_calc;
   tile.title_y_trg = tile.title_y_trg_calc;
 }
@@ -587,7 +575,7 @@ void sleep_param_init()
 {
   u8g2_SetDrawColor(&u8g2, 0);
   u8g2_DrawBox(&u8g2, 0, 0, DISP_W, DISP_H);
-  u8g2_SetPowerSave(&u8g2, 1);
+  //u8g2_SetPowerSave(&u8g2, 1);
   ui.state = S_NONE;
   ui.sleep = true;
 }
@@ -760,30 +748,63 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
   //计算动画过渡值
   animation(&tile.icon_x, &tile.icon_x_trg, TILE_ANI);
   animation(&tile.icon_y, &tile.icon_y_trg, TILE_ANI);
-  animation(&tile.indi_x, &tile.indi_x_trg, TILE_ANI);
   animation(&tile.title_y, &tile.title_y_trg, TILE_ANI);
+  animation(&tile.line_y, &tile.line_y_trg, TILE_ANI);
+  animation(&tile.arrow_y, &tile.arrow_y_trg, TILE_ANI);
 
   //设置大标题的颜色，0透显，1实显，2反色，这里用实显
   u8g2_SetDrawColor(&u8g2, 1);
 
-  //绘制大标题
+  //绘制标题
   u8g2_SetFont(&u8g2, TILE_B_FONT);
   u8g2_DrawStr(&u8g2,
-               ((DISP_W - TILE_INDI_W) - u8g2_GetStrWidth(&u8g2, arr_1[ui.select[ui.layer]].m_select)) / 2 +
-               TILE_INDI_W,
+               ((DISP_W) - u8g2_GetStrWidth(&u8g2, arr_1[ui.select[ui.layer]].m_select)) / 2,
                tile.title_y, arr_1[ui.select[ui.layer]].m_select);
 
-  //绘制大标题指示器
-  u8g2_DrawBox(&u8g2, 0, TILE_ICON_S, tile.indi_x, TILE_INDI_H);
+
 
   //绘制图标
   if (!ui.init)
   {
+    //按钮和箭头从下向上缓动
+    /**画左箭头**/
+    u8g2_DrawHLine(&u8g2, TILE_ARROW_S, tile.arrow_y, TILE_ARROW_W);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 1, tile.arrow_y + 1);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 2, tile.arrow_y + 2);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 1, tile.arrow_y - 1);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 2, tile.arrow_y - 2);
+    /**画左箭头**/
+
+    /**画右箭头**/
+    u8g2_DrawHLine(&u8g2, DISP_W - TILE_ARROW_W - TILE_ARROW_S, tile.arrow_y, TILE_ARROW_W);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W, tile.arrow_y + 1);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W - 1, tile.arrow_y + 2);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W, tile.arrow_y - 1);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W - 1, tile.arrow_y - 2);
+    /**画右箭头**/
+
+    /**画按钮**/
+    u8g2_DrawHLine(&u8g2, TILE_BTN_S, tile.arrow_y + 2, 9);
+    u8g2_DrawBox(&u8g2, TILE_BTN_S + 2, tile.arrow_y + 2 - 4, 5, 4);
+
+    u8g2_DrawHLine(&u8g2, 128 - TILE_BTN_S - 9, tile.arrow_y + 2, 9);
+    u8g2_DrawBox(&u8g2, 128 - TILE_BTN_S - 9 + 2, tile.arrow_y + 2 - 4, 5, 4);
+    /**画按钮**/
+
+    //虚线从下向上缓动
+    for (int index = 0; index <= 128; index += 1)
+    {
+      if (index % 8 == 0 | (index - 1) % 8 == 0 | (index - 2) % 8 == 0) continue;
+      u8g2_DrawPixel(&u8g2, index, (int16_t) tile.line_y);  // 绘制一条由像素点组成的虚线
+    }
+
+    //图标从左上到右下展开
     for (uint8_t i = 0; i < ui.num[ui.index]; ++i)
     {
       if (ui.param[TILE_UFD])
+      {
         tile.temp = (DISP_W - TILE_ICON_W) / 2 + i * tile.icon_x - TILE_ICON_S * ui.select[ui.layer];
-      else tile.temp = (DISP_W - TILE_ICON_W) / 2 + (i - ui.select[ui.layer]) * tile.icon_x;
+      } else tile.temp = (DISP_W - TILE_ICON_W) / 2 + (i - ui.select[ui.layer]) * tile.icon_x;
       u8g2_DrawXBMP(&u8g2, tile.temp, (int16_t) tile.icon_y, TILE_ICON_W, TILE_ICON_H, icon_pic[i]);
     }
     if (tile.icon_x == tile.icon_x_trg)
@@ -792,10 +813,45 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
       tile.icon_x = tile.icon_x_trg = -ui.select[ui.layer] * TILE_ICON_S;
     }
   } else
+  {
+    /**画左箭头**/
+    u8g2_DrawHLine(&u8g2, TILE_ARROW_S, TILE_ARROW_L, TILE_ARROW_W);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 1, TILE_ARROW_L + 1);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 2, TILE_ARROW_L + 2);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 1, TILE_ARROW_L - 1);
+    u8g2_DrawPixel(&u8g2, TILE_ARROW_S + 2, TILE_ARROW_L - 2);
+    /**画左箭头**/
+
+    /**画右箭头**/
+    u8g2_DrawHLine(&u8g2, DISP_W - TILE_ARROW_W - TILE_ARROW_S, TILE_ARROW_L, TILE_ARROW_W);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W, TILE_ARROW_L + 1);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W - 1, TILE_ARROW_L + 2);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W, TILE_ARROW_L - 1);
+    u8g2_DrawPixel(&u8g2, DISP_W - TILE_ARROW_W - 1, TILE_ARROW_L - 2);
+    /**画右箭头**/
+
+    /**画按钮**/
+    u8g2_DrawHLine(&u8g2, TILE_BTN_S, TILE_ARROW_L + 2, 9);
+    u8g2_DrawBox(&u8g2, TILE_BTN_S + 2, TILE_ARROW_L + 2 - 4, 5, 4);
+
+    u8g2_DrawHLine(&u8g2, 128 - TILE_BTN_S - 9, TILE_ARROW_L + 2, 9);
+    u8g2_DrawBox(&u8g2, 128 - TILE_BTN_S - 9 + 2, TILE_ARROW_L + 2 - 4, 5, 4);
+    /**画按钮**/
+
+    for (int index = 0; index <= 128; index += 1)
+    {
+      if (index % 8 == 0 | (index - 1) % 8 == 0 | (index - 2) % 8 == 0) continue;
+      u8g2_DrawPixel(&u8g2, index, TILE_LINE_S);  // 绘制一条由像素点组成的虚线
+    }
+
     for (uint8_t i = 0; i < ui.num[ui.index]; ++i)
-      u8g2_DrawXBMP(&u8g2, (DISP_W - TILE_ICON_W) / 2 + (int16_t) tile.icon_x + i * TILE_ICON_S, 0, TILE_ICON_W,
+    {
+      u8g2_DrawXBMP(&u8g2, (DISP_W - TILE_ICON_W) / 2 + (int16_t) tile.icon_x + i * TILE_ICON_S, TILE_ICON_L,
+                    TILE_ICON_W,
                     TILE_ICON_H,
                     icon_pic[i]);
+    }
+  }
 
   //反转屏幕内元素颜色，白天模式遮罩
   u8g2_SetDrawColor(&u8g2, 2);
@@ -923,46 +979,6 @@ void list_show(struct MENU arr[], uint8_t ui_index)
   }
 }
 
-//电压页面显示函数
-void volt_show()
-{
-//  //使用列表类显示选项
-//  list_show(volt_menu, M_VOLT);
-//
-//  //计算动画过渡值
-//  animation(&volt.text_bg_r, &volt.text_bg_r_trg, TAG_ANI);
-//
-//  //设置曲线颜色，0透显，1实显，2反色，这里用实显
-//  u8g2.setDrawColor(1);
-//
-//  //绘制电压曲线和外框
-//  volt.val = 0;
-//  u8g2.drawFrame(WAVE_BOX_L_S, 0, WAVE_BOX_W, WAVE_BOX_H);
-//  u8g2.drawFrame(WAVE_BOX_L_S + 1, 1, WAVE_BOX_W - 2, WAVE_BOX_H - 2);
-//  if (list.box_y == list.box_y_trg[ui.layer] && list.y == list.y_trg) {
-//    for (int i = 0; i < WAVE_SAMPLE * WAVE_W; i++)
-//      volt.ch0_adc[i] = volt.val = analogRead(analog_pin[ui.select[ui.layer]]);
-//    for (int i = 1; i < WAVE_W - 1; i++) {
-//      volt.ch0_wave[i] = map(volt.ch0_adc[int(5 * i)], 0, 4095, WAVE_MAX, WAVE_MIN);
-//      u8g2.drawLine(WAVE_L + i - 1, WAVE_U + volt.ch0_wave[i - 1], WAVE_L + i, WAVE_U + volt.ch0_wave[i]);
-//    }
-//  }
-//
-//  //绘制电压值
-//  u8g2.setFontDirection(0);
-//  u8g2.setFont(VOLT_FONT);
-//  u8g2.setCursor(39, DISP_H - 6);
-//  u8g2.print(volt.val / 4096.0f * 3.3f);
-//  u8g2.print("V");
-//
-//  //绘制列表选择框和电压文字背景
-//  u8g2.setDrawColor(2);
-//  u8g2.drawBox(VOLT_TEXT_BG_L_S, DISP_H - VOLT_TEXT_BG_H, volt.text_bg_r, VOLT_TEXT_BG_H);
-//
-//  //反转屏幕内元素颜色，白天模式遮罩
-//  if (!ui.param[DARK_MODE]) u8g2.drawBox(0, 0, DISP_W, DISP_H);
-}
-
 //弹窗通用显示函数
 void window_show()
 {
@@ -1007,7 +1023,6 @@ void tile_rotate_switch()
   switch (g_KeyValue)
   {
     case KEY_1_CLICK:
-      //todo: 按下左键的时候 灯并没有如期点亮 说明没进到这个状态
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
       if (ui.init)
       {
@@ -1069,16 +1084,14 @@ void list_rotate_switch()
             {
               list.box_y_trg[ui.layer] = DISP_H - LIST_LINE_H;
               list.y_trg = DISP_H - ui.num[ui.index] * LIST_LINE_H;
-            }
-            else list.box_y_trg[ui.layer] = (ui.num[ui.index] - 1) * LIST_LINE_H;
+            } else list.box_y_trg[ui.layer] = (ui.num[ui.index] - 1) * LIST_LINE_H;
             break;
-          }
-          else break;
+          } else break;
         }
         if (ui.init)
         {
           ui.select[ui.layer] -= 1;
-          if (ui.select[ui.layer] < - (list.y_trg / LIST_LINE_H))
+          if (ui.select[ui.layer] < -(list.y_trg / LIST_LINE_H))
           {
             if (!(DISP_H % LIST_LINE_H)) list.y_trg += LIST_LINE_H;
             else
@@ -1087,15 +1100,12 @@ void list_rotate_switch()
               {
                 list.y_trg += (list.line_n + 1) * LIST_LINE_H - DISP_H;
                 list.box_y_trg[ui.layer] = 0;
-              }
-              else if (list.box_y_trg[ui.layer] == LIST_LINE_H)
+              } else if (list.box_y_trg[ui.layer] == LIST_LINE_H)
               {
                 list.box_y_trg[ui.layer] = 0;
-              }
-              else list.y_trg += LIST_LINE_H;
+              } else list.y_trg += LIST_LINE_H;
             }
-          }
-          else list.box_y_trg[ui.layer] -= LIST_LINE_H;
+          } else list.box_y_trg[ui.layer] -= LIST_LINE_H;
           break;
         }
 
@@ -1109,8 +1119,7 @@ void list_rotate_switch()
             list.y_trg = 0;
             list.box_y_trg[ui.layer] = 0;
             break;
-          }
-          else break;
+          } else break;
         }
         if (ui.init)
         {
@@ -1124,15 +1133,12 @@ void list_rotate_switch()
               {
                 list.y_trg -= (list.line_n + 1) * LIST_LINE_H - DISP_H;
                 list.box_y_trg[ui.layer] = DISP_H - LIST_LINE_H;
-              }
-              else if (list.box_y_trg[ui.layer] == DISP_H - LIST_LINE_H * 2)
+              } else if (list.box_y_trg[ui.layer] == DISP_H - LIST_LINE_H * 2)
               {
                 list.box_y_trg[ui.layer] = DISP_H - LIST_LINE_H;
-              }
-              else list.y_trg -= LIST_LINE_H;
+              } else list.y_trg -= LIST_LINE_H;
             }
-          }
-          else list.box_y_trg[ui.layer] += LIST_LINE_H;
+          } else list.box_y_trg[ui.layer] += LIST_LINE_H;
           break;
         }
         break;
@@ -1181,10 +1187,12 @@ void sleep_proc()
     {
       g_KeyActionFlag = KEY_NOT_PRESSED;
 
+      //u8g2_SetPowerSave(&u8g2, 0);
+
+      ui.sleep = false;
       ui.index = M_MAIN;
       ui.state = S_LAYER_IN;
-      u8g2_SetPowerSave(&u8g2, 0);
-      ui.sleep = false;
+
       break;
     }
   }
@@ -1226,7 +1234,6 @@ void main_proc()
     }
     if (!tile.select_flag && ui.init)
     {
-      tile.indi_x = 0;
       tile.title_y = tile.title_y_calc;
     }
   }

@@ -21,12 +21,12 @@ void drawTestLogo(u8g2_t *u8g2)
 
   u8g2_SetFontDirection(u8g2, 1);
   u8g2_SetFont(u8g2, u8g2_font_myfont);
-  u8g2_DrawStr(u8g2, 21,8,"8");
+  u8g2_DrawStr(u8g2, 21, 8, "8");
 
   u8g2_SetFontDirection(u8g2, 0);
   u8g2_SetFont(u8g2, u8g2_font_myfont);
-  u8g2_DrawStr(u8g2, 51,30,"f");
-  u8g2_DrawStr(u8g2, 67,30,"\xb2");
+  u8g2_DrawStr(u8g2, 51, 30, "f");
+  u8g2_DrawStr(u8g2, 67, 30, "\xb2");
 
   u8g2_DrawHLine(u8g2, 2, 35, 47);
   u8g2_DrawHLine(u8g2, 3, 36, 47);
@@ -34,7 +34,7 @@ void drawTestLogo(u8g2_t *u8g2)
   u8g2_DrawVLine(u8g2, 46, 33, 12);
 
   u8g2_SetFont(u8g2, u8g2_font_myfont);
-  u8g2_DrawStr(u8g2, 1,54,"github.com/olikraus/u8g2");
+  u8g2_DrawStr(u8g2, 1, 54, "github.com/olikraus/u8g2");
 }
 
 void OLED_WR_Byte_NOCMD(uint8_t dat)
@@ -196,7 +196,8 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void 
   switch (msg)
   {
     case U8X8_MSG_BYTE_SEND: /*通过SPI发送arg_int个字节数据*/
-      HAL_SPI_Transmit_DMA(&hspi2, (uint8_t *)arg_ptr, arg_int);while(hspi2.TxXferCount);//DMA
+      HAL_SPI_Transmit_DMA(&hspi2, (uint8_t *) arg_ptr, arg_int);
+      while (hspi2.TxXferCount);//DMA
       break;
     case U8X8_MSG_BYTE_INIT: /*初始化函数*/
       break;
@@ -217,7 +218,8 @@ uint8_t u8x8_byte_4wire_hw_spi(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void 
   return 1;
 }
 
-uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8, U8X8_UNUSED uint8_t msg, U8X8_UNUSED uint8_t arg_int, U8X8_UNUSED void *arg_ptr)
+uint8_t u8x8_stm32_gpio_and_delay(U8X8_UNUSED u8x8_t *u8x8, U8X8_UNUSED uint8_t msg, U8X8_UNUSED uint8_t arg_int,
+                                  U8X8_UNUSED void *arg_ptr)
 {
   switch (msg)
   {

@@ -26,7 +26,8 @@ void Key_Scan(void)
 {
   static uint8_t TimeCnt = 0;
   static uint8_t lock = 0;
-  switch (KeyState) {
+  switch (KeyState)
+  {
     //按键未按下状态，此时判断Key的值
     case KEY_CHECK:
       if (!Key)
@@ -58,7 +59,8 @@ void Key_Scan(void)
           lock = 0;               //重新检查
           KeyState = KEY_RELEASE;    // 需要进入按键释放状态
         }
-      } else {
+      } else
+      {
         if (1 == lock)                // 不是第一次进入，  释放按键才执行
         {
           //所以这里要判断按键被释放才行
@@ -83,12 +85,10 @@ void Key_Scan(void)
   }
 }
 
-//todo: 查出来了 是按键处理的问题 无论如何按键都不会进到KEY_0_CLICK
-//修好后记得更新到github
-
 void Key_Proc()
 {
-  switch (g_KeyValue) {
+  switch (g_KeyValue)
+  {
     case KEY_0_CLICK:
       /*
         执行短按对应的事件
