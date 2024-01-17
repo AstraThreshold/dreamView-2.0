@@ -3,10 +3,12 @@
 //
 #include <cstring>
 #include <cmath>
+#include <string>
 #include "menu.h"
 #include "oled.h"
 #include "key.h"
 
+//todo: 拍摄界面如果有需要报警的参数 如曝光不正确等 需要闪烁叹号来示意
 /************************************* 定义页面 *************************************/
 
 //总目录，缩进表示页面层级
@@ -14,10 +16,11 @@ enum {
   M_WINDOW,
   M_SLEEP,
   M_MAIN,
-  M_EDITOR,
-  M_KNOB,
-  M_KRF,
-  M_KPF,
+  M_CAM,
+  M_CAMSETTING,
+  //M_KNOB,
+  //M_KRF,
+  //M_KPF,
   M_VOLT,
   M_SETTING,
   M_ABOUT,
@@ -43,26 +46,26 @@ typedef struct MENU {
 
 M_SELECT main_menu[]
   {
-    {"Sleep"},
-    {"Editor"},
-    {"Volt"},
-    {"Setting"},
+    {"休眠模式"},
+    {"拍摄模式"},
+    {"相机设置"},
+    {"系统设置"},
   };
 
-M_SELECT editor_menu[]
+M_SELECT cam_setting_menu[]
   {
-    {"[ Editor ]"},
-    {"- Function 0"},
-    {"- Function 1"},
-    {"- Function 2"},
-    {"- Function 3"},
-    {"- Function 4"},
-    {"- Function 5"},
-    {"- Function 6"},
-    {"- Function 7"},
-    {"- Function 8"},
-    {"- Function 9"},
-    {"- Knob"},
+    {"[ 相机设置 ]"},
+    {"~ 曝光许用误差"},
+    {"+ 强制释放快门"},
+    {"- B门触发方式"},
+    {"- B门屏幕行为"},
+    //{"- B门屏幕行为"},
+    //{"- Function 5"},
+    //{"- Function 6"},
+    //{"- Function 7"},
+    //{"- Function 8"},
+    //{"- Function 9"},
+    //{"- Knob"},
   };
 
 M_SELECT knob_menu[]
@@ -315,8 +318,8 @@ struct {
 #define   TILE_B_TITLE_H      18                          //磁贴大标题字体高度
 #define   TILE_ICON_H         30                          //磁贴图标高度
 #define   TILE_ICON_W         30                          //磁贴图标宽度
-#define   TILE_ICON_S         36                          //磁贴图标间距
-#define   TILE_ICON_L         5                           //磁贴图标上边距
+#define   TILE_ICON_S         38                          //磁贴图标间距
+#define   TILE_ICON_L         7                           //磁贴图标上边距
 #define   TILE_INDI_H         27                          //磁贴标题指示器高度
 #define   TILE_INDI_S         38                          //磁贴标题上边距
 #define   TILE_LINE_S         46                          //磁贴标题虚线上边距
@@ -534,7 +537,7 @@ void ui_param_init()
   ui.param[LIST_UFD] = 1;        //菜单列表从头展开开关
   ui.param[TILE_LOOP] = 1;        //磁贴图标循环模式开关
   ui.param[LIST_LOOP] = 1;        //菜单列表循环模式开关
-  ui.param[WIN_BOK] = 0;        //弹窗背景虚化开关
+  ui.param[WIN_BOK] = 1;        //弹窗背景虚化开关
   ui.param[KNOB_DIR] = 0;        //旋钮方向切换开关
   ui.param[DARK_MODE] = 1;        //黑暗模式开关
 }
@@ -543,10 +546,10 @@ void ui_param_init()
 void ui_init()
 {
   ui.num[M_MAIN] = sizeof(main_menu) / sizeof(M_SELECT);
-  ui.num[M_EDITOR] = sizeof(editor_menu) / sizeof(M_SELECT);
-  ui.num[M_KNOB] = sizeof(knob_menu) / sizeof(M_SELECT);
-  ui.num[M_KRF] = sizeof(krf_menu) / sizeof(M_SELECT);
-  ui.num[M_KPF] = sizeof(kpf_menu) / sizeof(M_SELECT);
+  ui.num[M_CAMSETTING] = sizeof(cam_setting_menu) / sizeof(M_SELECT);
+  //ui.num[M_KNOB] = sizeof(knob_menu) / sizeof(M_SELECT);
+  //ui.num[M_KRF] = sizeof(krf_menu) / sizeof(M_SELECT);
+  //ui.num[M_KPF] = sizeof(kpf_menu) / sizeof(M_SELECT);
   ui.num[M_VOLT] = sizeof(volt_menu) / sizeof(M_SELECT);
   ui.num[M_SETTING] = sizeof(setting_menu) / sizeof(M_SELECT);
   ui.num[M_ABOUT] = sizeof(about_menu) / sizeof(M_SELECT);
@@ -580,17 +583,17 @@ void sleep_param_init()
   ui.sleep = true;
 }
 
-//旋钮设置页初始化
-void knob_param_init()
-{ check_box_v_init(knob.param); }
+////旋钮设置页初始化
+//void knob_param_init()
+//{ check_box_v_init(knob.param); }
 
-//旋钮旋转页初始化
-void krf_param_init()
-{ check_box_s_init(&knob.param[KNOB_ROT], &knob.param[KNOB_ROT_P]); }
-
-//旋钮点按页初始化
-void kpf_param_init()
-{ check_box_s_init(&knob.param[KNOB_COD], &knob.param[KNOB_COD_P]); }
+////旋钮旋转页初始化
+//void krf_param_init()
+//{ check_box_s_init(&knob.param[KNOB_ROT], &knob.param[KNOB_ROT_P]); }
+//
+////旋钮点按页初始化
+//void kpf_param_init()
+//{ check_box_s_init(&knob.param[KNOB_COD], &knob.param[KNOB_COD_P]); }
 
 //电压测量页初始化
 void volt_param_init()
@@ -638,14 +641,14 @@ void layer_init_in()
     case M_MAIN:
       tile_param_init();
       break;  //睡眠进入主菜单，动画初始化
-    case M_KNOB:
-      knob_param_init();
+    //case M_KNOB:
+      //knob_param_init();
       break;  //旋钮设置页，行末尾文字初始化
-    case M_KRF:
-      krf_param_init();
+    //case M_KRF:
+      //krf_param_init();
       break;  //旋钮旋转页，单选框初始化
-    case M_KPF:
-      kpf_param_init();
+    //case M_KPF:
+      //kpf_param_init();
       break;  //旋钮点按页，单选框初始化
     case M_VOLT:
       volt_param_init();
@@ -757,11 +760,9 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
 
   //绘制标题
   u8g2_SetFont(&u8g2, TILE_B_FONT);
-  u8g2_DrawStr(&u8g2,
-               ((DISP_W) - u8g2_GetStrWidth(&u8g2, arr_1[ui.select[ui.layer]].m_select)) / 2,
+  u8g2_DrawUTF8(&u8g2,
+               ((DISP_W) - u8g2_GetUTF8Width(&u8g2, arr_1[ui.select[ui.layer]].m_select)) / 2,
                tile.title_y, arr_1[ui.select[ui.layer]].m_select);
-
-
 
   //绘制图标
   if (!ui.init)
@@ -863,6 +864,9 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
 //列表显示数值
 void list_draw_value(int n)
 {
+  std::string str = std::to_string(check_box.v[n - 1]);
+  const char* c_str = str.c_str();
+  u8g2_DrawStr(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
 }
 
 //绘制外框
@@ -889,7 +893,7 @@ void list_draw_kpf(int n)
 //判断列表尾部内容
 void list_draw_text_and_check_box(struct MENU arr[], int i)
 {
-  u8g2_DrawStr(&u8g2, LIST_TEXT_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, arr[i].m_select);
+  u8g2_DrawUTF8(&u8g2, LIST_TEXT_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, arr[i].m_select);
   //u8g2_SetCursor(&u8g2,CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S);
   switch (arr[i].m_select[0])
   {
@@ -920,7 +924,7 @@ void list_show(struct MENU arr[], uint8_t ui_index)
 {
   //更新动画目标值
   u8g2_SetFont(&u8g2, LIST_FONT);
-  list.box_x_trg = u8g2_GetStrWidth(&u8g2, arr[ui.select[ui.layer]].m_select) + LIST_TEXT_S * 2;
+  list.box_x_trg = u8g2_GetUTF8Width(&u8g2, arr[ui.select[ui.layer]].m_select) + LIST_TEXT_S * 2;
   list.bar_y_trg = ceil((ui.select[ui.layer]) * ((float) DISP_H / (ui.num[ui_index] - 1)));
 
   //计算动画过渡值
@@ -1003,7 +1007,10 @@ void window_show()
   u8g2_DrawBox(&u8g2, win.l + 7, (int16_t) win.y + 22, win.bar, WIN_BAR_H - 4);           //绘制进度条
 
   u8g2_DrawUTF8(&u8g2, win.l + 5, (int16_t) win.y + 14, win.title);   //绘制标题
-  u8g2_DrawUTF8(&u8g2, win.l + 78, (int16_t) win.y + 14, (const char *) win.value);   //绘制当前值
+
+  std::string str = std::to_string(*win.value);
+  const char* c_str = str.c_str();
+  u8g2_DrawUTF8(&u8g2, win.l + 78, (int16_t) win.y + 14, c_str);   //绘制当前值
 
   //需要在窗口修改参数时立即见效的函数
   if (!strcmp(win.title, "Disp Bri")) u8g2_SetContrast(&u8g2, ui.param[DISP_BRI]);
@@ -1219,11 +1226,11 @@ void main_proc()
             ui.state = S_LAYER_OUT;
             break;
           case 1:
-            ui.index = M_EDITOR;
+            ui.index = M_CAM;
             ui.state = S_LAYER_IN;
             break;
           case 2:
-            ui.index = M_VOLT;
+            ui.index = M_CAMSETTING;
             ui.state = S_LAYER_IN;
             break;
           case 3:
@@ -1239,10 +1246,10 @@ void main_proc()
   }
 }
 
-//编辑器菜单处理函数
-void editor_proc()
+//拍摄设置函数
+void cam_setting_proc()
 {
-  list_show(editor_menu, M_EDITOR);
+  list_show(cam_setting_menu, M_CAMSETTING);
   if (g_KeyActionFlag == KEY_PRESSED)
   {
     g_KeyActionFlag = KEY_NOT_PRESSED;
@@ -1262,30 +1269,12 @@ void editor_proc()
             ui.state = S_LAYER_OUT;
             break;
           case 11:
-            ui.index = M_KNOB;
+            //ui.index = M_KNOB;
             ui.state = S_LAYER_IN;
             break;
         }
     }
   }
-}
-
-//旋钮编辑菜单处理函数
-void knob_proc()
-{
-
-}
-
-//旋钮旋转功能菜单处理函数
-void krf_proc()
-{
-
-}
-
-//旋钮点按功能菜单处理函数
-void kpf_proc()
-{
-
 }
 
 //电压测量页处理函数
@@ -1436,18 +1425,18 @@ void ui_proc()
         case M_MAIN:
           main_proc();
           break;
-        case M_EDITOR:
-          editor_proc();
+        case M_CAMSETTING:
+          cam_setting_proc();
           break;
-        case M_KNOB:
-          knob_proc();
-          break;
-        case M_KRF:
-          krf_proc();
-          break;
-        case M_KPF:
-          kpf_proc();
-          break;
+//        case M_KNOB:
+//          knob_proc();
+//          break;
+//        case M_KRF:
+//          krf_proc();
+//          break;
+//        case M_KPF:
+//          kpf_proc();
+//          break;
         case M_VOLT:
           volt_proc();
           break;

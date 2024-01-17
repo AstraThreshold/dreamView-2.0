@@ -10,11 +10,11 @@
 *         - cat str.txt | iconv -f utf-8 -t c99 | sed 's/\\u\([0-9a-f]\{4\}\)/\$\1,\n/g' | sort | uniq | sed '/^$/d' | tr '/a-f/' '/A-F/' >> myfont.map
 *     + 出现myfont.map
 *     + 进入bdfconv文件夹 双击build_myfont.bat
-*     + 出现u8g2_font_myfont.c 在其首行include u8g2
+*     + 出现myfont.c 在其首行include u8g2
 *     + 复制编辑好的c文件到项目src文件夹 大功告成
 * + 绘制中文要使用DrawUTF8函数，相应地，获取对应宽度也要使用GetUTF8Width函数
 */
-#include "u8g2.h"
+#include "oled.h"
 const uint8_t u8g2_font_chargen_92_tr[1658] U8G2_FONT_SECTION("u8g2_font_chargen_92_tr") =
   "_\0\4\3\4\4\4\5\5\14\22\0\376\16\376\16\0\2;\4V\6] \5\0\10\71!\10\342\15"
   "\71<\60\42\42\10F\253\71\210p\42#\34\332\11\271\11\211\10\211\220\34\34\210\220\10\211\10\211\220\34"

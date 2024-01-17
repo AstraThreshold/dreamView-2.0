@@ -1,4 +1,3 @@
-#include "../../3rdParty/u8g2/Inc/u8g2.h"
 /*
   Fontname: -wenquanyi-wenquanyi bitmap song-medium-r-normal--12-120-75-75-P-119-ISO10646-1
   Copyright: (null)

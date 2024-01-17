@@ -47,10 +47,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = E:\Jetbrains\apps\CLion-Nova\ch-0\233.13871\bin\cmake\win\x64\bin\cmake.exe
+CMAKE_COMMAND = E:\Jetbrains\apps\CLion\ch-0\233.13135.93\bin\cmake\win\x64\bin\cmake.exe
 
 # The command to remove a file.
-RM = E:\Jetbrains\apps\CLion-Nova\ch-0\233.13871\bin\cmake\win\x64\bin\cmake.exe -E rm -f
+RM = E:\Jetbrains\apps\CLion\ch-0\233.13135.93\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = D:\Projects\dreamView-2.0\2.Firmware\dreamView-FW\cmake-build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	E:\Jetbrains\apps\CLion-Nova\ch-0\233.13871\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	E:\Jetbrains\apps\CLion\ch-0\233.13135.93\bin\cmake\win\x64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	E:\Jetbrains\apps\CLion-Nova\ch-0\233.13871\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	E:\Jetbrains\apps\CLion\ch-0\233.13135.93\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -391,54 +391,6 @@ dreamView-FW.elf/fast:
 3rdParty/u8g2/u8g2_font.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font.c.s
 .PHONY : 3rdParty/u8g2/u8g2_font.c.s
-
-3rdParty/u8g2/u8g2_font_myfont_fir.obj: 3rdParty/u8g2/u8g2_font_myfont_fir.c.obj
-.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.obj
-
-# target to build an object file
-3rdParty/u8g2/u8g2_font_myfont_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font_myfont_fir.c.obj
-.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.c.obj
-
-3rdParty/u8g2/u8g2_font_myfont_fir.i: 3rdParty/u8g2/u8g2_font_myfont_fir.c.i
-.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.i
-
-# target to preprocess a source file
-3rdParty/u8g2/u8g2_font_myfont_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font_myfont_fir.c.i
-.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.c.i
-
-3rdParty/u8g2/u8g2_font_myfont_fir.s: 3rdParty/u8g2/u8g2_font_myfont_fir.c.s
-.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.s
-
-# target to generate assembly for a file
-3rdParty/u8g2/u8g2_font_myfont_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_font_myfont_fir.c.s
-.PHONY : 3rdParty/u8g2/u8g2_font_myfont_fir.c.s
-
-3rdParty/u8g2/u8g2_fonts_nessary_fir.obj: 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj
-.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.obj
-
-# target to build an object file
-3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj
-.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.obj
-
-3rdParty/u8g2/u8g2_fonts_nessary_fir.i: 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i
-.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.i
-
-# target to preprocess a source file
-3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i
-.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.i
-
-3rdParty/u8g2/u8g2_fonts_nessary_fir.s: 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s
-.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.s
-
-# target to generate assembly for a file
-3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s
-.PHONY : 3rdParty/u8g2/u8g2_fonts_nessary_fir.c.s
 
 3rdParty/u8g2/u8g2_hvline.obj: 3rdParty/u8g2/u8g2_hvline.c.obj
 .PHONY : 3rdParty/u8g2/u8g2_hvline.obj
@@ -1208,6 +1160,30 @@ Core/Src/dma.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/dma.c.s
 .PHONY : Core/Src/dma.c.s
 
+Core/Src/fonts.obj: Core/Src/fonts.c.obj
+.PHONY : Core/Src/fonts.obj
+
+# target to build an object file
+Core/Src/fonts.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/fonts.c.obj
+.PHONY : Core/Src/fonts.c.obj
+
+Core/Src/fonts.i: Core/Src/fonts.c.i
+.PHONY : Core/Src/fonts.i
+
+# target to preprocess a source file
+Core/Src/fonts.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/fonts.c.i
+.PHONY : Core/Src/fonts.c.i
+
+Core/Src/fonts.s: Core/Src/fonts.c.s
+.PHONY : Core/Src/fonts.s
+
+# target to generate assembly for a file
+Core/Src/fonts.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/fonts.c.s
+.PHONY : Core/Src/fonts.c.s
+
 Core/Src/gpio.obj: Core/Src/gpio.c.obj
 .PHONY : Core/Src/gpio.obj
 
@@ -1303,6 +1279,30 @@ Core/Src/menu.s: Core/Src/menu.cpp.s
 Core/Src/menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/menu.cpp.s
 .PHONY : Core/Src/menu.cpp.s
+
+Core/Src/myfont.obj: Core/Src/myfont.c.obj
+.PHONY : Core/Src/myfont.obj
+
+# target to build an object file
+Core/Src/myfont.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/myfont.c.obj
+.PHONY : Core/Src/myfont.c.obj
+
+Core/Src/myfont.i: Core/Src/myfont.c.i
+.PHONY : Core/Src/myfont.i
+
+# target to preprocess a source file
+Core/Src/myfont.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/myfont.c.i
+.PHONY : Core/Src/myfont.c.i
+
+Core/Src/myfont.s: Core/Src/myfont.c.s
+.PHONY : Core/Src/myfont.s
+
+# target to generate assembly for a file
+Core/Src/myfont.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\dreamView-FW.elf.dir\build.make CMakeFiles/dreamView-FW.elf.dir/Core/Src/myfont.c.s
+.PHONY : Core/Src/myfont.c.s
 
 Core/Src/oled.obj: Core/Src/oled.c.obj
 .PHONY : Core/Src/oled.obj
@@ -1858,12 +1858,6 @@ help:
 	@echo ... 3rdParty/u8g2/u8g2_font.obj
 	@echo ... 3rdParty/u8g2/u8g2_font.i
 	@echo ... 3rdParty/u8g2/u8g2_font.s
-	@echo ... 3rdParty/u8g2/u8g2_font_myfont_fir.obj
-	@echo ... 3rdParty/u8g2/u8g2_font_myfont_fir.i
-	@echo ... 3rdParty/u8g2/u8g2_font_myfont_fir.s
-	@echo ... 3rdParty/u8g2/u8g2_fonts_nessary_fir.obj
-	@echo ... 3rdParty/u8g2/u8g2_fonts_nessary_fir.i
-	@echo ... 3rdParty/u8g2/u8g2_fonts_nessary_fir.s
 	@echo ... 3rdParty/u8g2/u8g2_hvline.obj
 	@echo ... 3rdParty/u8g2/u8g2_hvline.i
 	@echo ... 3rdParty/u8g2/u8g2_hvline.s
@@ -1960,6 +1954,9 @@ help:
 	@echo ... Core/Src/dma.obj
 	@echo ... Core/Src/dma.i
 	@echo ... Core/Src/dma.s
+	@echo ... Core/Src/fonts.obj
+	@echo ... Core/Src/fonts.i
+	@echo ... Core/Src/fonts.s
 	@echo ... Core/Src/gpio.obj
 	@echo ... Core/Src/gpio.i
 	@echo ... Core/Src/gpio.s
@@ -1972,6 +1969,9 @@ help:
 	@echo ... Core/Src/menu.obj
 	@echo ... Core/Src/menu.i
 	@echo ... Core/Src/menu.s
+	@echo ... Core/Src/myfont.obj
+	@echo ... Core/Src/myfont.i
+	@echo ... Core/Src/myfont.s
 	@echo ... Core/Src/oled.obj
 	@echo ... Core/Src/oled.i
 	@echo ... Core/Src/oled.s
