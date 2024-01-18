@@ -25,14 +25,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
-      <change afterPath="$PROJECT_DIR$/Core/Src/fonts.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Src/myfont.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/Other/bdfconv/u8g2_font_myfont.c" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/Other/bdfconv/u8g2_font_myfont.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_font_myfont_fir.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3rdParty/u8g2/u8g2_fonts_nessary_fir.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/menu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/myfont.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/myfont.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" afterDir="false" />
@@ -151,11 +147,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD dreamView-FW">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dreamView-FW.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dreamView-FW" TARGET_NAME="dreamView-FW.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dreamView-FW" RUN_TARGET_NAME="dreamView-FW.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -372,6 +363,7 @@
       <workItem from="1705464461531" duration="5501000" />
       <workItem from="1705481949824" duration="6475000" />
       <workItem from="1705499916793" duration="5101000" />
+      <workItem from="1705543084561" duration="26356000" />
     </task>
     <task id="LOCAL-00001" summary="Initial submission">
       <created>1676991362688</created>

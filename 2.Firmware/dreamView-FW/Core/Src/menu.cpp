@@ -8,7 +8,11 @@
 #include "oled.h"
 #include "key.h"
 
+//todo: 关于修改数值和多选框 核心思想: 都是对value数组进行改动 同时显示的也是value数组 最后再统一将value同步到参数数组中
+
 //todo: 拍摄界面如果有需要报警的参数 如曝光不正确等 需要闪烁叹号来示意
+//todo: 把所有带选项框的页面都重构 否则用不了（因为n-1都变成了n）
+//todo: 现在在菜单无法修改参数的真实值 因为param还未与value进行同步 菜单修改的是value的值 并不是param的值
 /************************************* 定义页面 *************************************/
 
 //总目录，缩进表示页面层级
@@ -57,8 +61,9 @@ M_SELECT cam_setting_menu[]
     {"[ 相机设置 ]"},
     {"~ 曝光许用误差"},
     {"+ 强制释放快门"},
-    {"- B门触发方式"},
-    {"- B门屏幕行为"},
+    //todo: 此处的'#'代表单选列表 仔细研究一下
+    {"# B门触发方式"},
+    {"# B门屏幕行为"},
     //{"- B门屏幕行为"},
     //{"- Function 5"},
     //{"- Function 6"},
@@ -186,38 +191,29 @@ M_SELECT volt_menu[]
     {"B1"},
   };
 
-M_SELECT setting_menu[]
-  {
-    {"[ Setting ]"},
-    {"~ Disp Bri"},
-    {"~ Tile Ani"},
-    {"~ List Ani"},
-    {"~ Win Ani"},
-    {"~ Spot Ani"},
-    {"~ Tag Ani"},
-    {"~ Fade Ani"},
-    {"~ Btn SPT"},
-    {"~ Btn LPT"},
-    {"+ T Ufd Fm Scr"},
-    {"+ L Ufd Fm Scr"},
-    {"+ T Loop Mode"},
-    {"+ L Loop Mode"},
-    {"+ Win Bokeh Bg"},
-    {"+ Knob Rot Dir"},
-    {"+ Dark Mode"},
-    {"- [ About ]"},
-  };
+//todo: 把所有需要复选框或者弹窗的界面都这么搞
+struct {
+  M_SELECT menu[6];
+  uint8_t value[6];
+} setting_menu = {{
+                    {"[ 系统设置 ]"},
+                    {"~ 屏幕亮度"},
+                    {"+ 按键音"},
+                    {"+ 暗黑模式"},
+                    {"- [ 测试 ]"},
+                    {"- [ 关于本机 ]"},
+                  }, {'\0', 255, 0, 1, '\0', '\0'}};
 
 M_SELECT about_menu[]
   {
-    {"[ WouoUI ]"},
-    {"- Version: v2.3"},
-    {"- Board: STM32F103"},
-    {"- Ram: 20k"},
-    {"- Flash: 64k"},
-    {"- Freq: 72Mhz"},
-    {"- Creator: RQNG"},
-    {"- Bili UID: 9182439"},
+    {"[ dreamView ]"},
+    {"- HW Version: v2.3"},
+    {"- FW Version: v2.0"},
+    {"- 由@dreamUI驱动"},
+    {"- UI Version: v1.0"},
+    {"- Based on WouoUI"},
+    {"- by 无理造物"},
+    {"- Bili UID: 43483079"},
   };
 
 /************************************* 文字内容 *************************************/
@@ -282,6 +278,7 @@ uint16_t buf_len;                  //缓冲长度
 #define   UI_DEPTH            20    //最深层级数
 #define   UI_MNUMB            100   //菜单数量
 #define   UI_PARAM            16    //参数数量
+
 enum {
   DISP_BRI,     //屏幕亮度
   TILE_ANI,     //磁贴动画速度
@@ -300,6 +297,7 @@ enum {
   KNOB_DIR,     //旋钮方向切换开关
   DARK_MODE,    //黑暗模式开关
 };
+
 struct {
   bool init;
   uint8_t num[UI_MNUMB];
@@ -493,6 +491,8 @@ void check_box_s_init(uint8_t *param, uint8_t *param_p)
 //多选框处理函数
 void check_box_m_select(uint8_t param)
 {
+  //DARK_MODE传进来是大于6的数 check_box.m此时是setting_menu.value 它并没有这么多数 越界了
+  //todo: 2个办法 1. 传个3进来（对应value中的暗黑模式）
   check_box.m[param] = !check_box.m[param];
 }
 
@@ -551,7 +551,7 @@ void ui_init()
   //ui.num[M_KRF] = sizeof(krf_menu) / sizeof(M_SELECT);
   //ui.num[M_KPF] = sizeof(kpf_menu) / sizeof(M_SELECT);
   ui.num[M_VOLT] = sizeof(volt_menu) / sizeof(M_SELECT);
-  ui.num[M_SETTING] = sizeof(setting_menu) / sizeof(M_SELECT);
+  ui.num[M_SETTING] = sizeof(setting_menu.menu) / sizeof(M_SELECT);
   ui.num[M_ABOUT] = sizeof(about_menu) / sizeof(M_SELECT);
 }
 
@@ -605,8 +605,10 @@ void volt_param_init()
 //设置页初始化
 void setting_param_init()
 {
-  check_box_v_init(ui.param);
-  check_box_m_init(ui.param);
+//  check_box_v_init(ui.param);
+//  check_box_m_init(ui.param);
+  check_box_v_init(setting_menu.value);
+  check_box_m_init(setting_menu.value);
 }
 
 /********************************** 通用初始化函数 *********************************/
@@ -641,13 +643,13 @@ void layer_init_in()
     case M_MAIN:
       tile_param_init();
       break;  //睡眠进入主菜单，动画初始化
-    //case M_KNOB:
+      //case M_KNOB:
       //knob_param_init();
       break;  //旋钮设置页，行末尾文字初始化
-    //case M_KRF:
+      //case M_KRF:
       //krf_param_init();
       break;  //旋钮旋转页，单选框初始化
-    //case M_KPF:
+      //case M_KPF:
       //kpf_param_init();
       break;  //旋钮点按页，单选框初始化
     case M_VOLT:
@@ -696,7 +698,7 @@ void animation(float *a, float *a_trg, uint8_t n)
 //消失函数
 void fade()
 {
-  //delay(ui.param[FADE_ANI]);
+  HAL_Delay(ui.param[FADE_ANI]);
   if (ui.param[DARK_MODE])
   {
     switch (ui.fade)
@@ -761,8 +763,8 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
   //绘制标题
   u8g2_SetFont(&u8g2, TILE_B_FONT);
   u8g2_DrawUTF8(&u8g2,
-               ((DISP_W) - u8g2_GetUTF8Width(&u8g2, arr_1[ui.select[ui.layer]].m_select)) / 2,
-               tile.title_y, arr_1[ui.select[ui.layer]].m_select);
+                ((DISP_W) - u8g2_GetUTF8Width(&u8g2, arr_1[ui.select[ui.layer]].m_select)) / 2,
+                tile.title_y, arr_1[ui.select[ui.layer]].m_select);
 
   //绘制图标
   if (!ui.init)
@@ -864,8 +866,9 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
 //列表显示数值
 void list_draw_value(int n)
 {
-  std::string str = std::to_string(check_box.v[n - 1]);
-  const char* c_str = str.c_str();
+  std::string str = std::to_string(check_box.v[n]); //因为值和字符已经一一对应 所以无需-1
+  //std::string str = std::to_string(check_box.v[n - 1]);
+  const char *c_str = str.c_str();
   u8g2_DrawStr(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
 }
 
@@ -883,11 +886,35 @@ void list_draw_check_box_dot()
 //列表显示旋钮功能
 void list_draw_krf(int n)
 {
+  //switch (check_box.v[n - 1]) //因为值和字符已经一一对应 所以无需-1
+  switch (check_box.v[n])
+  {
+    case 0:
+      u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "OFF");
+      break;
+    case 1:
+      u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "VOL");
+      break;
+    case 2:
+      u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "BRI");
+      break;
+    default:
+      u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "..");
+      break;
+  }
 }
 
-//列表显示按键键值
+//列表显示 单选框
 void list_draw_kpf(int n)
 {
+  //因为值和字符已经一一对应 所以无需-1
+  if (check_box.v[n] == 0) u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "OFF");
+  else if (check_box.v[n] <= 90)
+  {
+    std::string str = std::to_string((char) check_box.v[n]);
+    const char *c_str = str.c_str();
+    u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
+  } else u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "?");
 }
 
 //判断列表尾部内容
@@ -902,7 +929,9 @@ void list_draw_text_and_check_box(struct MENU arr[], int i)
       break;
     case '+':
       list_draw_check_box_frame();
-      if (check_box.m[i - 1] == 1) list_draw_check_box_dot();
+      //因为值和字符已经一一对应 所以无需-1
+      if (check_box.m[i] == 1) list_draw_check_box_dot();
+      //if (check_box.m[i - 1] == 1) list_draw_check_box_dot();
       break;
     case '=':
       list_draw_check_box_frame();
@@ -1009,11 +1038,11 @@ void window_show()
   u8g2_DrawUTF8(&u8g2, win.l + 5, (int16_t) win.y + 14, win.title);   //绘制标题
 
   std::string str = std::to_string(*win.value);
-  const char* c_str = str.c_str();
+  const char *c_str = str.c_str();
   u8g2_DrawUTF8(&u8g2, win.l + 78, (int16_t) win.y + 14, c_str);   //绘制当前值
 
   //需要在窗口修改参数时立即见效的函数
-  if (!strcmp(win.title, "Disp Bri")) u8g2_SetContrast(&u8g2, ui.param[DISP_BRI]);
+  if (!strcmp(win.title, "屏幕亮度")) u8g2_SetContrast(&u8g2, ui.param[DISP_BRI]);
 
   //反转屏幕内元素颜色，白天模式遮罩
   u8g2_SetDrawColor(&u8g2, 2);
@@ -1286,7 +1315,11 @@ void volt_proc()
 //设置菜单处理函数，多选框列表类模板，弹窗模板
 void setting_proc()
 {
-  list_show(setting_menu, M_SETTING);
+  ui.param[DARK_MODE] = setting_menu.value[3];
+  //ui.param[BUZ_MODE] = setting_menu.value[2];  //按键音还未写好
+
+  list_show(setting_menu.menu, M_SETTING);
+
   if (g_KeyActionFlag == KEY_PRESSED)
   {
     g_KeyActionFlag = KEY_NOT_PRESSED;
@@ -1308,56 +1341,27 @@ void setting_proc()
             break;
             //弹出窗口，参数初始化：标题，参数名，参数值，最大值，最小值，步长，背景列表名，背景列表标签
           case 1:
-            window_value_init("Disp Bri", DISP_BRI, &ui.param[DISP_BRI], 255, 0, 5, setting_menu, M_SETTING);
+            //todo: 看一下设置界面的弹窗和复选框初始化函数 处理一下 新的这些变量要初始化 旧的不用的那些初始化要裁剪掉
+            //window_value_init("屏幕亮度", DISP_BRI, &ui.param[DISP_BRI], 255, 0, 15, setting_menu.menu, M_SETTING);
+            window_value_init("屏幕亮度", DISP_BRI, &setting_menu.value[1], 255, 0, 15, setting_menu.menu, M_SETTING);
             break;
           case 2:
-            window_value_init("Tile Ani", TILE_ANI, &ui.param[TILE_ANI], 100, 10, 1, setting_menu, M_SETTING);
+            //按键音
+            //check_box_m_select(DARK_MODE);
+            check_box_m_select(3);
             break;
           case 3:
-            window_value_init("List Ani", LIST_ANI, &ui.param[LIST_ANI], 100, 10, 1, setting_menu, M_SETTING);
+            //暗黑模式
+            //check_box_m_select(DARK_MODE);
+            check_box_m_select(3);
             break;
           case 4:
-            window_value_init("Win Ani", WIN_ANI, &ui.param[WIN_ANI], 100, 10, 1, setting_menu, M_SETTING);
+            //测试界面
+            ui.index = M_ABOUT;
+            ui.state = S_LAYER_IN;
             break;
           case 5:
-            window_value_init("Spot Ani", SPOT_ANI, &ui.param[SPOT_ANI], 100, 10, 1, setting_menu, M_SETTING);
-            break;
-          case 6:
-            window_value_init("Tag Ani", TAG_ANI, &ui.param[TAG_ANI], 100, 10, 1, setting_menu, M_SETTING);
-            break;
-          case 7:
-            window_value_init("Fade Ani", FADE_ANI, &ui.param[FADE_ANI], 255, 0, 1, setting_menu, M_SETTING);
-            break;
-          case 8:
-            window_value_init("Btn SPT", BTN_SPT, &ui.param[BTN_SPT], 255, 0, 1, setting_menu, M_SETTING);
-            break;
-          case 9:
-            window_value_init("Btn LPT", BTN_LPT, &ui.param[BTN_LPT], 255, 0, 1, setting_menu, M_SETTING);
-            break;
-            //多选框
-          case 10:
-            check_box_m_select(TILE_UFD);
-            break;
-          case 11:
-            check_box_m_select(LIST_UFD);
-            break;
-          case 12:
-            check_box_m_select(TILE_LOOP);
-            break;
-          case 13:
-            check_box_m_select(LIST_LOOP);
-            break;
-          case 14:
-            check_box_m_select(WIN_BOK);
-            break;
-          case 15:
-            check_box_m_select(KNOB_DIR);
-            break;
-          case 16:
-            check_box_m_select(DARK_MODE);
-            break;
             //关于本机
-          case 17:
             ui.index = M_ABOUT;
             ui.state = S_LAYER_IN;
             break;
@@ -1418,6 +1422,9 @@ void ui_proc()
       {
         case M_WINDOW:
           window_proc();
+
+          //todo: 所有的参数在弹窗中修改时 显示的参数也要进行同步（不在弹窗中的不需要写在这里）
+          ui.param[DISP_BRI] = setting_menu.value[1];
           break;
         case M_SLEEP:
           sleep_proc();

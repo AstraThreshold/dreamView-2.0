@@ -192,7 +192,7 @@ void SysTick_Handler(void)
   static uint8_t cnt;
 
   cnt++;
-  if(cnt>10)           // 每10ms 执行一次按键扫描程序
+  if(cnt > 5)           // 每5ms 执行一次按键扫描程序
   {
     Key_Scan();
     cnt = 0;
