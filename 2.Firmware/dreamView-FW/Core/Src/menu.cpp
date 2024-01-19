@@ -22,9 +22,6 @@ enum {
   M_MAIN,
   M_CAM,
   M_CAMSETTING,
-  //M_KNOB,
-  //M_KRF,
-  //M_KPF,
   M_VOLT,
   M_SETTING,
   M_ABOUT,
@@ -41,7 +38,7 @@ enum {
 
 //菜单结构体
 typedef struct MENU {
-  char *m_select;
+  const char *m_select;
 } M_SELECT;
 
 /************************************* 定义内容 *************************************/
@@ -64,13 +61,6 @@ M_SELECT cam_setting_menu[]
     //todo: 此处的'#'代表单选列表 仔细研究一下
     {"# B门触发方式"},
     {"# B门屏幕行为"},
-    //{"- B门屏幕行为"},
-    //{"- Function 5"},
-    //{"- Function 6"},
-    //{"- Function 7"},
-    //{"- Function 8"},
-    //{"- Function 9"},
-    //{"- Knob"},
   };
 
 M_SELECT knob_menu[]
@@ -326,20 +316,20 @@ struct {
 #define   TILE_ARROW_W        6                           //磁贴标题箭头长度
 #define   TILE_BTN_S          16                          //磁贴按钮图标侧边距
 struct {
-  float title_y_calc = TILE_INDI_S + (TILE_INDI_H - TILE_B_TITLE_H) / 2 + TILE_B_TITLE_H * 2;
-  float title_y_trg_calc = TILE_INDI_S + (TILE_INDI_H - TILE_B_TITLE_H) / 2 + TILE_B_TITLE_H;
-  int16_t temp;
-  bool select_flag;
-  float arrow_y;
-  float arrow_y_trg;
-  float line_y;
-  float line_y_trg;
-  float icon_x;
-  float icon_x_trg;
-  float icon_y;
-  float icon_y_trg;
-  float title_y;
-  float title_y_trg;
+  float title_y_calc = TILE_INDI_S + (TILE_INDI_H - TILE_B_TITLE_H) / 2.0 + TILE_B_TITLE_H * 2;
+  float title_y_trg_calc = TILE_INDI_S + (TILE_INDI_H - TILE_B_TITLE_H) / 2.0 + TILE_B_TITLE_H;
+  int16_t temp{};
+  bool select_flag{};
+  float arrow_y{};
+  float arrow_y_trg{};
+  float line_y{};
+  float line_y_trg{};
+  float icon_x{};
+  float icon_x_trg{};
+  float icon_y{};
+  float icon_y_trg{};
+  float title_y{};
+  float title_y_trg{};
 } tile;
 
 //列表变量
@@ -491,8 +481,6 @@ void check_box_s_init(uint8_t *param, uint8_t *param_p)
 //多选框处理函数
 void check_box_m_select(uint8_t param)
 {
-  //DARK_MODE传进来是大于6的数 check_box.m此时是setting_menu.value 它并没有这么多数 越界了
-  //todo: 2个办法 1. 传个3进来（对应value中的暗黑模式）
   check_box.m[param] = !check_box.m[param];
 }
 
@@ -547,9 +535,6 @@ void ui_init()
 {
   ui.num[M_MAIN] = sizeof(main_menu) / sizeof(M_SELECT);
   ui.num[M_CAMSETTING] = sizeof(cam_setting_menu) / sizeof(M_SELECT);
-  //ui.num[M_KNOB] = sizeof(knob_menu) / sizeof(M_SELECT);
-  //ui.num[M_KRF] = sizeof(krf_menu) / sizeof(M_SELECT);
-  //ui.num[M_KPF] = sizeof(kpf_menu) / sizeof(M_SELECT);
   ui.num[M_VOLT] = sizeof(volt_menu) / sizeof(M_SELECT);
   ui.num[M_SETTING] = sizeof(setting_menu.menu) / sizeof(M_SELECT);
   ui.num[M_ABOUT] = sizeof(about_menu) / sizeof(M_SELECT);
@@ -583,18 +568,6 @@ void sleep_param_init()
   ui.sleep = true;
 }
 
-////旋钮设置页初始化
-//void knob_param_init()
-//{ check_box_v_init(knob.param); }
-
-////旋钮旋转页初始化
-//void krf_param_init()
-//{ check_box_s_init(&knob.param[KNOB_ROT], &knob.param[KNOB_ROT_P]); }
-//
-////旋钮点按页初始化
-//void kpf_param_init()
-//{ check_box_s_init(&knob.param[KNOB_COD], &knob.param[KNOB_COD_P]); }
-
 //电压测量页初始化
 void volt_param_init()
 {
@@ -605,8 +578,6 @@ void volt_param_init()
 //设置页初始化
 void setting_param_init()
 {
-//  check_box_v_init(ui.param);
-//  check_box_m_init(ui.param);
   check_box_v_init(setting_menu.value);
   check_box_m_init(setting_menu.value);
 }
@@ -643,15 +614,6 @@ void layer_init_in()
     case M_MAIN:
       tile_param_init();
       break;  //睡眠进入主菜单，动画初始化
-      //case M_KNOB:
-      //knob_param_init();
-      break;  //旋钮设置页，行末尾文字初始化
-      //case M_KRF:
-      //krf_param_init();
-      break;  //旋钮旋转页，单选框初始化
-      //case M_KPF:
-      //kpf_param_init();
-      break;  //旋钮点按页，单选框初始化
     case M_VOLT:
       volt_param_init();
       break;  //主菜单进入电压测量页，动画初始化
@@ -866,9 +828,9 @@ void tile_show(struct MENU arr_1[], const uint8_t icon_pic[][120])
 //列表显示数值
 void list_draw_value(int n)
 {
-  std::string str = std::to_string(check_box.v[n]); //因为值和字符已经一一对应 所以无需-1
+  auto str = std::to_string(check_box.v[n]); //因为值和字符已经一一对应 所以无需-1
   //std::string str = std::to_string(check_box.v[n - 1]);
-  const char *c_str = str.c_str();
+  auto *c_str = str.c_str();
   u8g2_DrawStr(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
 }
 
@@ -911,8 +873,8 @@ void list_draw_kpf(int n)
   if (check_box.v[n] == 0) u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "OFF");
   else if (check_box.v[n] <= 90)
   {
-    std::string str = std::to_string((char) check_box.v[n]);
-    const char *c_str = str.c_str();
+    auto str = std::to_string((char) check_box.v[n]);
+    auto *c_str = str.c_str();
     u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
   } else u8g2_DrawUTF8(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, "?");
 }
@@ -1037,8 +999,8 @@ void window_show()
 
   u8g2_DrawUTF8(&u8g2, win.l + 5, (int16_t) win.y + 14, win.title);   //绘制标题
 
-  std::string str = std::to_string(*win.value);
-  const char *c_str = str.c_str();
+  auto str = std::to_string(*win.value);
+  auto *c_str = str.c_str();
   u8g2_DrawUTF8(&u8g2, win.l + 78, (int16_t) win.y + 14, c_str);   //绘制当前值
 
   //需要在窗口修改参数时立即见效的函数
