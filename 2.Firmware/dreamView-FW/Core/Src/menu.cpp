@@ -8,7 +8,7 @@
 #include "oled.h"
 #include "key.h"
 
-//todo: 把相机设置的一级页面弹窗和checkbox搞定 然后搞定测试页面
+//todo: 搞定测试页面
 
 //todo: 关于多选弹窗 自己写一个 用在B门那里
 
@@ -29,6 +29,7 @@ enum {
   M_VOLT,
   M_SETTING,
   M_ABOUT,
+  M_TEST,
 };
 
 //状态，初始化标签
@@ -68,7 +69,17 @@ struct {
                         {"+ B门关闭屏幕"},
                       },
                       { '\0', 20, 1, 1, 0}};
-
+M_SELECT test_menu[]
+  {
+    {"[ 测试 ]"},
+    {"- [ 快门 ]"},
+    {"- [ 测光表 ]"},
+    {"- [ 反光板电机 ]"},
+    {"- [ 上弦电机 ]"},
+    {"- [ 计数光电门 ]"},
+    {"- [ 电池 ]"},
+    {"- [ 扬声器 ]"},
+  };
 
 M_SELECT knob_menu[]
   {
@@ -556,6 +567,7 @@ void ui_init()
   ui.num[M_CAMSETTING] = sizeof(cam_setting_menu.menu) / sizeof(M_SELECT);
   ui.num[M_VOLT] = sizeof(volt_menu) / sizeof(M_SELECT);
   ui.num[M_SETTING] = sizeof(setting_menu.menu) / sizeof(M_SELECT);
+  ui.num[M_TEST] = sizeof(test_menu) / sizeof(M_SELECT);
   ui.num[M_ABOUT] = sizeof(about_menu) / sizeof(M_SELECT);
 }
 
@@ -609,6 +621,12 @@ void setting_param_init()
   check_box_m_init(setting_menu.value);
 }
 
+////测试页初始化
+//void test_param_init()
+//{
+//
+//}
+
 /********************************** 通用初始化函数 *********************************/
 
 /*
@@ -650,6 +668,9 @@ void layer_init_in()
     case M_SETTING:
       setting_param_init();
       break;  //主菜单进入设置页，单选框初始化
+//    case M_TEST:
+//      test_param_init();    //设置页进入测试页
+//      break;
   }
 }
 
@@ -1219,7 +1240,7 @@ void sleep_proc()
       g_KeyActionFlag = KEY_NOT_PRESSED;
 
       u8g2_SetPowerSave(&u8g2, 0);
-      HAL_Delay(50);
+      HAL_Delay(50);    //退出休眠模式需要时间 等待
 
       ui.sleep = false;
       ui.index = M_MAIN;
@@ -1323,6 +1344,69 @@ void volt_proc()
 
 }
 
+//测试菜单处理函数
+void test_proc()
+{
+  list_show(test_menu, M_TEST);
+  if (g_KeyActionFlag == KEY_PRESSED)
+  {
+    g_KeyActionFlag = KEY_NOT_PRESSED;
+    switch (g_KeyValue)
+    {
+      case KEY_0_CLICK:
+      case KEY_1_CLICK:
+        list_rotate_switch();
+        break;
+      case KEY_0_PRESS:
+        ui.select[ui.layer] = 0;
+      case KEY_1_PPESS:
+        switch (ui.select[ui.layer])
+        {
+          //返回更浅层级，长按被当作选择这一项，也是执行这一行
+          case 0:
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 1:
+            //todo: 快门测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 2:
+            //todo: 测光表测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 3:
+            //todo: 反光板测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 4:
+            //todo: 上弦测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 5:
+            //todo: 光电门测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 6:
+            //todo: 电池测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+          case 7:
+            //todo: 扬声器测试
+            ui.index = M_SETTING;
+            ui.state = S_LAYER_OUT;
+            break;
+        }
+    }
+  }
+}
+
 //设置菜单处理函数，多选框列表类模板，弹窗模板
 void setting_proc()
 {
@@ -1368,7 +1452,7 @@ void setting_proc()
             break;
           case 4:
             //测试界面
-            ui.index = M_ABOUT;
+            ui.index = M_TEST;
             ui.state = S_LAYER_IN;
             break;
           case 5:
@@ -1452,6 +1536,9 @@ void ui_proc()
           break;
         case M_SETTING:
           setting_proc();
+          break;
+        case M_TEST:
+          test_proc();
           break;
         case M_ABOUT:
           about_proc();

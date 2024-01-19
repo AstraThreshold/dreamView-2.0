@@ -25,6 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/menu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" afterDir="false" />
@@ -362,7 +363,7 @@
       <workItem from="1705499916793" duration="5101000" />
       <workItem from="1705543084561" duration="26901000" />
       <workItem from="1705630915214" duration="5240000" />
-      <workItem from="1705644738743" duration="5828000" />
+      <workItem from="1705644738743" duration="7095000" />
     </task>
     <task id="LOCAL-00001" summary="Initial submission">
       <created>1676991362688</created>
