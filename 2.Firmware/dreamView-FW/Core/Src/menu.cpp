@@ -8,6 +8,10 @@
 #include "oled.h"
 #include "key.h"
 
+//todo: 把相机设置的一级页面弹窗和checkbox搞定 然后搞定测试页面
+
+//todo: 关于多选弹窗 自己写一个 用在B门那里
+
 //todo: 关于修改数值和多选框 核心思想: 都是对value数组进行改动 同时显示的也是value数组 最后再统一将value同步到参数数组中
 
 //todo: 拍摄界面如果有需要报警的参数 如曝光不正确等 需要闪烁叹号来示意
@@ -53,15 +57,18 @@ M_SELECT main_menu[]
     {"系统设置"},
   };
 
-M_SELECT cam_setting_menu[]
-  {
-    {"[ 相机设置 ]"},
-    {"~ 曝光许用误差"},
-    {"+ 强制释放快门"},
-    //todo: 此处的'#'代表单选列表 仔细研究一下
-    {"# B门触发方式"},
-    {"# B门屏幕行为"},
-  };
+struct {
+  M_SELECT menu[5];
+  uint8_t value[5];
+} cam_setting_menu = {{
+                        {"[ 相机设置 ]"},
+                        {"~ 曝光许用误差"},
+                        {"+ 强制释放快门"},
+                        {"> B门触发方式"},
+                        {"+ B门关闭屏幕"},
+                      },
+                      { '\0', 20, 1, 1, 0}};
+
 
 M_SELECT knob_menu[]
   {
@@ -192,7 +199,8 @@ struct {
                     {"+ 暗黑模式"},
                     {"- [ 测试 ]"},
                     {"- [ 关于本机 ]"},
-                  }, {'\0', 255, 0, 1, '\0', '\0'}};
+                  },
+                  { '\0', 255, 0, 1, '\0', '\0'}};
 
 M_SELECT about_menu[]
   {
@@ -267,9 +275,10 @@ uint16_t buf_len;                  //缓冲长度
 //UI变量
 #define   UI_DEPTH            20    //最深层级数
 #define   UI_MNUMB            100   //菜单数量
-#define   UI_PARAM            16    //参数数量
+#define   UI_PARAM            30    //参数数量
 
 enum {
+  /***系统设置***/
   DISP_BRI,     //屏幕亮度
   TILE_ANI,     //磁贴动画速度
   LIST_ANI,     //列表动画速度
@@ -286,6 +295,11 @@ enum {
   WIN_BOK,      //弹窗背景虚化开关
   KNOB_DIR,     //旋钮方向切换开关
   DARK_MODE,    //黑暗模式开关
+  /***相机设置***/
+  EXP_BIAS,     //曝光误差
+  SHT_FORCE,    //强制释放快门
+  BULB_TRI,     //B门触发方式
+  BULB_SCR,     //B门屏幕关闭
 };
 
 struct {
@@ -297,7 +311,7 @@ struct {
   uint8_t state = S_NONE;
   bool sleep = true;
   uint8_t fade = 1;
-  uint8_t param[UI_PARAM];
+  uint8_t param[UI_PARAM];;
 } ui;
 
 //磁贴变量
@@ -528,13 +542,18 @@ void ui_param_init()
   ui.param[WIN_BOK] = 1;        //弹窗背景虚化开关
   ui.param[KNOB_DIR] = 0;        //旋钮方向切换开关
   ui.param[DARK_MODE] = 1;        //黑暗模式开关
+
+  ui.param[EXP_BIAS] = 20;    //曝光许用误差
+  ui.param[SHT_FORCE] = 1;    //强制释放快门
+  ui.param[BULB_TRI] = 1;   //B门触发方式 0: OFF  1: PRESS  2: CLICK
+  ui.param[BULB_SCR] = 0;   //B门屏幕关闭
 }
 
 //列表类页面列表行数初始化，必须初始化的参数
 void ui_init()
 {
   ui.num[M_MAIN] = sizeof(main_menu) / sizeof(M_SELECT);
-  ui.num[M_CAMSETTING] = sizeof(cam_setting_menu) / sizeof(M_SELECT);
+  ui.num[M_CAMSETTING] = sizeof(cam_setting_menu.menu) / sizeof(M_SELECT);
   ui.num[M_VOLT] = sizeof(volt_menu) / sizeof(M_SELECT);
   ui.num[M_SETTING] = sizeof(setting_menu.menu) / sizeof(M_SELECT);
   ui.num[M_ABOUT] = sizeof(about_menu) / sizeof(M_SELECT);
@@ -573,6 +592,13 @@ void volt_param_init()
 {
   volt.text_bg_r = 0;
   volt.text_bg_r_trg = VOLT_TEXT_BG_W;
+}
+
+//相机设置页初始化
+void cam_setting_param_init()
+{
+  check_box_v_init(cam_setting_menu.value);
+  check_box_m_init(cam_setting_menu.value);
 }
 
 //设置页初始化
@@ -617,6 +643,9 @@ void layer_init_in()
     case M_VOLT:
       volt_param_init();
       break;  //主菜单进入电压测量页，动画初始化
+    case M_CAMSETTING:
+      cam_setting_param_init();
+      break;
     case M_SETTING:
       setting_param_init();
       break;  //主菜单进入设置页，单选框初始化
@@ -904,6 +933,9 @@ void list_draw_text_and_check_box(struct MENU arr[], int i)
       break;
     case '$':
       list_draw_kpf(i);
+      break;
+    case '>':
+      //todo: 在此放置自制多选弹窗
       break;
   }
 }
@@ -1240,7 +1272,11 @@ void main_proc()
 //拍摄设置函数
 void cam_setting_proc()
 {
-  list_show(cam_setting_menu, M_CAMSETTING);
+  ui.param[SHT_FORCE] = cam_setting_menu.value[2];
+  ui.param[BULB_SCR] = cam_setting_menu.value[4];
+
+  list_show(cam_setting_menu.menu, M_CAMSETTING);
+
   if (g_KeyActionFlag == KEY_PRESSED)
   {
     g_KeyActionFlag = KEY_NOT_PRESSED;
@@ -1259,9 +1295,20 @@ void cam_setting_proc()
             ui.index = M_MAIN;
             ui.state = S_LAYER_OUT;
             break;
-          case 11:
-            //ui.index = M_KNOB;
-            ui.state = S_LAYER_IN;
+          case 1:
+            //曝光许用误差
+            window_value_init("曝光误差", EXP_BIAS, &cam_setting_menu.value[1], 100, 10, 10, cam_setting_menu.menu, M_CAMSETTING);
+            break;
+          case 2:
+            //强制释放快门
+            check_box_m_select(2);
+            break;
+          case 3:
+            //B门触发方式
+            break;
+          case 4:
+            //B门关闭屏幕
+            check_box_m_select(4);
             break;
         }
     }
@@ -1387,6 +1434,7 @@ void ui_proc()
 
           //todo: 所有的参数在弹窗中修改时 显示的参数也要进行同步（不在弹窗中的不需要写在这里）
           ui.param[DISP_BRI] = setting_menu.value[1];
+          ui.param[EXP_BIAS] = cam_setting_menu.value[1];
           break;
         case M_SLEEP:
           sleep_proc();
@@ -1397,15 +1445,6 @@ void ui_proc()
         case M_CAMSETTING:
           cam_setting_proc();
           break;
-//        case M_KNOB:
-//          knob_proc();
-//          break;
-//        case M_KRF:
-//          krf_proc();
-//          break;
-//        case M_KPF:
-//          kpf_proc();
-//          break;
         case M_VOLT:
           volt_proc();
           break;
