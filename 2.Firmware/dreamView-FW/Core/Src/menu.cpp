@@ -582,7 +582,8 @@ void sleep_param_init()
 {
   u8g2_SetDrawColor(&u8g2, 0);
   u8g2_DrawBox(&u8g2, 0, 0, DISP_W, DISP_H);
-  //u8g2_SetPowerSave(&u8g2, 1);
+  u8g2_SetPowerSave(&u8g2, 1);
+  //todo: 在此加入一些省电功能
   ui.state = S_NONE;
   ui.sleep = true;
 }
@@ -1217,7 +1218,8 @@ void sleep_proc()
     {
       g_KeyActionFlag = KEY_NOT_PRESSED;
 
-      //u8g2_SetPowerSave(&u8g2, 0);
+      u8g2_SetPowerSave(&u8g2, 0);
+      HAL_Delay(50);
 
       ui.sleep = false;
       ui.index = M_MAIN;
