@@ -8,15 +8,12 @@
 #include "oled.h"
 #include "key.h"
 
-//todo: 搞定测试页面
-
-//todo: 关于多选弹窗 自己写一个 用在B门那里
+//todo: 写一个多选弹窗用在B门那里 也写一个差不多的通用绘制函数
+//todo: 然后 接入快门 开始快门测试页 -> 拍摄模式页的绘制
 
 //todo: 关于修改数值和多选框 核心思想: 都是对value数组进行改动 同时显示的也是value数组 最后再统一将value同步到参数数组中
 
 //todo: 拍摄界面如果有需要报警的参数 如曝光不正确等 需要闪烁叹号来示意
-//todo: 把所有带选项框的页面都重构 否则用不了（因为n-1都变成了n）
-//todo: 现在在菜单无法修改参数的真实值 因为param还未与value进行同步 菜单修改的是value的值 并不是param的值
 /************************************* 定义页面 *************************************/
 
 //总目录，缩进表示页面层级
@@ -30,12 +27,14 @@ enum {
   M_SETTING,
   M_ABOUT,
   M_TEST,
+  M_SIDELIST,
 };
 
 //状态，初始化标签
 enum {
   S_FADE,       //转场动画
   S_WINDOW,     //弹窗初始化
+  S_SIDELIST,   //侧边栏初始化
   S_LAYER_IN,   //层级初始化
   S_LAYER_OUT,  //层级初始化
   S_NONE,       //直接选择页面
@@ -198,6 +197,14 @@ M_SELECT volt_menu[]
     {"B0"},
     {"B1"},
   };
+
+struct {
+  M_SELECT text[2];
+  uint8_t select;
+} bulb_tri_side_menu = {{
+                              {"长按"},
+                              {"单击"},
+                              },1};
 
 //todo: 把所有需要复选框或者弹窗的界面都这么搞
 struct {
@@ -369,16 +376,16 @@ struct {
 
 struct {
   uint8_t line_n = DISP_H / LIST_LINE_H;
-  int16_t temp;
-  bool loop;
-  float y;
-  float y_trg;
-  float box_x;
-  float box_x_trg;
-  float box_y;
-  float box_y_trg[UI_DEPTH];
-  float bar_y;
-  float bar_y_trg;
+  int16_t temp{};
+  bool loop{};
+  float y{};
+  float y_trg{};
+  float box_x{};
+  float box_x_trg{};
+  float box_y{};
+  float box_y_trg[UI_DEPTH]{};
+  float bar_y{};
+  float bar_y_trg{};
 } list;
 
 //曲线相关
@@ -429,7 +436,6 @@ struct {
 #define   WIN_Y               - WIN_H - 2                 //弹窗竖直方向出场起始位置
 #define   WIN_Y_TRG           - WIN_H - 2                 //弹窗竖直方向退场终止位置
 struct {
-  //uint8_t
   uint8_t *value;
   uint8_t max;
   uint8_t min;
@@ -438,7 +444,7 @@ struct {
   MENU *bg;
   uint8_t index;
   char title[20];
-  uint8_t select;
+  //uint8_t select;
   uint8_t l = (DISP_W - WIN_W) / 2;
   uint8_t u = (DISP_H - WIN_H) / 2;
   float bar;
@@ -447,17 +453,30 @@ struct {
   float y_trg;
 } win;
 
-//聚光灯变量
+//侧边栏变量
+#define  SIDE_LIST_FONT  u8g2_font_myfont   //字体
+#define  SIDE_LIST_W          60                 //侧边栏弹出宽度
+#define  SIDE_LIST_X0         DISP_W             //侧边栏起始弹出位置
+#define  SIDE_LIST_TEXT_S     10                 //侧边栏文字左边距
 struct {
-  float l;
-  float l_trg;
-  float r;
-  float r_trg;
-  float u;
-  float u_trg;
-  float d;
-  float d_trg;
-} spot;
+  MENU *bg{};
+  uint8_t index{};
+  char title[20]{};
+  uint8_t select{};
+
+  M_SELECT *text;
+  uint8_t num{};
+
+  float line_x{};
+  float line_x_trg{};
+  float box_w{};
+  float box_w_trg{};
+  float box_y{};
+  float box_y_trg{};
+} side_list;
+
+uint8_t side_list_text_pos_even[] = {LIST_TEXT_S, LIST_LINE_H + LIST_TEXT_S, LIST_LINE_H*2 + LIST_TEXT_S, LIST_TEXT_S*3 + LIST_TEXT_S};
+uint8_t side_list_text_pos_odd[] = {(DISP_H / 2 - 1) - LIST_TEXT_H / 2 - LIST_LINE_H, (DISP_H / 2 - 1) - LIST_TEXT_H / 2, (DISP_H / 2 - 1) - LIST_TEXT_S + LIST_LINE_H};
 
 /************************************* 页面变量 *************************************/
 
@@ -516,12 +535,29 @@ void check_box_s_select(uint8_t val, uint8_t pos)
   *check_box.s_p = pos;
 }
 
+//侧边栏唤起函数
+void side_list_select(char title[], struct MENU arr[], uint8_t num, uint8_t *select, MENU *bg, uint8_t index)
+{
+  //todo: 没显示标题
+  strcpy(side_list.title, title);
+  side_list.num = num;
+  side_list.text = arr;  //我简直是他妈的一个天才我操了！
+
+  side_list.select = *select;
+
+  side_list.bg = bg;
+  side_list.index = index;
+
+  ui.index = M_SIDELIST;
+  ui.state = S_SIDELIST;
+}
+
 //弹窗数值初始化
 void window_value_init(char title[], uint8_t select, uint8_t *value, uint8_t max, uint8_t min, uint8_t step, MENU *bg,
                        uint8_t index)
 {
   strcpy(win.title, title);
-  win.select = select;
+  //win.select = select;
   win.value = value;
   win.max = max;
   win.min = min;
@@ -640,6 +676,16 @@ void window_param_init()
   win.bar = 0;
   win.y = WIN_Y;
   win.y_trg = win.u;
+  ui.state = S_NONE;
+}
+
+//侧边栏初始化
+void iWillNeverFuckingGiveUp_param_init()
+{
+  side_list.line_x = SIDE_LIST_X0;
+  side_list.line_x_trg = SIDE_LIST_X0 - SIDE_LIST_W;
+
+  //选择框也要从屏幕外面缓动进来
   ui.state = S_NONE;
 }
 
@@ -1004,8 +1050,7 @@ void list_show(struct MENU arr[], uint8_t ui_index)
       ui.init = true;
       list.y = list.y_trg = -LIST_LINE_H * ui.select[ui.layer] + list.box_y_trg[ui.layer];
     }
-  } else
-    for (int i = 0; i < ui.num[ui_index]; ++i)
+  } else for (int i = 0; i < ui.num[ui_index]; ++i)
     {
       list.temp = LIST_LINE_H * i + list.y;
       list_draw_text_and_check_box(arr, i);
@@ -1059,6 +1104,57 @@ void window_show()
 
   //需要在窗口修改参数时立即见效的函数
   if (!strcmp(win.title, "屏幕亮度")) u8g2_SetContrast(&u8g2, ui.param[DISP_BRI]);
+
+  //反转屏幕内元素颜色，白天模式遮罩
+  u8g2_SetDrawColor(&u8g2, 2);
+  if (!ui.param[DARK_MODE]) u8g2_DrawBox(&u8g2, 0, 0, DISP_W, DISP_H);
+}
+
+//侧边栏通用显示函数
+void side_list_show()
+{
+  //绘制背景列表，根据开关判断背景是否要虚化
+  //todo: 这里改成只要一开始退出侧边栏 就取消虚化 要不然会有很强的割裂感
+  list_show(side_list.bg, side_list.index);
+  if (ui.param[WIN_BOK]) for (uint16_t i = 0; i < buf_len; ++i) buf_ptr[i] = buf_ptr[i] & (i % 2 == 0 ? 0x55 : 0xAA);
+
+  //更新动画目标值 字体的y是不变的
+  side_list.box_w_trg = u8g2_GetUTF8Width(&u8g2, side_list.text[side_list.select].m_select) + LIST_TEXT_S * 2;
+
+  //side_list.box_x_trg = SIDE_LIST_X0 - SIDE_LIST_W + SIDE_LIST_TEXT_S - LIST_TEXT_S;
+
+  if (side_list.num == 2) side_list.box_y_trg = side_list_text_pos_even[side_list.select+1] - LIST_TEXT_S;
+  else if (side_list.num == 3) side_list.box_y_trg = side_list_text_pos_odd[side_list.select] - LIST_TEXT_S;
+  else side_list.box_y_trg = side_list_text_pos_even[side_list.select] - LIST_TEXT_S;
+
+  //计算动画过渡值
+  animation(&side_list.line_x, &side_list.line_x_trg, LIST_ANI);
+  animation(&side_list.box_w, &side_list.box_w_trg, LIST_ANI);
+  animation(&side_list.box_y, &side_list.box_y_trg, LIST_ANI);
+
+  //设置文字和进度条颜色，0透显，1实显，2反色，这里都用实显
+  u8g2_SetDrawColor(&u8g2, 1);
+
+  u8g2_SetDrawColor(&u8g2, 0);
+  u8g2_DrawBox(&u8g2, side_list.line_x, 0, SIDE_LIST_W, DISP_H);
+
+  u8g2_SetDrawColor(&u8g2, 1);
+  u8g2_DrawVLine(&u8g2, side_list.line_x, 0, DISP_H);
+
+  //todo: 此处补一个绘制标题
+
+  //绘制列表文字
+  for (int i = 0; i < side_list.num; ++i)
+  {
+    if (side_list.num == 2) u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_even[i+1], side_list.text[i].m_select);
+    else if (side_list.num == 3) u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_odd[i], side_list.text[i].m_select);
+    else u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_even[i], side_list.text[i].m_select);
+  }
+
+  //绘制文字选择框，0透显，1实显，2反色，这里用反色
+  u8g2_SetDrawColor(&u8g2, 2);
+  u8g2_DrawRBox(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S - LIST_TEXT_S, side_list.box_y, side_list.box_w, LIST_LINE_H, LIST_BOX_R);
+  u8g2_SetDrawColor(&u8g2, 1);
 
   //反转屏幕内元素颜色，白天模式遮罩
   u8g2_SetDrawColor(&u8g2, 2);
@@ -1215,13 +1311,48 @@ void window_proc()
         if (*win.value > win.min) *win.value -= win.step;
         break;
       case KEY_0_PRESS:
-      case KEY_1_PPESS:
+      case KEY_1_PRESS:
         win.y_trg = WIN_Y_TRG;
         break;
     }
   }
 }
 
+//侧边栏通用处理函数
+void side_list_proc()
+{
+  side_list_show();
+
+  if (side_list.line_x == SIDE_LIST_X0)  ui.index = side_list.index;
+
+  //todo: select和对应的显示部分没问题
+  if (g_KeyActionFlag == KEY_PRESSED)
+  {
+    g_KeyActionFlag = KEY_NOT_PRESSED;
+    switch (g_KeyValue)
+    {
+      case KEY_0_CLICK:
+        if (side_list.select > 0) side_list.select -= 1;
+        else if(side_list.select == 0) side_list.select = side_list.num - 1;
+        break;
+      case KEY_1_CLICK:
+        if (side_list.select < side_list.num - 1) side_list.select += 1;
+        else if(side_list.select == side_list.num - 1) side_list.select = 0;
+        break;
+      case KEY_0_PRESS:
+        side_list.line_x_trg = SIDE_LIST_X0;
+        //todo: 此处没有动画 第一次进入时有动画 退出时无动画 此后所有情况都无动画
+        //因为取消了 所以不进行同步
+        break;
+      case KEY_1_PRESS:
+        //因为确定了 所以进行同步
+        ui.param[BULB_TRI] = bulb_tri_side_menu.select;
+        side_list.line_x_trg = SIDE_LIST_X0;
+        break;
+    }
+  }
+
+}
 /********************************** 分页面处理函数 **********************************/
 
 //睡眠页面处理函数
@@ -1264,7 +1395,7 @@ void main_proc()
       case KEY_1_CLICK:
         tile_rotate_switch();
         break;
-      case KEY_1_PPESS:
+      case KEY_1_PRESS:
         switch (ui.select[ui.layer])
         {
           case 0:
@@ -1311,7 +1442,7 @@ void cam_setting_proc()
         break;
       case KEY_0_PRESS:
         ui.select[ui.layer] = 0;
-      case KEY_1_PPESS:
+      case KEY_1_PRESS:
         switch (ui.select[ui.layer])
         {
           case 0:
@@ -1328,6 +1459,7 @@ void cam_setting_proc()
             break;
           case 3:
             //B门触发方式
+            side_list_select("触发方式", bulb_tri_side_menu.text, 2, &bulb_tri_side_menu.select, cam_setting_menu.menu, M_CAMSETTING);
             break;
           case 4:
             //B门关闭屏幕
@@ -1359,7 +1491,7 @@ void test_proc()
         break;
       case KEY_0_PRESS:
         ui.select[ui.layer] = 0;
-      case KEY_1_PPESS:
+      case KEY_1_PRESS:
         switch (ui.select[ui.layer])
         {
           //返回更浅层级，长按被当作选择这一项，也是执行这一行
@@ -1426,7 +1558,7 @@ void setting_proc()
         break;
       case KEY_0_PRESS:
         ui.select[ui.layer] = 0;
-      case KEY_1_PPESS:
+      case KEY_1_PRESS:
         switch (ui.select[ui.layer])
         {
           //返回更浅层级，长按被当作选择这一项，也是执行这一行
@@ -1480,7 +1612,7 @@ void about_proc()
         break;
       case KEY_0_PRESS:
         ui.select[ui.layer] = 0;
-      case KEY_1_PPESS:
+      case KEY_1_PRESS:
         switch (ui.select[ui.layer])
         {
           case 0:
@@ -1504,6 +1636,9 @@ void ui_proc()
     case S_WINDOW:
       window_param_init();
       break;  //弹窗初始化
+    case S_SIDELIST:
+      iWillNeverFuckingGiveUp_param_init();
+      break;  //侧边栏初始化
     case S_LAYER_IN:
       layer_init_in();
       break;  //层级初始化
@@ -1521,6 +1656,9 @@ void ui_proc()
           //todo: 所有的参数在弹窗中修改时 显示的参数也要进行同步（不在弹窗中的不需要写在这里）
           ui.param[DISP_BRI] = setting_menu.value[1];
           ui.param[EXP_BIAS] = cam_setting_menu.value[1];
+          break;
+        case M_SIDELIST:
+          side_list_proc();
           break;
         case M_SLEEP:
           sleep_proc();

@@ -54,7 +54,7 @@ void Key_Scan(void)
           g_KeyActionFlag = KEY_PRESSED;
           //判断按键依然按下
           if (0 == KEY0) g_KeyValue = KEY_0_PRESS;
-          if (0 == KEY1) g_KeyValue = KEY_1_PPESS;
+          if (0 == KEY1) g_KeyValue = KEY_1_PRESS;
           TimeCnt = 0;
           lock = 0;               //重新检查
           KeyState = KEY_RELEASE;    // 需要进入按键释放状态
@@ -119,7 +119,7 @@ void Key_Proc()
       break;
 
 
-    case KEY_1_PPESS:
+    case KEY_1_PRESS:
       /*
      执行长按对应的事件
      */

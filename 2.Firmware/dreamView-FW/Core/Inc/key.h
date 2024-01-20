@@ -43,7 +43,7 @@ typedef enum {
   KEY_0_CLICK,  //轻击
   KEY_0_PRESS,  //长按
   KEY_1_CLICK,
-  KEY_1_PPESS,
+  KEY_1_PRESS,
 } KEY_VALUE;
 
 extern KEY_TYPE g_KeyActionFlag;
