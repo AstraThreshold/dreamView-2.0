@@ -204,7 +204,7 @@ struct {
 } bulb_tri_side_menu = {{
                               {"长按"},
                               {"单击"},
-                              },1};
+                              },0};
 
 //todo: 把所有需要复选框或者弹窗的界面都这么搞
 struct {
@@ -318,6 +318,8 @@ enum {
   SHT_FORCE,    //强制释放快门
   BULB_TRI,     //B门触发方式
   BULB_SCR,     //B门屏幕关闭
+
+  SIDE_ANI,
 };
 
 struct {
@@ -456,13 +458,13 @@ struct {
 //侧边栏变量
 #define  SIDE_LIST_FONT  u8g2_font_myfont   //字体
 #define  SIDE_LIST_W          60                 //侧边栏弹出宽度
-#define  SIDE_LIST_X0         DISP_W             //侧边栏起始弹出位置
-#define  SIDE_LIST_TEXT_S     10                 //侧边栏文字左边距
+#define  SIDE_LIST_X0         DISP_W + 4         //侧边栏起始弹出位置
+#define  SIDE_LIST_TEXT_S     16                 //侧边栏文字左边距
 struct {
   MENU *bg{};
   uint8_t index{};
   char title[20]{};
-  uint8_t select{};
+  uint8_t *select{};
 
   M_SELECT *text;
   uint8_t num{};
@@ -473,6 +475,8 @@ struct {
   float box_w_trg{};
   float box_y{};
   float box_y_trg{};
+
+  uint8_t change{};
 } side_list;
 
 uint8_t side_list_text_pos_even[] = {LIST_TEXT_S, LIST_LINE_H + LIST_TEXT_S, LIST_LINE_H*2 + LIST_TEXT_S, LIST_TEXT_S*3 + LIST_TEXT_S};
@@ -540,10 +544,11 @@ void side_list_select(char title[], struct MENU arr[], uint8_t num, uint8_t *sel
 {
   //todo: 没显示标题
   strcpy(side_list.title, title);
+
   side_list.num = num;
   side_list.text = arr;  //我简直是他妈的一个天才我操了！
 
-  side_list.select = *select;
+  side_list.select = select;  //传指针 前面改了后面也跟着一起改
 
   side_list.bg = bg;
   side_list.index = index;
@@ -594,6 +599,8 @@ void ui_param_init()
   ui.param[SHT_FORCE] = 1;    //强制释放快门
   ui.param[BULB_TRI] = 1;   //B门触发方式 0: OFF  1: PRESS  2: CLICK
   ui.param[BULB_SCR] = 0;   //B门屏幕关闭
+
+  ui.param[SIDE_ANI] = 50;
 }
 
 //列表类页面列表行数初始化，必须初始化的参数
@@ -931,6 +938,15 @@ void list_draw_value(int n)
   u8g2_DrawStr(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
 }
 
+//侧边栏在列表中显示数值
+void side_list_draw_value(int n)
+{
+  auto str = std::to_string(*side_list.select + 1); //因为值和字符已经一一对应 所以无需-1
+  //std::string str = std::to_string(check_box.v[n - 1]);
+  auto *c_str = str.c_str();
+  u8g2_DrawStr(&u8g2, CHECK_BOX_L_S, list.temp + LIST_TEXT_H + LIST_TEXT_S, c_str);
+}
+
 //绘制外框
 void list_draw_check_box_frame()
 { u8g2_DrawRFrame(&u8g2, CHECK_BOX_L_S, list.temp + CHECK_BOX_U_S, CHECK_BOX_F_W, CHECK_BOX_F_H, 1); }
@@ -1003,7 +1019,7 @@ void list_draw_text_and_check_box(struct MENU arr[], int i)
       list_draw_kpf(i);
       break;
     case '>':
-      //todo: 在此放置自制多选弹窗
+      side_list_draw_value(i);
       break;
   }
 }
@@ -1119,16 +1135,16 @@ void side_list_show()
   if (ui.param[WIN_BOK]) for (uint16_t i = 0; i < buf_len; ++i) buf_ptr[i] = buf_ptr[i] & (i % 2 == 0 ? 0x55 : 0xAA);
 
   //更新动画目标值 字体的y是不变的
-  side_list.box_w_trg = u8g2_GetUTF8Width(&u8g2, side_list.text[side_list.select].m_select) + LIST_TEXT_S * 2;
+  side_list.box_w_trg = u8g2_GetUTF8Width(&u8g2, side_list.text[*side_list.select].m_select) + LIST_TEXT_S * 2;
 
   //side_list.box_x_trg = SIDE_LIST_X0 - SIDE_LIST_W + SIDE_LIST_TEXT_S - LIST_TEXT_S;
 
-  if (side_list.num == 2) side_list.box_y_trg = side_list_text_pos_even[side_list.select+1] - LIST_TEXT_S;
-  else if (side_list.num == 3) side_list.box_y_trg = side_list_text_pos_odd[side_list.select] - LIST_TEXT_S;
-  else side_list.box_y_trg = side_list_text_pos_even[side_list.select] - LIST_TEXT_S;
+  if (side_list.num == 2) side_list.box_y_trg = side_list_text_pos_even[*side_list.select+1] - LIST_TEXT_S;
+  else if (side_list.num == 3) side_list.box_y_trg = side_list_text_pos_odd[*side_list.select] - LIST_TEXT_S;
+  else side_list.box_y_trg = side_list_text_pos_even[*side_list.select] - LIST_TEXT_S;
 
   //计算动画过渡值
-  animation(&side_list.line_x, &side_list.line_x_trg, LIST_ANI);
+  animation(&side_list.line_x, &side_list.line_x_trg, SIDE_ANI);
   animation(&side_list.box_w, &side_list.box_w_trg, LIST_ANI);
   animation(&side_list.box_y, &side_list.box_y_trg, LIST_ANI);
 
@@ -1146,9 +1162,10 @@ void side_list_show()
   //绘制列表文字
   for (int i = 0; i < side_list.num; ++i)
   {
-    if (side_list.num == 2) u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_even[i+1], side_list.text[i].m_select);
-    else if (side_list.num == 3) u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_odd[i], side_list.text[i].m_select);
-    else u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_even[i], side_list.text[i].m_select);
+    if (side_list.num == 2) u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_odd[i+1], side_list.text[i].m_select);
+    //else if (side_list.num == 3) u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_odd[i+1], side_list.text[i].m_select);
+    //else u8g2_DrawUTF8(&u8g2, side_list.line_x + SIDE_LIST_TEXT_S, side_list_text_pos_even[i], side_list.text[i].m_select);
+    //todo: 这里还不完善
   }
 
   //绘制文字选择框，0透显，1实显，2反色，这里用反色
@@ -1323,30 +1340,31 @@ void side_list_proc()
 {
   side_list_show();
 
+  uint8_t select_pre = *side_list.select;
+
   if (side_list.line_x == SIDE_LIST_X0)  ui.index = side_list.index;
 
-  //todo: select和对应的显示部分没问题
+  //todo: select和对应的显示部分没问题 但是发现select不会保存 再弹出来还是之前那个（有过渡动画 考虑是弹开之后select才变的 检查show函数）
   if (g_KeyActionFlag == KEY_PRESSED)
   {
     g_KeyActionFlag = KEY_NOT_PRESSED;
     switch (g_KeyValue)
     {
       case KEY_0_CLICK:
-        if (side_list.select > 0) side_list.select -= 1;
-        else if(side_list.select == 0) side_list.select = side_list.num - 1;
+        if (*side_list.select > 0) *side_list.select -= 1;
+        else if(*side_list.select == 0) *side_list.select = side_list.num - 1;
         break;
       case KEY_1_CLICK:
-        if (side_list.select < side_list.num - 1) side_list.select += 1;
-        else if(side_list.select == side_list.num - 1) side_list.select = 0;
+        if (*side_list.select < side_list.num - 1) *side_list.select += 1;
+        else if(*side_list.select == side_list.num - 1) *side_list.select = 0;
         break;
       case KEY_0_PRESS:
         side_list.line_x_trg = SIDE_LIST_X0;
-        //todo: 此处没有动画 第一次进入时有动画 退出时无动画 此后所有情况都无动画
-        //因为取消了 所以不进行同步
+        *side_list.select = select_pre;   //把之前的值复原
+        //取消了
         break;
       case KEY_1_PRESS:
-        //因为确定了 所以进行同步
-        ui.param[BULB_TRI] = bulb_tri_side_menu.select;
+        //确定了
         side_list.line_x_trg = SIDE_LIST_X0;
         break;
     }
@@ -1459,7 +1477,7 @@ void cam_setting_proc()
             break;
           case 3:
             //B门触发方式
-            side_list_select("触发方式", bulb_tri_side_menu.text, 2, &bulb_tri_side_menu.select, cam_setting_menu.menu, M_CAMSETTING);
+            side_list_select("触发方式", bulb_tri_side_menu.text, sizeof(bulb_tri_side_menu.text)/sizeof(M_SELECT), &bulb_tri_side_menu.select, cam_setting_menu.menu, M_CAMSETTING);
             break;
           case 4:
             //B门关闭屏幕
@@ -1659,6 +1677,7 @@ void ui_proc()
           break;
         case M_SIDELIST:
           side_list_proc();
+          ui.param[BULB_TRI] = bulb_tri_side_menu.select;
           break;
         case M_SLEEP:
           sleep_proc();
