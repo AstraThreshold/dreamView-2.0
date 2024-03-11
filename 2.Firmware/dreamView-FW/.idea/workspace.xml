@@ -24,13 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/menu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" afterDir="false" />
-    </list>
+    <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,33 +102,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;OpenOCD 下载并运行.OCD dreamView-FW.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;所有位置&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW-OLD&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C/C++&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "OpenOCD 下载并运行.OCD dreamView-FW.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "所有位置",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "astra",
+    "last_opened_file_path": "D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.C++",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\dreamView-2.0\2.Firmware\dreamView-FW\3rdParty\u8g2" />
@@ -364,7 +358,57 @@
       <workItem from="1705543084561" duration="26901000" />
       <workItem from="1705630915214" duration="5240000" />
       <workItem from="1705644738743" duration="19804000" />
-      <workItem from="1705721501664" duration="16714000" />
+      <workItem from="1705721501664" duration="19497000" />
+      <workItem from="1705803937872" duration="1427000" />
+      <workItem from="1705938122025" duration="627000" />
+      <workItem from="1705976436542" duration="8992000" />
+      <workItem from="1706060201724" duration="5340000" />
+      <workItem from="1706145563671" duration="615000" />
+      <workItem from="1706173789088" duration="6087000" />
+      <workItem from="1706250865227" duration="2440000" />
+      <workItem from="1706333049240" duration="698000" />
+      <workItem from="1706439286788" duration="943000" />
+      <workItem from="1706499876918" duration="628000" />
+      <workItem from="1706709854663" duration="1158000" />
+      <workItem from="1706749790391" duration="1793000" />
+      <workItem from="1706795418516" duration="4500000" />
+      <workItem from="1706836083468" duration="1218000" />
+      <workItem from="1706858353927" duration="3584000" />
+      <workItem from="1706921161831" duration="2421000" />
+      <workItem from="1707037438446" duration="3660000" />
+      <workItem from="1707099183109" duration="2000" />
+      <workItem from="1707099533801" duration="23000" />
+      <workItem from="1707100123692" duration="89000" />
+      <workItem from="1707180736904" duration="1201000" />
+      <workItem from="1707276002354" duration="123000" />
+      <workItem from="1707321395124" duration="275000" />
+      <workItem from="1707359533213" duration="2080000" />
+      <workItem from="1707383323361" duration="2131000" />
+      <workItem from="1707450014907" duration="141000" />
+      <workItem from="1707637288677" duration="1295000" />
+      <workItem from="1707702388794" duration="8189000" />
+      <workItem from="1707787894290" duration="2382000" />
+      <workItem from="1707877236871" duration="1220000" />
+      <workItem from="1708005726623" duration="6653000" />
+      <workItem from="1708154616663" duration="2988000" />
+      <workItem from="1708222277269" duration="9146000" />
+      <workItem from="1708307540448" duration="5234000" />
+      <workItem from="1708515147369" duration="440000" />
+      <workItem from="1708697502459" duration="596000" />
+      <workItem from="1708871438970" duration="942000" />
+      <workItem from="1708937778796" duration="1133000" />
+      <workItem from="1709102819338" duration="810000" />
+      <workItem from="1709183299400" duration="40000" />
+      <workItem from="1709307919600" duration="1169000" />
+      <workItem from="1709357049928" duration="3175000" />
+      <workItem from="1709474189299" duration="597000" />
+      <workItem from="1709617683956" duration="682000" />
+      <workItem from="1709802951048" duration="727000" />
+      <workItem from="1709805412299" duration="3471000" />
+      <workItem from="1709866204171" duration="2270000" />
+      <workItem from="1709905270386" duration="1743000" />
+      <workItem from="1710081552367" duration="6000" />
+      <workItem from="1710165767071" duration="575000" />
     </task>
     <task id="LOCAL-00001" summary="Initial submission">
       <created>1676991362688</created>
