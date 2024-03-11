@@ -25,11 +25,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ab08cb-a7da-4a2d-b39a-1e66f3dbf21a" name="变更" comment="加入文字入场动画">
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/.cmake/api/v1/reply/cache-v2-23d65e67d29fdcf034d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-bae8c6b8751db43b641a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-9cd539c40602d6353f0f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/.cmake/api/v1/reply/index-2024-01-08T15-02-48-0064.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-5efe78b4086657363b1b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/dreamView-FW.elf.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/CMakeFiles/dreamView-FW.elf.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../dreamView-FW-OLD/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/menu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamView-FW.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +137,14 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW-OLD&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/dreamView-2.0/2.Firmware/dreamView-FW&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C/C++&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.C++&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -364,7 +378,56 @@
       <workItem from="1705543084561" duration="26901000" />
       <workItem from="1705630915214" duration="5240000" />
       <workItem from="1705644738743" duration="19804000" />
-      <workItem from="1705721501664" duration="16714000" />
+      <workItem from="1705721501664" duration="19497000" />
+      <workItem from="1705803937872" duration="1427000" />
+      <workItem from="1705938122025" duration="627000" />
+      <workItem from="1705976436542" duration="8992000" />
+      <workItem from="1706060201724" duration="5340000" />
+      <workItem from="1706145563671" duration="615000" />
+      <workItem from="1706173789088" duration="6087000" />
+      <workItem from="1706250865227" duration="2440000" />
+      <workItem from="1706333049240" duration="698000" />
+      <workItem from="1706439286788" duration="943000" />
+      <workItem from="1706499876918" duration="628000" />
+      <workItem from="1706709854663" duration="1158000" />
+      <workItem from="1706749790391" duration="1793000" />
+      <workItem from="1706795418516" duration="4500000" />
+      <workItem from="1706836083468" duration="1218000" />
+      <workItem from="1706858353927" duration="3584000" />
+      <workItem from="1706921161831" duration="2421000" />
+      <workItem from="1707037438446" duration="3660000" />
+      <workItem from="1707099183109" duration="2000" />
+      <workItem from="1707099533801" duration="23000" />
+      <workItem from="1707100123692" duration="89000" />
+      <workItem from="1707180736904" duration="1201000" />
+      <workItem from="1707276002354" duration="123000" />
+      <workItem from="1707321395124" duration="275000" />
+      <workItem from="1707359533213" duration="2080000" />
+      <workItem from="1707383323361" duration="2131000" />
+      <workItem from="1707450014907" duration="141000" />
+      <workItem from="1707637288677" duration="1295000" />
+      <workItem from="1707702388794" duration="8189000" />
+      <workItem from="1707787894290" duration="2382000" />
+      <workItem from="1707877236871" duration="1220000" />
+      <workItem from="1708005726623" duration="6653000" />
+      <workItem from="1708154616663" duration="2988000" />
+      <workItem from="1708222277269" duration="9146000" />
+      <workItem from="1708307540448" duration="5234000" />
+      <workItem from="1708515147369" duration="440000" />
+      <workItem from="1708697502459" duration="596000" />
+      <workItem from="1708871438970" duration="942000" />
+      <workItem from="1708937778796" duration="1133000" />
+      <workItem from="1709102819338" duration="810000" />
+      <workItem from="1709183299400" duration="40000" />
+      <workItem from="1709307919600" duration="1169000" />
+      <workItem from="1709357049928" duration="3175000" />
+      <workItem from="1709474189299" duration="597000" />
+      <workItem from="1709617683956" duration="682000" />
+      <workItem from="1709802951048" duration="727000" />
+      <workItem from="1709805412299" duration="3471000" />
+      <workItem from="1709866204171" duration="2270000" />
+      <workItem from="1709905270386" duration="1743000" />
+      <workItem from="1710081552367" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="Initial submission">
       <created>1676991362688</created>
